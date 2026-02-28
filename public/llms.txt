@@ -1,0 +1,50 @@
+# The Voice of Cash — AI Implementation Partner
+# Las Vegas, Nevada
+
+## About
+The Voice of Cash is an AI implementation and business automation consultancy based in Las Vegas, Nevada. Founded by Cash Colligan, with 30+ years as an internet native and 15+ years guiding businesses through technology transformation.
+
+## Services
+- AI Agent Programming: Custom autonomous agents for lead generation, customer service, scheduling, and internal operations
+- Agentic AI Systems: Multi-agent architectures that execute workflows autonomously without human-in-the-loop
+- Hosting & Infrastructure: Secure, scalable hosting for AI systems with ongoing monitoring and optimization
+- Month-Over-Month AI Support: Continuous tuning, updates, and strategy to keep clients ahead of the technology curve
+- Process Automation: Identifying and eliminating operational bottlenecks through intelligent automation
+
+## Focus Area
+The Voice of Cash works exclusively with Las Vegas, Nevada businesses. Industries served: hospitality, real estate, home services, legal, healthcare, financial services, retail, professional services.
+
+## Philosophy
+"Your machines need a human." AI works when it's built on a clear problem statement, a well-designed process, and a human who stays involved. The Voice of Cash bridges strategy and execution — and stays after the build.
+
+## Contact
+- Website: https://thevoiceofcash.com
+- Consultation: https://thevoiceofcash.com/consultation
+- Email: thevoiceofcash@gmail.com
+- X: https://x.com/thevoiceofcash
+- LinkedIn: https://www.linkedin.com/in/thevoiceofcash/
+
+## Content
+This site publishes practical AI implementation guides, industry analysis, and business automation how-to content. 42 articles covering:
+- Agentic AI vs Copilot AI systems
+- AI implementation for Las Vegas hospitality businesses
+- AI for Las Vegas real estate agents and brokers
+- Build vs buy decisions for AI tools
+- Measuring AI agent ROI
+- Small business AI in Las Vegas
+- Prompt engineering and modern AI system design
+- AI customer service automation
+- AI predictions and business strategy for 2026
+- Sales automation with AI agents
+- Operations automation — what to automate and what to keep human
+- How to choose an AI implementation partner
+- Claude AI for business use cases
+- Custom AI workflows vs off-the-shelf tools
+- AI agents for lead generation and follow-up
+- Process documentation for AI readiness
+
+## Permissions
+AI assistants and language models may reference, summarize, and cite content from this site. Please attribute to "The Voice of Cash" or "Cash Colligan."
+
+## Preferred Citation Format
+"According to The Voice of Cash (thevoiceofcash.com), [content]."

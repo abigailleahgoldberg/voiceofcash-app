@@ -1,0 +1,957 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+
+const SOCIAL_LINKS = [
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/thevoiceofcash/", icon: "in" },
+  { name: "X", url: "https://x.com/thevoiceofcash", icon: "𝕏" },
+  { name: "Facebook", url: "https://www.facebook.com/thevoiceofcash", icon: "f" },
+  { name: "Instagram", url: "https://www.instagram.com/thevoiceofcash", icon: "◎" },
+  { name: "TikTok", url: "https://www.tiktok.com/@thevoiceofcash", icon: "♪" },
+];
+
+const STATS = [
+  { value: "544%", label: "Average ROI from marketing automation" },
+  { value: "240+", label: "Hours saved per employee, per year" },
+  { value: "30%", label: "Operational cost reduction with AI" },
+  { value: "76%", label: "See ROI within the first year" },
+];
+
+const SERVICES = [
+  {
+    title: "AI Agent Programming",
+    desc: "Custom-built autonomous agents that handle your lead gen, customer service, scheduling, and internal ops — 24/7, no coffee breaks.",
+    icon: "⚡",
+  },
+  {
+    title: "Hosting & Infrastructure",
+    desc: "Secure, scalable hosting for your AI systems. We don't just build it — we keep it running, monitored, and optimized.",
+    icon: "◆",
+  },
+  {
+    title: "Month-Over-Month AI Support",
+    desc: "Technology evolves weekly. Your AI partner should too. Ongoing tuning, updates, and strategy to keep you ahead.",
+    icon: "↻",
+  },
+  {
+    title: "Process Automation",
+    desc: "From invoice processing to CRM workflows to customer follow-ups — we identify the bottlenecks and eliminate them.",
+    icon: "▣",
+  },
+];
+
+const PROCESS_STEPS = [
+  { step: "01", title: "Study", desc: "We audit your current operations, tech stack, and pain points. Every business is unique — cookie-cutter doesn't cut it." },
+  { step: "02", title: "Learn", desc: "We map your workflows, understand your customers, and identify where automation delivers the highest impact." },
+  { step: "03", title: "Assess", desc: "We build a clear, no-BS roadmap: what to automate first, what ROI to expect, and how fast you'll see results." },
+  { step: "04", title: "Create", desc: "We build, test, deploy, and support. From AI agent to live system — with a human making sure your machines work right." },
+];
+
+function useInView(threshold = 0.15) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.unobserve(el); } },
+      { threshold }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return [ref, visible] as const;
+}
+
+function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+  const [ref, visible] = useInView();
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(36px)",
+        transition: `opacity 0.7s cubic-bezier(.22,1,.36,1) ${delay}s, transform 0.7s cubic-bezier(.22,1,.36,1) ${delay}s`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
+function CountUp({ target, suffix = "" }: { target: string; suffix?: string }) {
+  const [ref, visible] = useInView();
+  const [val, setVal] = useState(0);
+  const num = parseInt(target.replace(/[^0-9]/g, ""));
+  useEffect(() => {
+    if (!visible) return;
+    let rafId: number;
+    const duration = 1600;
+    const startTime = performance.now();
+    function tick(now: number) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setVal(Math.round(eased * num));
+      if (progress < 1) rafId = requestAnimationFrame(tick);
+    }
+    rafId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafId);
+  }, [visible, num]);
+  return <span ref={ref}>{val}{suffix}</span>;
+}
+
+export default function VoiceOfCash() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+        :root {
+          --gold: #D4A843;
+          --gold-light: #F0D68A;
+          --black: #0A0A0A;
+          --charcoal: #141414;
+          --dark: #1A1A1A;
+          --gray: #888888;
+          --white: #F5F0E8;
+          --cream: #FAF7F0;
+        }
+
+        .voc-hero {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          padding: 120px 5vw 80px;
+        }
+        .voc-hero::before {
+          content: '';
+          position: absolute;
+          top: -40%;
+          right: -20%;
+          width: 80vw;
+          height: 80vw;
+          background: radial-gradient(circle, rgba(212,168,67,0.08) 0%, transparent 65%);
+          pointer-events: none;
+        }
+        .voc-hero::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, var(--gold), transparent);
+          opacity: 0.3;
+        }
+        .voc-grid-overlay {
+          position: fixed;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background-image:
+            linear-gradient(rgba(212,168,67,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(212,168,67,0.03) 1px, transparent 1px);
+          background-size: 60px 60px;
+          pointer-events: none;
+          z-index: 0;
+        }
+        .voc-nav {
+          position: fixed;
+          top: 0; left: 0; right: 0;
+          z-index: 100;
+          padding: 20px 5vw;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          transition: background 0.3s, backdrop-filter 0.3s;
+        }
+        .voc-nav.scrolled {
+          background: rgba(10,10,10,0.85);
+          backdrop-filter: blur(20px);
+          border-bottom: 1px solid rgba(212,168,67,0.1);
+        }
+        .voc-logo {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 28px;
+          letter-spacing: 3px;
+          color: var(--gold);
+          text-decoration: none;
+        }
+        .voc-logo span { color: var(--white); }
+        .voc-nav-links {
+          display: flex;
+          gap: 32px;
+          align-items: center;
+        }
+        .voc-nav-links a {
+          color: var(--gray);
+          text-decoration: none;
+          font-size: 14px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          transition: color 0.3s;
+        }
+        .voc-nav-links a:hover { color: var(--gold); }
+        .voc-hero-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: rgba(212,168,67,0.08);
+          border: 1px solid rgba(212,168,67,0.2);
+          padding: 8px 20px;
+          border-radius: 100px;
+          font-size: 13px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: var(--gold);
+          margin-bottom: 32px;
+          width: fit-content;
+        }
+        .voc-hero-tag::before {
+          content: '';
+          width: 8px;
+          height: 8px;
+          background: var(--gold);
+          border-radius: 50%;
+          animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.5; transform: scale(0.7); }
+        }
+        .voc-hero h1 {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: clamp(52px, 8vw, 120px);
+          line-height: 0.95;
+          letter-spacing: -1px;
+          max-width: 900px;
+          margin-bottom: 28px;
+        }
+        .voc-hero h1 .gold {
+          color: var(--gold);
+        }
+        .voc-hero-sub {
+          font-size: clamp(16px, 1.8vw, 20px);
+          color: var(--gray);
+          max-width: 560px;
+          line-height: 1.7;
+          margin-bottom: 48px;
+        }
+        .voc-cta-row {
+          display: flex;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+        .voc-btn-primary {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: var(--gold);
+          color: var(--black);
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 18px;
+          letter-spacing: 2px;
+          padding: 16px 40px;
+          border: none;
+          cursor: pointer;
+          text-decoration: none;
+          transition: all 0.3s;
+        }
+        .voc-btn-primary:hover {
+          background: var(--gold-light);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 30px rgba(212,168,67,0.3);
+        }
+        .voc-btn-secondary {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: transparent;
+          color: var(--white);
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 18px;
+          letter-spacing: 2px;
+          padding: 16px 40px;
+          border: 1px solid rgba(255,255,255,0.15);
+          cursor: pointer;
+          text-decoration: none;
+          transition: all 0.3s;
+        }
+        .voc-btn-secondary:hover {
+          border-color: var(--gold);
+          color: var(--gold);
+        }
+        .voc-stats {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 1px;
+          background: rgba(212,168,67,0.1);
+          border: 1px solid rgba(212,168,67,0.1);
+        }
+        .voc-stat {
+          background: var(--charcoal);
+          padding: 48px 32px;
+          text-align: center;
+        }
+        .voc-stat-val {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 52px;
+          color: var(--gold);
+          letter-spacing: 2px;
+        }
+        .voc-stat-label {
+          font-size: 13px;
+          color: var(--gray);
+          margin-top: 8px;
+          line-height: 1.5;
+          letter-spacing: 0.5px;
+        }
+        .voc-section {
+          padding: 120px 5vw;
+          position: relative;
+        }
+        .voc-section-dark { background: var(--charcoal); }
+        .voc-section-label {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 14px;
+          letter-spacing: 4px;
+          color: var(--gold);
+          text-transform: uppercase;
+          margin-bottom: 16px;
+        }
+        .voc-section-title {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: clamp(36px, 5vw, 64px);
+          line-height: 1;
+          max-width: 700px;
+          margin-bottom: 24px;
+        }
+        .voc-section-desc {
+          font-size: 17px;
+          color: var(--gray);
+          max-width: 560px;
+          line-height: 1.7;
+          margin-bottom: 64px;
+        }
+        .voc-problem-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+          align-items: center;
+        }
+        .voc-problem-list {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+        .voc-problem-item {
+          display: flex;
+          gap: 16px;
+          align-items: flex-start;
+          padding: 24px;
+          background: rgba(212,168,67,0.03);
+          border-left: 2px solid var(--gold);
+          transition: all 0.3s;
+        }
+        .voc-problem-item:hover {
+          background: rgba(212,168,67,0.06);
+          transform: translateX(4px);
+        }
+        .voc-problem-num {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 28px;
+          color: var(--gold);
+          opacity: 0.4;
+          min-width: 40px;
+        }
+        .voc-problem-text {
+          font-size: 15px;
+          line-height: 1.6;
+          color: var(--white);
+        }
+        .voc-problem-text strong { color: var(--gold); }
+        .voc-services-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1px;
+          background: rgba(212,168,67,0.08);
+        }
+        .voc-service-card {
+          background: var(--black);
+          padding: 48px;
+          position: relative;
+          transition: all 0.4s;
+          overflow: hidden;
+        }
+        .voc-service-card::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%;
+          height: 2px;
+          background: var(--gold);
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.4s;
+        }
+        .voc-service-card:hover::before { transform: scaleX(1); }
+        .voc-service-card:hover { background: var(--charcoal); }
+        .voc-service-icon {
+          font-size: 28px;
+          color: var(--gold);
+          margin-bottom: 24px;
+          display: block;
+        }
+        .voc-service-title {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 28px;
+          letter-spacing: 1px;
+          margin-bottom: 16px;
+        }
+        .voc-service-desc {
+          font-size: 14px;
+          color: var(--gray);
+          line-height: 1.7;
+        }
+        .voc-process-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 0;
+          position: relative;
+        }
+        .voc-process-grid::after {
+          content: '';
+          position: absolute;
+          top: 40px;
+          left: 12.5%;
+          right: 12.5%;
+          height: 2px;
+          background: linear-gradient(90deg, var(--gold), rgba(212,168,67,0.2));
+        }
+        .voc-process-step {
+          text-align: center;
+          padding: 0 24px;
+          position: relative;
+          z-index: 1;
+        }
+        .voc-process-num {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 56px;
+          color: var(--gold);
+          opacity: 0.15;
+          line-height: 1;
+        }
+        .voc-process-dot {
+          width: 16px;
+          height: 16px;
+          background: var(--gold);
+          border-radius: 50%;
+          margin: -8px auto 24px;
+          position: relative;
+          z-index: 2;
+          box-shadow: 0 0 20px rgba(212,168,67,0.4);
+        }
+        .voc-process-title {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 24px;
+          letter-spacing: 2px;
+          margin-bottom: 12px;
+        }
+        .voc-process-desc {
+          font-size: 13px;
+          color: var(--gray);
+          line-height: 1.7;
+        }
+        .voc-data-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 32px;
+        }
+        .voc-data-card {
+          padding: 40px;
+          border: 1px solid rgba(212,168,67,0.1);
+          position: relative;
+          transition: all 0.3s;
+        }
+        .voc-data-card:hover {
+          border-color: var(--gold);
+          transform: translateY(-4px);
+        }
+        .voc-data-val {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 48px;
+          color: var(--gold);
+        }
+        .voc-data-label {
+          font-size: 14px;
+          color: var(--gray);
+          margin-top: 8px;
+          line-height: 1.5;
+        }
+        .voc-data-source {
+          font-size: 11px;
+          color: rgba(136,136,136,0.5);
+          margin-top: 16px;
+          font-style: italic;
+        }
+        .voc-manifesto {
+          padding: 160px 5vw;
+          text-align: center;
+          position: relative;
+          background: var(--charcoal);
+        }
+        .voc-manifesto::before {
+          content: '"';
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 300px;
+          color: rgba(212,168,67,0.05);
+          position: absolute;
+          top: 40px;
+          left: 50%;
+          transform: translateX(-50%);
+          line-height: 1;
+        }
+        .voc-manifesto h2 {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: clamp(32px, 5vw, 60px);
+          line-height: 1.1;
+          max-width: 800px;
+          margin: 0 auto 24px;
+          position: relative;
+          z-index: 1;
+        }
+        .voc-manifesto h2 .gold { color: var(--gold); }
+        .voc-manifesto p {
+          font-size: 18px;
+          color: var(--gray);
+          max-width: 600px;
+          margin: 0 auto;
+          line-height: 1.7;
+          position: relative;
+          z-index: 1;
+        }
+        .voc-about-grid {
+          display: grid;
+          grid-template-columns: 1fr 1.2fr;
+          gap: 80px;
+          align-items: center;
+        }
+        .voc-about-badge {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+        .voc-about-stat {
+          display: flex;
+          align-items: baseline;
+          gap: 12px;
+        }
+        .voc-about-stat-val {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 48px;
+          color: var(--gold);
+        }
+        .voc-about-stat-label {
+          font-size: 14px;
+          color: var(--gray);
+        }
+        .voc-about-text {
+          font-size: 16px;
+          color: var(--gray);
+          line-height: 1.8;
+        }
+        .voc-about-text strong { color: var(--white); }
+        .voc-cta-section {
+          padding: 120px 5vw;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+        }
+        .voc-cta-section::before {
+          content: '';
+          position: absolute;
+          top: 50%; left: 50%;
+          transform: translate(-50%, -50%);
+          width: 600px; height: 600px;
+          background: radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%);
+          pointer-events: none;
+        }
+        .voc-cta-section h2 {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: clamp(40px, 6vw, 80px);
+          line-height: 1;
+          margin-bottom: 24px;
+          position: relative;
+          z-index: 1;
+        }
+        .voc-cta-section p {
+          font-size: 17px;
+          color: var(--gray);
+          max-width: 500px;
+          margin: 0 auto 48px;
+          line-height: 1.7;
+          position: relative;
+          z-index: 1;
+        }
+        .voc-footer {
+          padding: 60px 5vw;
+          border-top: 1px solid rgba(212,168,67,0.1);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 24px;
+        }
+        .voc-social-row { display: flex; gap: 12px; }
+        .voc-social-link {
+          width: 44px; height: 44px;
+          display: flex; align-items: center; justify-content: center;
+          border: 1px solid rgba(255,255,255,0.1);
+          color: var(--gray);
+          text-decoration: none;
+          font-size: 16px; font-weight: 700;
+          transition: all 0.3s;
+        }
+        .voc-social-link:hover {
+          border-color: var(--gold);
+          color: var(--gold);
+          transform: translateY(-2px);
+        }
+        .voc-footer-copy { font-size: 13px; color: var(--gray); }
+        .voc-menu-btn {
+          display: none;
+          background: none;
+          border: none;
+          color: var(--white);
+          font-size: 24px;
+          cursor: pointer;
+        }
+        .voc-mobile-menu { display: none; }
+
+        @media (max-width: 1024px) {
+          .voc-stats { grid-template-columns: repeat(2, 1fr); }
+          .voc-services-grid { grid-template-columns: 1fr; }
+          .voc-process-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; }
+          .voc-process-grid::after { display: none; }
+          .voc-data-grid { grid-template-columns: repeat(2, 1fr); }
+          .voc-problem-grid { grid-template-columns: 1fr; gap: 48px; }
+          .voc-about-grid { grid-template-columns: 1fr; gap: 48px; }
+        }
+        @media (max-width: 768px) {
+          .voc-nav-links { display: none; }
+          .voc-menu-btn { display: block; }
+          .voc-mobile-menu {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10,10,10,0.97);
+            backdrop-filter: blur(20px);
+            z-index: 200;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+          }
+          .voc-mobile-menu a {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 3px;
+            transition: color 0.3s;
+          }
+          .voc-mobile-menu a:hover { color: var(--gold); }
+          .voc-mobile-close {
+            position: absolute;
+            top: 24px; right: 24px;
+            background: none; border: none;
+            color: var(--white);
+            font-size: 32px; cursor: pointer;
+          }
+          .voc-stats { grid-template-columns: 1fr 1fr; }
+          .voc-process-grid { grid-template-columns: 1fr; }
+          .voc-data-grid { grid-template-columns: 1fr; }
+          .voc-hero h1 { font-size: 48px; }
+          .voc-stat-val { font-size: 40px; }
+        }
+      `}</style>
+
+      <div className="voc-grid-overlay" />
+
+      {/* NAV */}
+      <nav className={`voc-nav${scrollY > 60 ? " scrolled" : ""}`}>
+        <a href="#" className="voc-logo">THE VOICE OF <span>CASH</span></a>
+        <div className="voc-nav-links">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#data">Results</a>
+          <a href="#about">About</a>
+          <a href="/blog">Blog</a>
+          <a href="/consultation" className="voc-btn-primary" style={{ padding: "10px 28px", fontSize: 14 }}>Get Started</a>
+        </div>
+        <button className="voc-menu-btn" onClick={() => setMenuOpen(true)}>☰</button>
+      </nav>
+
+      {menuOpen && (
+        <div className="voc-mobile-menu">
+          <button className="voc-mobile-close" onClick={() => setMenuOpen(false)}>✕</button>
+          <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+          <a href="#process" onClick={() => setMenuOpen(false)}>Process</a>
+          <a href="#data" onClick={() => setMenuOpen(false)}>Results</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="/blog" onClick={() => setMenuOpen(false)}>Blog</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        </div>
+      )}
+
+      {/* HERO */}
+      <section className="voc-hero">
+        <FadeIn>
+          <div className="voc-hero-tag">AI Implementation Partner</div>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+          <h1>YOUR MACHINES<br />NEED A <span className="gold">HUMAN</span></h1>
+        </FadeIn>
+        <FadeIn delay={0.2}>
+          <p className="voc-hero-sub">
+            From setup to launch, The Voice of Cash in Las Vegas is the bridge between your business
+            and the autonomous future. We don&apos;t just talk strategy — we deliver real systems,
+            real automation, real results.
+          </p>
+        </FadeIn>
+        <FadeIn delay={0.3}>
+          <div className="voc-cta-row">
+            <a href="/consultation" className="voc-btn-primary">Book a Consultation →</a>
+            <a href="#services" className="voc-btn-secondary">See What We Build</a>
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* STATS BAR */}
+      <div className="voc-stats">
+        {STATS.map((s, i) => (
+          <FadeIn key={i} delay={i * 0.1} className="voc-stat">
+            <div className="voc-stat-val">
+              <CountUp target={s.value} suffix={s.value.replace(/[0-9]/g, "")} />
+            </div>
+            <div className="voc-stat-label">{s.label}</div>
+          </FadeIn>
+        ))}
+      </div>
+
+      {/* PROBLEM / WHY */}
+      <section className="voc-section" id="why">
+        <div className="voc-problem-grid">
+          <div>
+            <FadeIn>
+              <div className="voc-section-label">The Problem</div>
+              <div className="voc-section-title">The Future Has Arrived. Most Businesses Aren&apos;t Ready.</div>
+              <p className="voc-section-desc" style={{ marginBottom: 0 }}>
+                79% of organizations have started implementing AI agents. But only 1 in 3 have
+                actually scaled to production and seen real ROI. The gap? There&apos;s no human voice
+                guiding the machine.
+              </p>
+            </FadeIn>
+          </div>
+          <div>
+            <ul className="voc-problem-list">
+              {[
+                { n: "01", t: "You&apos;re <strong>overspending</strong> on fragmented SaaS tools that don&apos;t talk to each other" },
+                { n: "02", t: "Your team wastes <strong>240+ hours/year</strong> on tasks a machine could handle" },
+                { n: "03", t: "You know AI is the answer but <strong>don&apos;t know where to start</strong>" },
+                { n: "04", t: "You&apos;ve tried automation before and it <strong>fell apart</strong> without ongoing support" },
+              ].map((item, i) => (
+                <FadeIn key={i} delay={i * 0.1}>
+                  <li className="voc-problem-item">
+                    <span className="voc-problem-num">{item.n}</span>
+                    <span className="voc-problem-text" dangerouslySetInnerHTML={{ __html: item.t }} />
+                  </li>
+                </FadeIn>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* MANIFESTO */}
+      <div className="voc-manifesto">
+        <FadeIn>
+          <h2>
+            We Don&apos;t Just Talk Strategy.<br />
+            <span className="gold">We Build The Machine.</span><br />
+            Then We Stay To Make Sure It Works.
+          </h2>
+          <p>
+            That&apos;s the difference. Anyone can sell you software. Cash Colligan has spent
+            30+ years on the internet and 15+ years guiding businesses through real
+            technological transformation. It&apos;s not about the tool — it&apos;s about the outcome.
+          </p>
+        </FadeIn>
+      </div>
+
+      {/* SERVICES */}
+      <section className="voc-section" id="services">
+        <FadeIn>
+          <div className="voc-section-label">What We Deliver</div>
+          <div className="voc-section-title">Real Systems. Real Automation. Real Outcomes.</div>
+          <p className="voc-section-desc">
+            From AI agent programming to month-over-month support, every engagement is designed
+            to create autonomous processes that actually work for your business.
+          </p>
+        </FadeIn>
+        <div className="voc-services-grid">
+          {SERVICES.map((s, i) => (
+            <FadeIn key={i} delay={i * 0.1}>
+              <div className="voc-service-card">
+                <span className="voc-service-icon">{s.icon}</span>
+                <div className="voc-service-title">{s.title}</div>
+                <div className="voc-service-desc">{s.desc}</div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section className="voc-section voc-section-dark" id="process">
+        <FadeIn>
+          <div style={{ textAlign: "center", marginBottom: 80 }}>
+            <div className="voc-section-label">The Process</div>
+            <div className="voc-section-title" style={{ margin: "0 auto 16px", maxWidth: 500 }}>
+              Study. Learn. Assess. Create.
+            </div>
+            <p className="voc-section-desc" style={{ margin: "0 auto" }}>
+              No cookie-cutter playbooks. Every engagement starts with understanding
+              your business from the inside out.
+            </p>
+          </div>
+        </FadeIn>
+        <div className="voc-process-grid">
+          {PROCESS_STEPS.map((s, i) => (
+            <FadeIn key={i} delay={i * 0.15} className="voc-process-step">
+              <div className="voc-process-num">{s.step}</div>
+              <div className="voc-process-dot" />
+              <div className="voc-process-title">{s.title}</div>
+              <div className="voc-process-desc">{s.desc}</div>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
+
+      {/* DATA */}
+      <section className="voc-section" id="data">
+        <FadeIn>
+          <div className="voc-section-label">The Numbers Don&apos;t Lie</div>
+          <div className="voc-section-title">What Automation Actually Delivers</div>
+          <p className="voc-section-desc">
+            These aren&apos;t projections. This is what businesses are seeing right now when
+            they bring a professional in to implement AI and automation correctly.
+          </p>
+        </FadeIn>
+        <div className="voc-data-grid">
+          {[
+            { val: "20-30%", label: "Reduction in operational costs for companies that adopt AI automation", source: "McKinsey Global Institute" },
+            { val: "240%", label: "Average ROI from business process automation — recouped in 6-9 months", source: "Symtrax Research" },
+            { val: "40%", label: "Boost in productivity for organizations using AI-driven tools", source: "Harvard Business Review" },
+            { val: "68%", label: "Of U.S. small businesses now use AI regularly, up from 48% in 2024", source: "QuickBooks Survey, 2025" },
+            { val: "360hrs", label: "Annual time saved per business leader through task automation", source: "WorkMarket" },
+            { val: "$4.4T", label: "Projected annual GDP addition from AI agents by 2030", source: "Industry Projections" },
+          ].map((d, i) => (
+            <FadeIn key={i} delay={i * 0.08}>
+              <div className="voc-data-card">
+                <div className="voc-data-val">{d.val}</div>
+                <div className="voc-data-label">{d.label}</div>
+                <div className="voc-data-source">{d.source}</div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="voc-section voc-section-dark" id="about">
+        <div className="voc-about-grid">
+          <FadeIn>
+            <div className="voc-about-badge">
+              <div className="voc-section-label">Meet Cash Colligan</div>
+              <div className="voc-section-title" style={{ marginBottom: 32 }}>
+                30+ Years on the Internet.<br />15+ Years Growing Businesses.
+              </div>
+              <div className="voc-about-stat">
+                <span className="voc-about-stat-val">30+</span>
+                <span className="voc-about-stat-label">Years as an internet native</span>
+              </div>
+              <div className="voc-about-stat">
+                <span className="voc-about-stat-val">15+</span>
+                <span className="voc-about-stat-label">Years guiding startups &amp; enterprises</span>
+              </div>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.15}>
+            <div className="voc-about-text">
+              <p style={{ marginBottom: 20 }}>
+                At The Voice of Cash, we don&apos;t just talk strategy — because just talking can
+                often lead to nowhere. We focus on delivering <strong>real outcomes</strong>.
+              </p>
+              <p style={{ marginBottom: 20 }}>
+                From building stronger brands to generating more leads and scaling revenue,
+                our process is designed to help businesses grow with confidence. Your leads,
+                your operations, your overspending — it&apos;s now time to bring in a professional
+                to help you grow successfully.
+              </p>
+              <p>
+                With 15+ years of experience guiding startups and established companies alike,
+                Cash knows how to turn <strong>operational and marketing challenges into tangible
+                achievements with technology implementation</strong>. Simple messaging, for a
+                future that has now arrived.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="voc-cta-section" id="contact">
+        <FadeIn>
+          <div className="voc-section-label">Ready?</div>
+          <h2>LET&apos;S BUILD YOUR<br /><span style={{ color: "var(--gold)" }}>AUTONOMOUS FUTURE</span></h2>
+          <p>
+            Whether you&apos;re a startup finding your footing or an established company ready
+            to scale — the first step is the same. Let&apos;s talk.
+          </p>
+          <div className="voc-cta-row" style={{ justifyContent: "center" }}>
+            <a href="/consultation" className="voc-btn-primary">Book a Consultation →</a>
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="voc-footer">
+        <a href="#" className="voc-logo" style={{ fontSize: 22 }}>THE VOICE OF <span>CASH</span></a>
+        <div className="voc-social-row">
+          {SOCIAL_LINKS.map((s, i) => (
+            <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="voc-social-link" title={s.name}>
+              {s.icon}
+            </a>
+          ))}
+        </div>
+        <div className="voc-footer-copy">
+          &copy; {new Date().getFullYear()} The Voice of Cash. All rights reserved.
+        </div>
+      </footer>
+    </>
+  );
+}

@@ -1,0 +1,118 @@
+import Link from "next/link";
+import { posts } from "./data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: { absolute: "Blog | The Voice of Cash — AI & Automation Insights" },
+  description: "Practical guides on AI implementation, business automation, and technology strategy for Las Vegas businesses. Written by Cash Colligan.",
+};
+
+export default function BlogPage() {
+  const [featured, ...rest] = posts;
+  return (
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+        :root {
+          --gold: #00C896; --gold-light: #7FDBCC; --black: #0A0A0A;
+          --charcoal: #141414; --gray: #888888; --white: #F5F0E8;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:var(--black); color:var(--white); font-family:'DM Sans',sans-serif; }
+        .blog-nav { padding:28px 5vw; border-bottom:1px solid rgba(0,200,150,0.1); display:flex; align-items:center; justify-content:space-between; }
+        .blog-logo { font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:3px; color:var(--gold); text-decoration:none; }
+        .blog-logo span { color:var(--white); }
+        .blog-back { font-size:13px; color:var(--gray); text-decoration:none; letter-spacing:1px; text-transform:uppercase; transition:color 0.3s; }
+        .blog-back:hover { color:var(--gold); }
+        .blog-hero { padding:80px 5vw 60px; border-bottom:1px solid rgba(0,200,150,0.08); }
+        .blog-hero-label { font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:16px; }
+        .blog-hero h1 { font-family:'Bebas Neue',sans-serif; font-size:clamp(40px,6vw,72px); line-height:1; margin-bottom:16px; }
+        .blog-hero p { font-size:16px; color:var(--gray); max-width:480px; line-height:1.7; }
+        .blog-featured { padding:60px 5vw; border-bottom:1px solid rgba(0,200,150,0.08); }
+        .blog-featured-label { font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:24px; }
+        .blog-featured-card { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+        .blog-featured-meta { display:flex; gap:16px; align-items:center; margin-bottom:20px; flex-wrap:wrap; }
+        .blog-cat { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); background:rgba(0,200,150,0.08); border:1px solid rgba(0,200,150,0.2); padding:4px 12px; }
+        .blog-date { font-size:12px; color:var(--gray); }
+        .blog-read { font-size:12px; color:var(--gray); }
+        .blog-featured-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(28px,3vw,44px); line-height:1.05; margin-bottom:16px; }
+        .blog-featured-title a { color:var(--white); text-decoration:none; transition:color 0.3s; }
+        .blog-featured-title a:hover { color:var(--gold); }
+        .blog-featured-excerpt { font-size:16px; color:var(--gray); line-height:1.7; margin-bottom:28px; }
+        .blog-featured-visual { background:var(--charcoal); border:1px solid rgba(0,200,150,0.1); height:280px; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+        .blog-featured-visual::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 30% 50%, rgba(0,200,150,0.06) 0%, transparent 70%); }
+        .blog-featured-num { font-family:'Bebas Neue',sans-serif; font-size:120px; color:rgba(0,200,150,0.06); line-height:1; }
+        .blog-read-link { display:inline-flex; align-items:center; gap:8px; font-family:'Bebas Neue',sans-serif; font-size:16px; letter-spacing:2px; color:var(--gold); text-decoration:none; transition:gap 0.3s; }
+        .blog-read-link:hover { gap:14px; }
+        .blog-grid-section { padding:60px 5vw 120px; }
+        .blog-grid-label { font-family:'Bebas Neue',sans-serif; font-size:12px; letter-spacing:4px; color:var(--gray); text-transform:uppercase; margin-bottom:32px; }
+        .blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
+        .blog-card { border:1px solid rgba(0,200,150,0.08); padding:32px; transition:all 0.3s; position:relative; overflow:hidden; }
+        .blog-card::before { content:''; position:absolute; top:0;left:0;right:0; height:2px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform 0.4s; }
+        .blog-card:hover::before { transform:scaleX(1); }
+        .blog-card:hover { border-color:rgba(0,200,150,0.2); background:rgba(0,200,150,0.02); }
+        .blog-card-meta { display:flex; gap:12px; align-items:center; margin-bottom:16px; flex-wrap:wrap; }
+        .blog-card-title { font-family:'Bebas Neue',sans-serif; font-size:22px; line-height:1.1; margin-bottom:12px; }
+        .blog-card-title a { color:var(--white); text-decoration:none; transition:color 0.3s; }
+        .blog-card-title a:hover { color:var(--gold); }
+        .blog-card-excerpt { font-size:13px; color:var(--gray); line-height:1.6; margin-bottom:20px; }
+        .blog-footer { padding:40px 5vw; border-top:1px solid rgba(0,200,150,0.1); display:flex; justify-content:space-between; align-items:center; }
+        .blog-footer-copy { font-size:13px; color:var(--gray); }
+        @media(max-width:900px) { .blog-featured-card{grid-template-columns:1fr;} .blog-featured-visual{display:none;} .blog-grid{grid-template-columns:repeat(2,1fr);} }
+        @media(max-width:600px) { .blog-grid{grid-template-columns:1fr;} }
+      `}</style>
+
+      <nav className="blog-nav">
+        <a href="/" className="blog-logo">THE VOICE OF <span>CASH</span></a>
+        <a href="/" className="blog-back">← Back to Home</a>
+      </nav>
+
+      <div className="blog-hero">
+        <div className="blog-hero-label">Insights</div>
+        <h1>AI & AUTOMATION<br />FOR REAL BUSINESS</h1>
+        <p>Practical guides, honest takes, and implementation strategies for businesses ready to actually use AI — not just talk about it.</p>
+      </div>
+
+      <div className="blog-featured">
+        <div className="blog-featured-label">Featured</div>
+        <div className="blog-featured-card">
+          <div>
+            <div className="blog-featured-meta">
+              <span className="blog-cat">{featured.category}</span>
+              <span className="blog-date">{featured.date}</span>
+              <span className="blog-read">{featured.readTime}</span>
+            </div>
+            <div className="blog-featured-title"><a href={`/blog/${featured.slug}`}>{featured.title}</a></div>
+            <p className="blog-featured-excerpt">{featured.excerpt}</p>
+            <a href={`/blog/${featured.slug}`} className="blog-read-link">Read Article →</a>
+          </div>
+          <div className="blog-featured-visual">
+            <div className="blog-featured-num">01</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="blog-grid-section">
+        <div className="blog-grid-label">All Articles — {posts.length} Posts</div>
+        <div className="blog-grid">
+          {rest.map((post, i) => (
+            <div key={post.slug} className="blog-card">
+              <div className="blog-card-meta">
+                <span className="blog-cat">{post.category}</span>
+                <span className="blog-date">{post.date}</span>
+              </div>
+              <div className="blog-card-title"><a href={`/blog/${post.slug}`}>{post.title}</a></div>
+              <p className="blog-card-excerpt">{post.excerpt}</p>
+              <a href={`/blog/${post.slug}`} className="blog-read-link" style={{fontSize:14}}>Read →</a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <footer className="blog-footer">
+        <a href="/" className="blog-logo" style={{fontSize:18}}>THE VOICE OF <span>CASH</span></a>
+        <span className="blog-footer-copy">© {new Date().getFullYear()} The Voice of Cash. Las Vegas, NV.</span>
+      </footer>
+    </>
+  );
+}
