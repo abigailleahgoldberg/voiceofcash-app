@@ -382,7 +382,7 @@ export default function IndustriesPage() {
               We Work With Any Business That Has Leads, Customers, and Operations.
             </h2>
             <p style={{ fontSize: 16, color: 'rgba(245,240,232,0.55)', lineHeight: 1.75, marginBottom: 36 }}>
-              If your business has a phone, an inbox, a CRM, or a customer — we can automate something that matters.
+              If your business has a phone, an inbox, a CRM, or a customer, we can automate something that matters.
               Book a free strategy call and we will tell you exactly where the opportunity is.
             </p>
             <Link href="/consultation" style={{
