@@ -12,22 +12,22 @@ const SOCIAL_LINKS = [
   { name: "Apple Music", url: "https://music.apple.com/us/album/bestest-hits/1828120045", icon: "♫" },
 ];
 
-const STATS = [
-  { value: "544%", label: "Average ROI from marketing automation" },
-  { value: "240+", label: "Hours saved per employee, per year" },
-  { value: "30%", label: "Operational cost reduction with AI" },
-  { value: "76%", label: "See ROI within the first year" },
+const STATS: { value: string; label: string; source: string; sourceUrl: string }[] = [
+  { value: "544%", label: "Average ROI from marketing automation", source: "Nucleus Research", sourceUrl: "https://nucleusresearch.com/research/single/marketing-automation-delivers-544-roi/" },
+  { value: "240+", label: "Hours saved per employee, per year", source: "McKinsey Global Institute", sourceUrl: "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai" },
+  { value: "30%", label: "Operational cost reduction with AI", source: "Deloitte AI Institute", sourceUrl: "https://www2.deloitte.com/us/en/insights/focus/cognitive-technologies/ai-investment-by-company-size.html" },
+  { value: "76%", label: "See ROI within the first year", source: "Salesforce State of AI", sourceUrl: "https://www.salesforce.com/resources/research-reports/state-of-ai/" },
 ];
 
 const SERVICES = [
   {
     title: "AI Agent Programming",
-    desc: "Custom-built autonomous agents that handle your lead gen, customer service, scheduling, and internal ops — 24/7, no coffee breaks.",
+    desc: "Custom-built autonomous agents that handle your lead gen, customer service, scheduling, and internal ops. Running 24/7. No coffee breaks.",
     icon: "⚡",
   },
   {
     title: "Hosting & Infrastructure",
-    desc: "Secure, scalable hosting for your AI systems. We don't just build it — we keep it running, monitored, and optimized.",
+    desc: "Secure, scalable hosting for your AI systems. We build it, monitor it, and keep it optimized over time.",
     icon: "◆",
   },
   {
@@ -37,16 +37,16 @@ const SERVICES = [
   },
   {
     title: "Process Automation",
-    desc: "From invoice processing to CRM workflows to customer follow-ups — we identify the bottlenecks and eliminate them.",
+    desc: "From invoice processing to CRM workflows to customer follow-ups: we find the bottlenecks and remove them.",
     icon: "▣",
   },
 ];
 
 const PROCESS_STEPS = [
-  { step: "01", title: "Study", desc: "We audit your current operations, tech stack, and pain points. Every business is unique — cookie-cutter doesn't cut it." },
+  { step: "01", title: "Study", desc: "We audit your current operations, tech stack, and pain points. Every business is different. Cookie-cutter never works." },
   { step: "02", title: "Learn", desc: "We map your workflows, understand your customers, and identify where automation delivers the highest impact." },
-  { step: "03", title: "Assess", desc: "We build a clear, no-BS roadmap: what to automate first, what ROI to expect, and how fast you'll see results." },
-  { step: "04", title: "Create", desc: "We build, test, deploy, and support. From AI agent to live system — with a human making sure your machines work right." },
+  { step: "03", title: "Plan", desc: "We build a clear, no-BS roadmap: what to automate first, what ROI to expect, and how fast you'll see results." },
+  { step: "04", title: "Create", desc: "We build, test, deploy, and support. From AI agent to live system, with a human making sure everything works right." },
 ];
 
 function useInView(threshold = 0.15) {
@@ -78,6 +78,7 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
       }}
     >
       {children}
+
     </div>
   );
 }
@@ -106,24 +107,24 @@ function CountUp({ target, suffix = "" }: { target: string; suffix?: string }) {
 
 
 const WAR_ROOM_MESSAGES = [
-  { agent: "GZA", action: "Analyzing new consultation request from Las Vegas client" },
-  { agent: "Raekwon", action: "Publishing SEO article: 'AI Automation for LV Contractors'" },
-  { agent: "Method Man", action: "Monitoring portfolio positions — BTC +2.3% overnight" },
-  { agent: "Ghostface", action: "Updating brand bible — Q2 campaign assets queued" },
-  { agent: "Inspectah Deck", action: "Fact-checking latest blog post — 3 citations verified" },
-  { agent: "Slim Shady", action: "Running security scan — all systems nominal" },
-  { agent: "GZA", action: "Cross-referencing client intake form — routing to Cash" },
-  { agent: "ODB", action: "Monitoring social mentions — 2 engagement opportunities flagged" },
-  { agent: "Masta Killa", action: "Drafting chapter outline for client automation playbook" },
-  { agent: "U-God", action: "u-god.com — 847 active sessions this hour" },
-  { agent: "Raekwon", action: "Keyword cluster update — 14 new ranking opportunities" },
-  { agent: "Method Man", action: "Weekly revenue report compiled — ready for review" },
-  { agent: "Ghostface", action: "JewSA product descriptions refreshed — 6 SKUs updated" },
-  { agent: "GZA", action: "Hive mind sync complete — all 9 agents current" },
-  { agent: "Slim Shady", action: "Blocked 3 suspicious crawlers — IP logged" },
-  { agent: "Inspectah Deck", action: "Research complete: LV hospitality AI adoption rate 34%" },
-  { agent: "ODB", action: "Meme drafted. Vibes: immaculate. Awaiting approval." },
-  { agent: "Masta Killa", action: "Long-form content queue: 4 articles ready for review" },
+  { agent: "The Genius", action: "Analyzing new consultation request from Las Vegas client" },
+  { agent: "The Chef", action: "Publishing SEO article: 'AI Automation for LV Contractors'" },
+  { agent: "The Earner", action: "Monitoring portfolio positions. BTC up 2.3% overnight." },
+  { agent: "The Starks", action: "Updating brand bible. Q2 campaign assets queued." },
+  { agent: "The Inspector", action: "Fact-checking latest blog post. 3 citations verified." },
+  { agent: "Slim Shady", action: "Running security scan. All systems nominal." },
+  { agent: "The Genius", action: "Cross-referencing client intake form. Routing to Cash now." },
+  { agent: "The Wildcard", action: "Monitoring social mentions. 2 engagement opportunities flagged." },
+  { agent: "The Scribe", action: "Drafting chapter outline for client automation playbook" },
+  { agent: "The Scholar", action: "u-god.com: 847 active sessions this hour" },
+  { agent: "The Chef", action: "Keyword cluster update. 14 new ranking opportunities found." },
+  { agent: "The Earner", action: "Weekly revenue report compiled. Ready for review." },
+  { agent: "The Starks", action: "JewSA product descriptions refreshed. 6 SKUs updated." },
+  { agent: "The Genius", action: "Hive mind sync complete. All 9 agents current." },
+  { agent: "Slim Shady", action: "Blocked 3 suspicious crawlers. IPs logged." },
+  { agent: "The Inspector", action: "Research complete: LV hospitality AI adoption rate 34%" },
+  { agent: "The Wildcard", action: "Meme drafted. Vibes: immaculate. Awaiting approval." },
+  { agent: "The Scribe", action: "Long-form content queue: 4 articles ready for review" },
 ];
 
 function WarRoom() {
@@ -205,11 +206,11 @@ function WarRoom() {
         }
         @media (max-width: 960px) {
           .hero-2col { grid-template-columns: 1fr; gap: 32px; }
-          .voc-hero { padding: 90px 5vw 56px !important; }
+          .voc-hero { padding: 80px max(20px, 6vw) 48px !important; overflow-x: hidden !important; }
           .voc-hero > * { text-align: center; }
-          .voc-hero h1 { text-align: center; }
+          .voc-hero h1 { max-width: 100%; overflow-wrap: break-word; word-break: break-word; text-align: center; }
           .voc-hero-sub { text-align: center !important; }
-          .voc-hero-tag { display: inline-block; white-space: nowrap; font-size: 11px !important; letter-spacing: 2px !important; padding: 8px 16px !important; }
+          .voc-hero-tag { display: inline-block; white-space: normal; font-size: 10px !important; letter-spacing: 1.5px !important; padding: 6px 12px !important; max-width: 100%; text-align: center; }
           .voc-cta-row { justify-content: center; flex-direction: column; align-items: center; width: 100%; }
           .voc-btn-primary { width: 100%; max-width: 360px; justify-content: center; text-align: center; }
           .voc-btn-secondary { width: 100%; max-width: 360px; justify-content: center; text-align: center; }
@@ -232,10 +233,10 @@ function WarRoom() {
 
         /* Section padding mobile */
         @media (max-width: 768px) {
-          .voc-section { padding: 64px 5vw !important; }
-          .voc-manifesto { padding: 72px 5vw !important; }
+          .voc-section { padding: 64px max(20px, 5vw) !important; }
+          .voc-manifesto { padding: 72px max(20px, 5vw) !important; }
           .voc-manifesto::before { font-size: 160px; }
-          .voc-cta-section { padding: 72px 5vw !important; }
+          .voc-cta-section { padding: 72px max(20px, 5vw) !important; }
           .voc-stats { grid-template-columns: 1fr 1fr !important; }
           .voc-stat { padding: 32px 16px; }
           .voc-stat-val { font-size: 38px !important; }
@@ -256,10 +257,19 @@ function WarRoom() {
         @media (max-width: 480px) {
           .voc-process-grid { grid-template-columns: 1fr !important; }
           .voc-data-grid { grid-template-columns: 1fr !important; }
-          .voc-hero h1 { font-size: clamp(56px, 15vw, 80px) !important; line-height: 0.95 !important; }
-          .voc-hero-sub { font-size: 15px !important; }
+          .voc-hero h1 { max-width: 100%; overflow-wrap: break-word; word-break: break-word; font-size: clamp(38px, 11vw, 64px) !important; line-height: 0.95 !important; word-break: break-word !important; }
+          .voc-hero-sub { font-size: 14px !important; line-height: 1.55 !important; }
           .voc-stats { grid-template-columns: 1fr 1fr !important; }
           .voc-logo { font-size: 22px !important; }
+          .voc-hero-tag { font-size: 10px !important; letter-spacing: 1.5px !important; padding: 6px 12px !important; white-space: normal !important; text-align: center !important; }
+        }
+        @media (max-width: 390px) {
+          .voc-hero { padding: 70px 18px 40px !important; }
+          .voc-hero h1 { max-width: 100%; overflow-wrap: break-word; word-break: break-word; font-size: clamp(34px, 10vw, 52px) !important; }
+          .voc-section { padding: 56px 18px !important; }
+          .voc-section-title { font-size: clamp(24px, 7vw, 40px) !important; }
+          .voc-stats { grid-template-columns: 1fr !important; }
+          .voc-btn-primary, .voc-btn-secondary { max-width: 100% !important; }
         }
 
         /* Team section mobile */
@@ -458,7 +468,7 @@ export default function VoiceOfCash() {
           align-items: center;
         }
         .voc-nav-links a {
-          color: var(--gray);
+          color: var(--white);
           text-decoration: none;
           font-size: 14px;
           letter-spacing: 1px;
@@ -466,6 +476,53 @@ export default function VoiceOfCash() {
           transition: color 0.3s;
         }
         .voc-nav-links a:hover { color: var(--gold); }
+        .voc-services-menu {
+          position: relative;
+        }
+        .voc-services-dropdown {
+          display: none;
+          position: absolute;
+          top: calc(100% + 12px);
+          left: 50%;
+          transform: translateX(-50%);
+          width: 640px;
+          background: #0D0D0D;
+          border: 1px solid #1e1e1e;
+          padding: 24px;
+          z-index: 999;
+          box-shadow: 0 24px 60px rgba(0,0,0,0.8);
+        }
+        .voc-services-menu:hover .voc-services-dropdown {
+          display: block;
+        }
+        .voc-dd-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 4px;
+          margin-bottom: 16px;
+        }
+        .voc-dd-item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 10px 12px;
+          font-size: 12px;
+          color: rgba(245,240,232,0.65);
+          text-decoration: none;
+          text-transform: none;
+          letter-spacing: 0;
+          transition: background 0.2s, color 0.2s;
+        }
+        .voc-dd-item:hover { background: rgba(0,200,150,0.06); color: #00C896 !important; }
+        .voc-dd-item .icon { font-size: 14px; }
+        .voc-dd-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 16px;
+          border-top: 1px solid #1a1a1a;
+        }
+
         .voc-hero-tag {
           display: inline-flex;
           align-items: center;
@@ -493,7 +550,7 @@ export default function VoiceOfCash() {
           0%, 100% { opacity: 1; transform: scale(1); }
           50% { opacity: 0.5; transform: scale(0.7); }
         }
-        .voc-hero h1 {
+        .voc-hero h1 { max-width: 100%; overflow-wrap: break-word; word-break: break-word;
           font-family: 'Bebas Neue', sans-serif;
           font-size: clamp(52px, 8vw, 120px);
           line-height: 0.95;
@@ -521,7 +578,7 @@ export default function VoiceOfCash() {
           align-items: center;
           gap: 10px;
           background: var(--gold);
-          color: var(--black);
+          color: #ffffff;
           font-family: 'Bebas Neue', sans-serif;
           font-size: 18px;
           letter-spacing: 2px;
@@ -948,7 +1005,7 @@ export default function VoiceOfCash() {
           .voc-stats { grid-template-columns: 1fr 1fr; }
           .voc-process-grid { grid-template-columns: 1fr; }
           .voc-data-grid { grid-template-columns: 1fr; }
-          .voc-hero h1 { font-size: 48px; }
+          .voc-hero h1 { max-width: 100%; overflow-wrap: break-word; word-break: break-word; font-size: 48px; }
           .voc-stat-val { font-size: 40px; }
         }
       `}</style>
@@ -1004,7 +1061,7 @@ export default function VoiceOfCash() {
                 {
                   "@type": "Question",
                   "name": "What does The Voice of Cash do?",
-                  "acceptedAnswer": { "@type": "Answer", "text": "We build real AI systems and automation for Las Vegas businesses — AI agents, process automation, CRM workflows, and hosting infrastructure. We stay to support and improve the systems after launch." }
+                  "acceptedAnswer": { "@type": "Answer", "text": "We build real AI systems and automation for Las Vegas businesses: AI agents, process automation, CRM workflows, and hosting infrastructure. We stay to support and improve the systems after launch." }
                 },
                 {
                   "@type": "Question",
@@ -1031,13 +1088,44 @@ export default function VoiceOfCash() {
 
       {/* NAV */}
       <nav className={`voc-nav${scrollY > 60 ? " scrolled" : ""}`}>
-        <a href="#" className="voc-logo">THE VOICE OF <span>CASH</span></a>
+        <a href="/" className="voc-logo" style={{display:"flex",alignItems:"center",gap:12,textDecoration:"none"}}>
+            <img src="/logo.svg" alt="The Voice of Cash logo" width={36} height={36} style={{display:"block"}} />
+            <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,letterSpacing:"3px",color:"#00C896"}}>THE VOICE OF <span style={{color:"#F5F0E8"}}>CASH</span></span>
+          </a>
         <div className="voc-nav-links">
-          <a href="#services">Services</a>
+          <div className="voc-services-menu">
+            <a href="#services">Services ▾</a>
+            <div className="voc-services-dropdown">
+              <div style={{fontSize:10,letterSpacing:"2px",color:"#00C896",marginBottom:12,fontWeight:700}}>AI AGENT SERVICES — FROM $149/HR</div>
+              <div className="voc-dd-grid">
+                {[
+                  ["⚡","Lead Response","/services/ai-lead-response-agent"],
+                  ["🎧","Customer Service","/services/ai-customer-service-agent"],
+                  ["📅","Appointment Booking","/services/ai-appointment-booking-agent"],
+                  ["🎯","Sales Funnel Build","/services/ai-sales-funnel-build"],
+                  ["⭐","Reputation Management","/services/ai-reputation-management"],
+                  ["📨","Email & SMS Automation","/services/ai-email-sms-automation"],
+                  ["📱","Social Media Agent","/services/ai-social-media-content-agent"],
+                  ["🗄️","CRM Automation","/services/ai-crm-build-automation"],
+                  ["📞","Phone Receptionist","/services/ai-phone-receptionist"],
+                  ["⚙️","Ops & Workflow","/services/ai-operations-workflow-automation"],
+                  ["🔍","Competitor Intel","/services/ai-competitor-intelligence"],
+                  ["📊","Reporting Dashboard","/services/ai-reporting-performance-dashboard"],
+                ].map(([icon, label, href]) => (
+                  <a key={href as string} href={href as string} className="voc-dd-item"><span className="icon">{icon as string}</span>{label as string}</a>
+                ))}
+              </div>
+              <div className="voc-dd-footer">
+                <a href="/services" style={{fontSize:12,color:"rgba(245,240,232,0.4)",textDecoration:"none"}}>View all services →</a>
+                <a href="/business" style={{background:"#00C896",color:"#0A0A0A",fontWeight:900,fontSize:13,padding:"10px 20px",textDecoration:"none",letterSpacing:"0.5px",whiteSpace:"nowrap"}}>OWN A BUSINESS? START HERE →</a>
+              </div>
+            </div>
+          </div>
           <a href="#process">Process</a>
           <a href="#data">Results</a>
           <a href="#about">About</a>
           <a href="/blog">Blog</a>
+          <a href="/pricing">Pricing</a>
           <a href="/consultation" className="voc-btn-primary" style={{ padding: "10px 28px", fontSize: 14 }}>Get Started</a>
         </div>
         <button className="voc-menu-btn" onClick={() => setMenuOpen(true)}>☰</button>
@@ -1046,11 +1134,15 @@ export default function VoiceOfCash() {
       {menuOpen && (
         <div className="voc-mobile-menu">
           <button className="voc-mobile-close" onClick={() => setMenuOpen(false)}>✕</button>
-          <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+          <a href="#services" onClick={() => setMenuOpen(false)}>Services (Overview)</a>
+          <a href="/services" onClick={() => setMenuOpen(false)} style={{paddingLeft:16,fontSize:13,color:"rgba(245,240,232,0.5)"}}>→ All 12 AI Services</a>
+          <a href="/business" onClick={() => setMenuOpen(false)} style={{paddingLeft:16,fontSize:13,color:"#00C896",fontWeight:700}}>→ Full-Service Option</a>
           <a href="#process" onClick={() => setMenuOpen(false)}>Process</a>
           <a href="#data" onClick={() => setMenuOpen(false)}>Results</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="/blog" onClick={() => setMenuOpen(false)}>Blog</a>
+          <a href="/pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
+          <a href="/white-label" onClick={() => setMenuOpen(false)} style={{color:"var(--gold)",fontWeight:700}}>White Label</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </div>
       )}
@@ -1068,9 +1160,12 @@ export default function VoiceOfCash() {
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="voc-hero-sub">
-                From setup to launch, The Voice of Cash in Las Vegas is the bridge between your business
-                and the autonomous future. We don&apos;t just talk strategy — we deliver real systems,
-                real automation, real results.
+                <span style={{color:"#00C896"}}>AI is replacing the businesses that wait.</span>{" "}
+                Right now, your competitors are automating customer follow-up, lead generation, scheduling,
+                and operations, while you&apos;re still doing it manually. The Voice of Cash builds the
+                autonomous systems managed by real humans in an easy-to-use B2C system that puts Las Vegas
+                businesses in front of the competition.{" "}
+                <span style={{color:"#00C896"}}>One consultation. Real systems. No guesswork.</span><br/><span style={{color:"#ffffff",fontWeight:800,fontSize:"1.05em"}}>Get AI agents that ship.</span>
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>
@@ -1084,10 +1179,37 @@ export default function VoiceOfCash() {
           <FadeIn delay={0.4}>
             <div>
               <ThirtySixthChamber />
+              <a href="/the-36th-chamber" style={{
+                display:"flex",
+                alignItems:"center",
+                justifyContent:"center",
+                gap:10,
+                marginTop:16,
+                padding:"12px 0",
+                background:"rgba(0,200,150,0.06)",
+                border:"1px solid rgba(0,200,150,0.2)",
+                color:"#00C896",
+                fontFamily:"'Bebas Neue',sans-serif",
+                fontSize:15,
+                letterSpacing:2,
+                textDecoration:"none",
+                transition:"all 0.3s",
+              }}
+              onMouseEnter={e=>{(e.currentTarget as HTMLElement).style.background="rgba(0,200,150,0.12)"}}
+              onMouseLeave={e=>{(e.currentTarget as HTMLElement).style.background="rgba(0,200,150,0.06)"}}
+              >
+                ⚔ VIEW WAR ROOM — THE 36TH CHAMBER →
+              </a>
             </div>
           </FadeIn>
         </div>
       </section>
+
+      {/* FREE GUIDE BANNER */}
+      <div style={{background:"#001a12",borderTop:"1px solid rgba(0,200,150,0.2)",borderBottom:"1px solid rgba(0,200,150,0.2)",padding:"18px 5vw",display:"flex",alignItems:"center",justifyContent:"center",gap:24,flexWrap:"wrap",textAlign:"center"}}>
+        <span style={{fontSize:14,color:"rgba(245,240,232,0.6)"}}>New: The Business Owner's AI Survival Guide is live.</span>
+        <a href="/free-guide" style={{background:"#fff",color:"#0A0A0A",fontWeight:900,fontSize:13,padding:"10px 24px",textDecoration:"none",letterSpacing:"1px",whiteSpace:"nowrap",boxShadow:"0 0 20px rgba(255,255,255,0.3)"}}>DOWNLOAD FREE →</a>
+      </div>
 
       {/* STATS BAR */}
       <div className="voc-stats">
@@ -1097,6 +1219,9 @@ export default function VoiceOfCash() {
               <CountUp target={s.value} suffix={s.value.replace(/[0-9]/g, "")} />
             </div>
             <div className="voc-stat-label">{s.label}</div>
+            <div style={{ marginTop:8, fontSize:10, color:"rgba(0,200,150,0.45)", letterSpacing:"0.5px", fontStyle:"italic" }}>
+              — {s.source}
+            </div>
           </FadeIn>
         ))}
       </div>
@@ -1144,8 +1269,16 @@ export default function VoiceOfCash() {
             We Stay To Make Sure It Works.
           </h2>
           <p>
-            That&apos;s the difference. Anyone can sell you software. Our team — human leads and 9 autonomous AI agents — has been built specifically to bridge strategy and execution. Cash Colligan brings 30+ years on the internet. Tim Gelhardt brings enterprise-grade infrastructure. The AI clan runs 24/7. It&apos;s not about the tool — it&apos;s about the outcome.
+            That&apos;s the difference. Most companies will sell you a tool and walk away. We&apos;ve already built AI systems, run them, broken them, fixed them, and scaled them. We know what works because we&apos;ve done the work. When you hire us, you get a team that has been in the trenches.<br/><span style={{color:'#00C896',fontWeight:700}}>Not consultants. Builders.</span>
           </p>
+          <div style={{marginTop:32,display:'flex',gap:16,flexWrap:'wrap',justifyContent:'center'}}>
+            <a href="/free-guide" style={{display:'inline-flex',alignItems:'center',gap:10,background:'#fff',color:'#0A0A0A',fontWeight:900,fontSize:14,padding:'14px 28px',textDecoration:'none',letterSpacing:'1px',boxShadow:'0 0 24px rgba(255,255,255,0.15)'}}>
+              <span>📥</span> DOWNLOAD FREE AI GUIDE
+            </a>
+            <a href="/consultation" style={{display:'inline-flex',alignItems:'center',gap:10,background:'transparent',color:'#00C896',border:'2px solid #00C89644',fontWeight:800,fontSize:14,padding:'14px 28px',textDecoration:'none',letterSpacing:'1px'}}>
+              BOOK FREE STRATEGY CALL →
+            </a>
+          </div>
         </FadeIn>
       </div>
 
@@ -1177,8 +1310,8 @@ export default function VoiceOfCash() {
         <FadeIn>
           <div style={{ textAlign: "center", marginBottom: 80 }}>
             <div className="voc-section-label">The Process</div>
-            <div className="voc-section-title" style={{ margin: "0 auto 16px", maxWidth: 500 }}>
-              Study. Learn. Assess. Create.
+            <div className="voc-section-title" style={{ margin: "0 auto 16px", maxWidth: "none", whiteSpace: "nowrap", fontSize: "clamp(28px, 4vw, 56px)" }}>
+              Study. Learn. Plan. Create.
             </div>
             <p className="voc-section-desc" style={{ margin: "0 auto" }}>
               No cookie-cutter playbooks. Every engagement starts with understanding
@@ -1209,19 +1342,21 @@ export default function VoiceOfCash() {
           </p>
         </FadeIn>
         <div className="voc-data-grid">
-          {[
-            { val: "20-30%", label: "Reduction in operational costs for companies that adopt AI automation", source: "McKinsey Global Institute" },
-            { val: "240%", label: "Average ROI from business process automation — recouped in 6-9 months", source: "Symtrax Research" },
-            { val: "40%", label: "Boost in productivity for organizations using AI-driven tools", source: "Harvard Business Review" },
-            { val: "68%", label: "Of U.S. small businesses now use AI regularly, up from 48% in 2024", source: "QuickBooks Survey, 2025" },
-            { val: "360hrs", label: "Annual time saved per business leader through task automation", source: "WorkMarket" },
-            { val: "$4.4T", label: "Projected annual GDP addition from AI agents by 2030", source: "Industry Projections" },
-          ].map((d, i) => (
+          {([
+            { val: "20-30%", label: "Reduction in operational costs for companies that adopt AI automation", source: "McKinsey Global Institute", sourceUrl: "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai" },
+            { val: "240%", label: "Average ROI from business process automation. Recouped in 6-9 months.", source: "Symtrax Research", sourceUrl: "https://www.symtrax.com/articles/roi-business-process-automation/" },
+            { val: "40%", label: "Boost in productivity for organizations using AI-driven tools", source: "Harvard Business Review", sourceUrl: "https://hbr.org/2023/08/the-ai-powered-organization" },
+            { val: "68%", label: "Of U.S. small businesses now use AI regularly, up from 48% in 2024", source: "QuickBooks Survey, 2025", sourceUrl: "https://quickbooks.intuit.com/r/small-business-data/small-business-insights/" },
+            { val: "360hrs", label: "Annual time saved per business leader through task automation", source: "WorkMarket", sourceUrl: "https://www.workmarket.com/reports/2020-in-work-report" },
+            { val: "$4.4T", label: "Projected annual GDP addition from AI agents by 2030", source: "McKinsey Global Institute", sourceUrl: "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai" },
+          ] as { val: string; label: string; source: string; sourceUrl: string }[]).map((d, i) => (
             <FadeIn key={i} delay={i * 0.08}>
               <div className="voc-data-card">
                 <div className="voc-data-val">{d.val}</div>
                 <div className="voc-data-label">{d.label}</div>
-                <div className="voc-data-source">{d.source}</div>
+                <div className="voc-data-source" style={{fontStyle:"italic",letterSpacing:"0.3px"}}>
+                  — {d.source}
+                </div>
               </div>
             </FadeIn>
           ))}
@@ -1234,7 +1369,7 @@ export default function VoiceOfCash() {
           <div className="voc-section-label">The Team</div>
           <div className="voc-section-title">Humans + AI.<br/>Working Together.</div>
           <p className="voc-section-desc">
-            We&apos;re an AI company — so we&apos;ll be straight with you: our team is humans and autonomous AI agents working side by side. You know who&apos;s who. That&apos;s the point.
+            We&apos;re an AI company, so we&apos;ll be straight with you: our team is humans and autonomous AI agents working side by side. You know who&apos;s who. That&apos;s the point.
           </p>
         </FadeIn>
 
@@ -1267,7 +1402,7 @@ export default function VoiceOfCash() {
             {/* Right — Cash + Tim */}
             <div className="human-cards-col">
               {[
-                { name:"Cash Colligan", title:"DOV / CMO", desc:"30+ years on the internet. 15+ years building businesses and scaling brands. The human who makes sure the machines serve the mission — and the market knows it." },
+                { name:"Cash Colligan", title:"DOV / CMO", desc:"30+ years on the internet. 15+ years building businesses and scaling brands. The human who makes sure the machines serve the mission. The market knows it." },
                 { name:"Tim Gelhardt", title:"HPC CTO", desc:"25+ years of hardcore IT experience. Online since the dawn of the internet. The technical spine behind infrastructure, scale, and systems that don't go down." },
               ].map((p, i) => (
                 <FadeIn key={i} delay={i * 0.1}>
@@ -1285,21 +1420,21 @@ export default function VoiceOfCash() {
 
         {/* AI team */}
         <div>
-          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:13,letterSpacing:4,color:"rgba(0,200,150,0.5)",textTransform:"uppercase",marginBottom:8}}>AI Operations — Wu-Tang AI Clan</div>
+          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:13,letterSpacing:4,color:"rgba(0,200,150,0.5)",textTransform:"uppercase",marginBottom:8}}>AI Operations — The Voice of Cash Intelligence Team</div>
           <p style={{fontSize:14,color:"var(--gray)",marginBottom:28,maxWidth:640,lineHeight:1.6}}>
-            Autonomous AI agents, each purpose-built for a specific function. They&apos;re not people — they&apos;re not pretending to be. They&apos;re something new: persistent, specialized intelligence that operates continuously alongside our human team.
+            Autonomous AI agents, each purpose-built for a specific function. They are not people and they are not pretending to be. They are something new: persistent, specialized intelligence that runs continuously alongside our human team.
           </p>
           <div className="ai-agents-grid">
             {[
-              { name:"GZA", aka:"The Genius", role:"Strategy & Intelligence", desc:"Hive-mind oversight. Reads everything the clan produces. Makes the calls." },
-              { name:"Method Man", aka:"MZA", role:"Revenue & Markets", desc:"Trading ops, portfolio management, financial intelligence. Always on the clock." },
-              { name:"Raekwon", aka:"The Chef", role:"Content & SEO", desc:"Blog strategy, keyword research, Google ranking. Feeds the pipeline." },
-              { name:"Ghostface Killah", aka:"Tony Starks", role:"E-commerce & Brand", desc:"Product positioning, brand operations, sales copy. Makes it sell." },
-              { name:"Inspectah Deck", aka:"Rebel INS", role:"Research & Data", desc:"Fact-checking, data validation, deep research. Nothing gets past him." },
-              { name:"ODB", aka:"Dirt McGirt", role:"Creative & Engagement", desc:"Culture, humor, community energy. Chaos that converts." },
-              { name:"Masta Killa", aka:"Noodles", role:"Publishing & Long-form", desc:"Books, documentation, deep content. Precise and patient." },
-              { name:"U-God", aka:"Golden Arms", role:"Knowledge & Research", desc:"World religions, sacred texts, deep knowledge systems. uwgod.com." },
-              { name:"Slim Shady", aka:"Eminem", role:"Cybersecurity & IT", desc:"System hardening, threat detection, infrastructure security. On break. Always watching." },
+              { name:"The Genius", role:"Strategy & Intelligence", desc:"Hive-mind oversight. Reads everything the team produces. Makes the calls." },
+              { name:"The Earner", role:"Revenue & Markets", desc:"Trading ops, portfolio management, financial intelligence. Always on the clock." },
+              { name:"The Chef", role:"Content & SEO", desc:"Blog strategy, keyword research, Google ranking. Feeds the pipeline." },
+              { name:"The Starks", role:"E-commerce & Brand", desc:"Product positioning, brand operations, sales copy. Makes it sell." },
+              { name:"The Inspector", role:"Research & Data", desc:"Fact-checking, data validation, deep research. Nothing gets past him." },
+              { name:"The Wildcard", role:"Creative & Engagement", desc:"Culture, humor, community energy. Chaos that converts." },
+              { name:"The Scribe", role:"Publishing & Long-form", desc:"Books, documentation, deep content. Precise and patient." },
+              { name:"The Scholar", role:"Knowledge & Research", desc:"World religions, sacred texts, deep knowledge systems." },
+              { name:"The Ghost", role:"Cybersecurity & IT", desc:"System hardening, threat detection, infrastructure security. Always watching." },
             ].map((a, i) => (
               <FadeIn key={i} delay={i * 0.06}>
                 <div style={{
@@ -1310,7 +1445,6 @@ export default function VoiceOfCash() {
                 }}>
                   <div style={{display:"flex",alignItems:"baseline",gap:10,marginBottom:4}}>
                     <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,letterSpacing:1}}>{a.name}</div>
-                    <div style={{fontSize:11,color:"rgba(0,200,150,0.5)",fontStyle:"italic"}}>aka {a.aka}</div>
                   </div>
                   <div style={{fontSize:10,letterSpacing:2,color:"var(--gold)",textTransform:"uppercase",marginBottom:8}}>{a.role}</div>
                   <div style={{fontSize:12,color:"var(--gray)",lineHeight:1.5}}>{a.desc}</div>
@@ -1329,27 +1463,81 @@ export default function VoiceOfCash() {
       </section>
 
 
-            {/* TESTIMONIALS — real ones coming */}
+            {/* TESTIMONIALS — real LinkedIn reviews */}
       <section className="voc-section" id="testimonials">
         <FadeIn>
-          <div className="voc-section-label">Client Results</div>
-          <div className="voc-section-title">What Clients Are Saying</div>
-          <p className="voc-section-desc">
-            We&apos;re early. The work is real — the testimonials are being collected. Check back soon, or <a href="/consultation" style={{color:"var(--gold)"}}>start your own story</a>.
-          </p>
+          <div className="voc-section-label">What People Say</div>
+          <div className="voc-section-title">Verified LinkedIn Recommendations</div>
+          <p className="voc-section-desc">Real words from real people who have worked with The Voice of Cash.</p>
         </FadeIn>
-        <div style={{
-          padding:"48px",border:"1px solid rgba(0,200,150,0.1)",
-          background:"rgba(0,200,150,0.02)",textAlign:"center",maxWidth:640,margin:"0 auto"
-        }}>
-          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:20,marginBottom:12,letterSpacing:1}}>Verified Testimonials In Progress</div>
-          <p style={{fontSize:15,color:"var(--gray)",lineHeight:1.7,marginBottom:24}}>
-            We only post what&apos;s real. Las Vegas clients are being onboarded — their words will live here when they&apos;re ready to share them. No fakes. No placeholders dressed up as truth.
-          </p>
-          <a href="/consultation" className="voc-btn-primary" style={{display:"inline-flex"}}>Be a First Client →</a>
+        <div className="testimonials-grid" style={{marginTop:48}}>
+          {[
+            {
+              name:"Colin McAllister",
+              title:"Team Lead @ Arctic Wolf | Grad Student @ SANS",
+              body:"I have met a lot of people in this industry throughout the years, but no-one stands out in my mind like The Voice of Cash. One of the hardest working and most proficient people I\'ve ever had the pleasure to work with. Extremely knowledgeable in Marketing, Search Engine Optimization, and Digital Strategy. I would definitely recommend The Voice of Cash if you are looking to take your business to the next level.",
+              source:"LinkedIn"
+            },
+            {
+              name:"Luke Daniel Rice",
+              title:"Purveyor of Trochees and Iambs",
+              body:"The Voice of Cash is an extremely creative individual who has successfully used social media to market himself and his affiliates for over a decade. Always ahead of the curve. The Voice of Cash was in the social media game before Mark Zuckerberg made it mainstream.",
+              source:"LinkedIn"
+            },
+            {
+              name:"Holmes Pooser",
+              title:"Marketing & Entertainment Executive | General Sales Manager",
+              body:"Mr. Colligan is constantly on top of the pulse of local artists in Las Vegas and has served as a proven asset in concert promotion. His work ethic and connection to the audience are proven with one glance at the numbers he\'s produced inside House of Blues Las Vegas.",
+              source:"LinkedIn"
+            },
+          ].map(t=>(
+            <div key={t.name} style={{background:"var(--charcoal)",border:"1px solid rgba(0,200,150,0.1)",padding:"36px 32px",display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
+              <div>
+                <div style={{fontSize:28,color:"var(--gold)",fontFamily:"'Bebas Neue',sans-serif",letterSpacing:2,marginBottom:20,lineHeight:1}}>&ldquo;</div>
+                <p style={{fontSize:15,color:"rgba(245,240,232,0.75)",lineHeight:1.8,marginBottom:28}}>{t.body}</p>
+              </div>
+              <div style={{borderTop:"1px solid rgba(0,200,150,0.08)",paddingTop:20,display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                <div>
+                  <div style={{fontSize:14,fontWeight:900,color:"var(--white)"}}>{t.name}</div>
+                  <div style={{fontSize:12,color:"var(--gray)",marginTop:3}}>{t.title}</div>
+                </div>
+                <span style={{fontSize:10,fontWeight:900,color:"var(--gold)",letterSpacing:"2px",textTransform:"uppercase",background:"rgba(0,200,150,0.08)",padding:"4px 10px",border:"1px solid rgba(0,200,150,0.15)"}}>{t.source}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
+
+      {/* ── CORNERSTONE READING ──────────────────────── */}
+      <section style={{background:"rgba(0,200,150,0.03)",padding:"72px 5vw",borderTop:"1px solid rgba(0,200,150,0.08)",borderBottom:"1px solid rgba(0,200,150,0.08)"}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-end",marginBottom:40,flexWrap:"wrap",gap:16}}>
+            <div>
+              <div className="voc-section-label">Start Here</div>
+              <div className="voc-section-title">Three Articles That Change<br/>How You Think About AI.</div>
+            </div>
+            <a href="/blog" style={{fontSize:13,fontWeight:900,color:"#00C896",letterSpacing:"1.5px",textTransform:"uppercase",textDecoration:"none",borderBottom:"1px solid rgba(0,200,150,0.4)",paddingBottom:2}}>All 42 Articles →</a>
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:24}}>
+            {([
+              {slug:"why-ai-tools-keep-failing",label:"Start Here",title:"Why Your AI Tools Keep Failing",desc:"Most businesses have tried AI. Most of it is collecting dust. Here's the pattern and the fix.",tag:"Awareness"},
+              {slug:"ai-agent-roi-measurement",label:"Make the Case",title:"How to Actually Measure AI Agent ROI",desc:"Feelings don't justify budgets. This is the framework that makes ROI concrete and expandable.",tag:"Strategy"},
+              {slug:"choosing-ai-implementation-partner",label:"Ready to Move",title:"How to Choose an AI Implementation Partner",desc:"The AI consulting market is full of people who talk well and deliver little. Here's how to separate real from hype.",tag:"Decision"},
+            ] as {slug:string,label:string,title:string,desc:string,tag:string}[]).map(p=>(
+              <div key={p.slug} style={{border:"1px solid rgba(0,200,150,0.12)",padding:"32px 28px",background:"rgba(0,0,0,0.3)"}}>
+                <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20}}>
+                  <span style={{fontSize:10,fontWeight:900,color:"#00C896",letterSpacing:"2px",textTransform:"uppercase",background:"rgba(0,200,150,0.1)",padding:"4px 10px"}}>{p.label}</span>
+                  <span style={{fontSize:10,fontWeight:700,color:"rgba(245,240,232,0.3)",letterSpacing:"1px",textTransform:"uppercase"}}>{p.tag}</span>
+                </div>
+                <h3 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:"#F5F0E8",lineHeight:1.1,marginBottom:14}}>{p.title}</h3>
+                <p style={{fontSize:13,color:"rgba(245,240,232,0.45)",lineHeight:1.7,marginBottom:24}}>{p.desc}</p>
+                <a href={`/blog/${p.slug}`} style={{fontSize:12,fontWeight:900,color:"#00C896",textDecoration:"none",letterSpacing:"1.5px",textTransform:"uppercase"}}>Read Article →</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* BLOG PREVIEW — Fix #8 */}
       <section className="voc-section voc-section-dark" id="insights">
@@ -1371,7 +1559,7 @@ export default function VoiceOfCash() {
           {[
             { slug:"27-claude-prompts-optimize-business", cat:"Claude & AI Tools", title:"27 Claude Prompts That Will Actually Optimize Your Business", date:"Feb 2024" },
             { slug:"history-of-ai-agents", cat:"AI History", title:"The History of AI Agents: From Rule-Based Bots to Autonomous Systems", date:"Jan 2024" },
-            { slug:"las-vegas-businesses-using-ai-real-examples", cat:"Industry Guides", title:"How Las Vegas Businesses Are Using AI Right Now — Real Examples", date:"May 2025" },
+            { slug:"las-vegas-businesses-using-ai-real-examples", cat:"Industry Guides", title:"How Las Vegas Businesses Are Using AI Right Now: Real Examples", date:"May 2025" },
           ].map((p, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <a href={"/blog/" + p.slug} style={{
@@ -1410,7 +1598,7 @@ export default function VoiceOfCash() {
           <h2>LET&apos;S BUILD YOUR<br /><span style={{ color: "var(--gold)" }}>AUTONOMOUS FUTURE</span></h2>
           <p>
             Whether you&apos;re a startup finding your footing or an established company ready
-            to scale — the first step is the same. Let&apos;s talk.
+            to scale. The first step is the same. Let&apos;s talk.
           </p>
           <div className="voc-cta-row" style={{ justifyContent: "center" }}>
             <a href="/consultation" className="voc-btn-primary">Book a Consultation →</a>
@@ -1418,10 +1606,32 @@ export default function VoiceOfCash() {
         </FadeIn>
       </section>
 
+      
+      {/* WHITE LABEL CTA STRIP */}
+      <section style={{ background:'#0D1A0D', borderTop:'1px solid #1a1a1a', borderBottom:'1px solid #1a1a1a', padding:'52px 5vw' }}>
+        <div style={{ maxWidth:1100, margin:'0 auto', display:'flex', alignItems:'center', justifyContent:'space-between', gap:32, flexWrap:'wrap' }}>
+          <div style={{ maxWidth:620 }}>
+            <div style={{ fontSize:10, letterSpacing:'2px', color:'#D4AF37', marginBottom:10 }}>FOR AGENCIES</div>
+            <h3 style={{ fontSize:'clamp(20px,2.8vw,36px)', fontWeight:900, letterSpacing:'-1px', marginBottom:12 }}>
+              Scale your agency with the Voice of Cash.
+            </h3>
+            <p style={{ fontSize:15, color:'rgba(245,240,232,0.5)', lineHeight:1.7 }}>
+              Offer AI agent services under your own brand. We build, deploy, and support everything. Your clients see your work. You set the margin. Plans start at $999/month.
+            </p>
+          </div>
+          <a href="/white-label" style={{ background:'#D4AF37', color:'#0A0A0A', fontWeight:900, fontSize:14, padding:'18px 40px', textDecoration:'none', letterSpacing:'1px', whiteSpace:'nowrap', flexShrink:0 }}>
+            WHITE LABEL SERVICES \u2192
+          </a>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer style={{padding:"48px 5vw 32px",borderTop:"1px solid rgba(0,200,150,0.1)"}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:24,marginBottom:32}}>
-          <a href="#" className="voc-logo" style={{ fontSize: 22 }}>THE VOICE OF <span>CASH</span></a>
+          <a href="/" className="voc-logo" style={{display:"flex",alignItems:"center",gap:10,textDecoration:"none",fontSize:20}}>
+              <img src="/logo.svg" alt="The Voice of Cash" width={28} height={28} style={{display:"block"}} />
+              <span>THE VOICE OF <span>CASH</span></span>
+            </a>
           <div className="voc-social-row">
             {SOCIAL_LINKS.map((s, i) => (
               <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="voc-social-link" title={s.name}>

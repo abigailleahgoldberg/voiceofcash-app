@@ -20,11 +20,11 @@ Nothing on this Site constitutes an offer to provide services. Engagement begins
   },
   {
     title: "3. Intellectual Property — Site Content",
-    body: `All content on this Site — including but not limited to text, blog articles, copy, graphics, design elements, layouts, code, frameworks, processes, methodologies, system architectures, agent configurations, workflow designs, and the "Wu-Tang AI Clan" operational framework — is the exclusive intellectual property of The Voice of Cash LLC and is protected by United States copyright law, trade secret law, and applicable state and federal laws.
+    body: `All content on this Site — including but not limited to text, blog articles, copy, graphics, design elements, layouts, code, frameworks, processes, methodologies, system architectures, agent configurations, workflow designs, and the AI agent operational framework — is the exclusive intellectual property of The Voice of Cash LLC and is protected by United States copyright law, trade secret law, and applicable state and federal laws.
 
 You may not reproduce, republish, distribute, transmit, modify, create derivative works from, sell, or exploit any content from this Site without the express prior written consent of The Voice of Cash LLC. Unauthorized use constitutes copyright infringement and may subject you to civil and criminal penalties.
 
-The Voice of Cash™, the Wu-Tang AI Clan operational framework, and associated agent identities are proprietary designations of The Voice of Cash LLC. All rights reserved.`
+The Voice of Cash™ and associated agent identities, methodologies, and frameworks are proprietary designations of The Voice of Cash LLC. All rights reserved.`
   },
   {
     title: "4. Intellectual Property — AI Systems & Methodologies",
@@ -36,7 +36,7 @@ Client-specific systems developed under service agreements remain the property o
   },
   {
     title: "5. AI Disclosure",
-    body: `The Voice of Cash LLC operates an AI-augmented team that includes autonomous AI agents ("the Wu-Tang AI Clan"). These agents are disclosed transparently on this Site. They are not human employees. They are AI systems purpose-built for specific operational functions.
+    body: `The Voice of Cash LLC operates an AI-augmented team that includes autonomous AI agents (the "VoC Intelligence Team"). These agents are disclosed transparently on this Site. They are not human employees. They are AI systems purpose-built for specific operational functions.
 
 Content generated with AI assistance is reviewed by human team members before publication. AI agents do not make binding business commitments — all binding decisions, contracts, and client communications are handled by or reviewed by human team members.
 

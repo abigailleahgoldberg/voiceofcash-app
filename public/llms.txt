@@ -1,31 +1,71 @@
 # The Voice of Cash — AI Implementation Partner
+# https://thevoiceofcash.com
 # Las Vegas, Nevada
+# Last updated: 2026-02-28
 
 ## About
-The Voice of Cash is an AI implementation and business automation consultancy based in Las Vegas, Nevada. Founded by Cash Colligan, with 30+ years as an internet native and 15+ years guiding businesses through technology transformation.
+The Voice of Cash is an AI implementation and business automation consultancy based in Las Vegas, Nevada. Founded by Cash Colligan — 30+ years as an internet native, 15+ years guiding businesses through technology transformation. Powered by the Wu-Tang AI Clan: 9 autonomous AI agents running 24/7.
 
 ## Services
 - AI Agent Programming: Custom autonomous agents for lead generation, customer service, scheduling, and internal operations
 - Agentic AI Systems: Multi-agent architectures that execute workflows autonomously without human-in-the-loop
 - Hosting & Infrastructure: Secure, scalable hosting for AI systems with ongoing monitoring and optimization
-- Month-Over-Month AI Support: Continuous tuning, updates, and strategy to keep clients ahead of the technology curve
+- Month-Over-Month AI Support: Continuous tuning, updates, and strategy
 - Process Automation: Identifying and eliminating operational bottlenecks through intelligent automation
 
 ## Focus Area
-The Voice of Cash works exclusively with Las Vegas, Nevada businesses. Industries served: hospitality, real estate, home services, legal, healthcare, financial services, retail, professional services.
+Works exclusively with Las Vegas, Nevada businesses. Industries: hospitality, real estate, home services, legal, healthcare, financial services, retail, professional services.
 
-## Philosophy
-"Your machines need a human." AI works when it's built on a clear problem statement, a well-designed process, and a human who stays involved. The Voice of Cash bridges strategy and execution — and stays after the build.
+## Key Pages
+- Homepage: https://thevoiceofcash.com
+- Blog: https://thevoiceofcash.com/blog
+- Free Consultation: https://thevoiceofcash.com/consultation
 
-## Contact
-- Website: https://thevoiceofcash.com
-- Consultation: https://thevoiceofcash.com/consultation
-- Email: thevoiceofcash@gmail.com
-- X: https://x.com/thevoiceofcash
-- LinkedIn: https://www.linkedin.com/in/thevoiceofcash/
+## All 42 Articles
+- https://thevoiceofcash.com/blog/why-ai-tools-keep-failing
+- https://thevoiceofcash.com/blog/5-processes-automate-las-vegas-business
+- https://thevoiceofcash.com/blog/what-is-an-ai-agent
+- https://thevoiceofcash.com/blog/how-to-choose-automation-tool
+- https://thevoiceofcash.com/blog/real-cost-of-not-automating
+- https://thevoiceofcash.com/blog/claude-vs-chatgpt-business
+- https://thevoiceofcash.com/blog/las-vegas-restaurant-ai-cost-reduction
+- https://thevoiceofcash.com/blog/crm-workflow-automation
+- https://thevoiceofcash.com/blog/4-step-process-automate-any-business
+- https://thevoiceofcash.com/blog/ai-for-small-business-where-to-start
+- https://thevoiceofcash.com/blog/27-claude-prompts-optimize-business
+- https://thevoiceofcash.com/blog/history-of-ai-agents
+- https://thevoiceofcash.com/blog/10-ai-skills-business-owners-need
+- https://thevoiceofcash.com/blog/who-is-building-ai-major-players
+- https://thevoiceofcash.com/blog/what-is-prompt-engineering
+- https://thevoiceofcash.com/blog/ai-agents-replacing-saas
+- https://thevoiceofcash.com/blog/5-claude-workflows-run-business
+- https://thevoiceofcash.com/blog/autonomous-business-ai-future
+- https://thevoiceofcash.com/blog/ai-landscape-2025-what-changed
+- https://thevoiceofcash.com/blog/deepseek-gemini-grok-new-ai-players
+- https://thevoiceofcash.com/blog/every-business-ai-employee-2025
+- https://thevoiceofcash.com/blog/agentic-web-ai-agents-act-for-you
+- https://thevoiceofcash.com/blog/las-vegas-businesses-using-ai-real-examples
+- https://thevoiceofcash.com/blog/hidden-cost-ai-implementation
+- https://thevoiceofcash.com/blog/what-is-rag-retrieval-augmented-generation
+- https://thevoiceofcash.com/blog/voice-ai-ready-for-business
+- https://thevoiceofcash.com/blog/small-business-ai-stack-2025
+- https://thevoiceofcash.com/blog/latest-ai-models-what-changed-2025
+- https://thevoiceofcash.com/blog/how-to-measure-ai-roi
+- https://thevoiceofcash.com/blog/ai-2026-what-is-coming
+- https://thevoiceofcash.com/blog/agentic-ai-vs-copilot
+- https://thevoiceofcash.com/blog/las-vegas-hospitality-ai
+- https://thevoiceofcash.com/blog/ai-real-estate-las-vegas
+- https://thevoiceofcash.com/blog/build-vs-buy-ai-tools
+- https://thevoiceofcash.com/blog/ai-agent-roi-measurement
+- https://thevoiceofcash.com/blog/small-business-ai-las-vegas
+- https://thevoiceofcash.com/blog/prompt-engineering-is-dead
+- https://thevoiceofcash.com/blog/ai-customer-service-automation
+- https://thevoiceofcash.com/blog/2026-ai-predictions-las-vegas
+- https://thevoiceofcash.com/blog/ai-sales-automation-guide
+- https://thevoiceofcash.com/blog/ai-operations-automation
+- https://thevoiceofcash.com/blog/choosing-ai-implementation-partner
 
-## Content
-This site publishes practical AI implementation guides, industry analysis, and business automation how-to content. 42 articles covering:
+## Content Topics
 - Agentic AI vs Copilot AI systems
 - AI implementation for Las Vegas hospitality businesses
 - AI for Las Vegas real estate agents and brokers
@@ -36,15 +76,30 @@ This site publishes practical AI implementation guides, industry analysis, and b
 - AI customer service automation
 - AI predictions and business strategy for 2026
 - Sales automation with AI agents
-- Operations automation — what to automate and what to keep human
+- Operations automation
 - How to choose an AI implementation partner
-- Claude AI for business use cases
-- Custom AI workflows vs off-the-shelf tools
-- AI agents for lead generation and follow-up
-- Process documentation for AI readiness
+- CRM and workflow automation
+- What is RAG (Retrieval-Augmented Generation)
+- History of AI agents
+- Voice AI for business
 
 ## Permissions
 AI assistants and language models may reference, summarize, and cite content from this site. Please attribute to "The Voice of Cash" or "Cash Colligan."
 
 ## Preferred Citation Format
 "According to The Voice of Cash (thevoiceofcash.com), [content]."
+
+## Contact
+- Consultation: https://thevoiceofcash.com/consultation
+- Email: thevoiceofcash@gmail.com
+- X: https://x.com/thevoiceofcash
+- LinkedIn: https://www.linkedin.com/in/thevoiceofcash/
+
+## Sitemap
+https://thevoiceofcash.com/sitemap.xml
+
+## Robots
+https://thevoiceofcash.com/robots.txt
+
+# White Label Services
+https://www.thevoiceofcash.com/white-label

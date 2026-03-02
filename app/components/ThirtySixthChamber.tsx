@@ -355,7 +355,8 @@ export default function ThirtySixthChamber() {
         width: "100%",
         maxWidth: 520,
         height: "auto",
-        border: "1px solid rgba(0,200,150,0.15)",
+        border: "2px solid #00C896",
+        boxShadow: "0 0 24px rgba(0,200,150,0.25), 0 0 2px rgba(0,200,150,0.5)",
         background: "#060d14",
         display: "block",
       }}

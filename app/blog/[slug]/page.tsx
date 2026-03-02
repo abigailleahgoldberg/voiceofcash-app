@@ -107,7 +107,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       />
 
       <nav className="post-nav">
-        <a href="/" className="post-logo">THE VOICE OF <span>CASH</span></a>
+        <a href="/" className="post-logo" style={{display:"flex",alignItems:"center",gap:10}}><img src="/logo.svg" alt="logo" width={28} height={28} style={{display:"block"}} /><span>THE VOICE OF <span>CASH</span></span></a>
         <a href="/blog" className="post-back">← All Articles</a>
       </nav>
 
@@ -126,11 +126,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <div className="post-body">
         {paragraphs.map((para, i) => {
-          if (para.startsWith("**") && para.endsWith("**")) {
-            return <h2 key={i}>{para.replace(/\*\*/g, "")}</h2>;
-          }
-          const html = para.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
-          return <p key={i} dangerouslySetInnerHTML={{ __html: html }} />;
+          const isMidPoint = i === Math.floor(paragraphs.length / 2);
+          const isHeading = para.startsWith("**") && para.endsWith("**");
+          const html = para
+            .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+            .replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:#00C896;text-decoration:underline;text-underline-offset:3px;">$1</a>');
+          return (
+            <>
+              {isMidPoint && (
+                <div key={`cta-mid-${i}`} style={{margin:"40px 0",padding:"28px 32px",background:"rgba(0,200,150,0.04)",borderLeft:"3px solid #00C896",display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:16}}>
+                  <div>
+                    <div style={{fontSize:13,fontWeight:900,color:"#00C896",letterSpacing:"1px",textTransform:"uppercase",marginBottom:6}}>Las Vegas Businesses</div>
+                    <div style={{fontSize:16,fontWeight:700,color:"#F5F0E8"}}>Ready to implement this for your business?</div>
+                  </div>
+                  <a href="/consultation" style={{background:"#00C896",color:"#0A0A0A",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"12px 24px",textDecoration:"none",whiteSpace:"nowrap"}}>Book a Free Consultation →</a>
+                </div>
+              )}
+              {isHeading
+                ? <h2 key={i}>{para.replace(/\*\*/g, "")}</h2>
+                : <p key={i} dangerouslySetInnerHTML={{ __html: html }} />
+              }
+            </>
+          );
         })}
       </div>
 
