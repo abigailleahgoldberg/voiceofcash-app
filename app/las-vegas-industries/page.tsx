@@ -5,13 +5,13 @@ export const revalidate = false; // fully static — never revalidate
 
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve | The Voice of Cash | Las Vegas AI Automation',
+  title: 'Industries We Serve — Las Vegas | The Voice of Cash | Las Vegas AI Automation',
   description: 'The Voice of Cash builds AI automation systems for Las Vegas businesses across 25 industries. From hotels to healthcare, real estate to restaurants. Local expertise. Real results.',
-  alternates: { canonical: 'https://www.thevoiceofcash.com/industries' },
+  alternates: { canonical: 'https://www.thevoiceofcash.com/las-vegas-industries' },
   openGraph: {
-    title: 'Industries We Serve | The Voice of Cash',
+    title: 'Industries We Serve — Las Vegas | The Voice of Cash',
     description: 'AI automation and infrastructure for 25 industries in Las Vegas, Nevada.',
-    url: 'https://www.thevoiceofcash.com/industries',
+    url: 'https://www.thevoiceofcash.com/las-vegas-industries',
     siteName: 'The Voice of Cash',
     type: 'website',
   },
@@ -231,7 +231,7 @@ const schemaOrg = {
   '@type': 'WebPage',
   name: 'Industries We Serve | The Voice of Cash',
   description: 'AI automation systems for 25 industries in Las Vegas, Nevada.',
-  url: 'https://www.thevoiceofcash.com/industries',
+  url: 'https://www.thevoiceofcash.com/las-vegas-industries',
   provider: {
     '@type': 'LocalBusiness',
     name: 'The Voice of Cash LLC',
