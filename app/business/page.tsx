@@ -40,13 +40,13 @@ export default function BusinessPage() {
               <span style={{color:G}}>Everything handled.</span>
             </h1>
             <p style={{ fontSize:'clamp(17px,2vw,21px)', color:'rgba(245,240,232,0.6)', lineHeight:1.75, marginBottom:16 }}>
-              If it can be done digitally inside your business operations, we set it up to run automatically — with an AI agent handling execution and a human team overseeing every moving part.
+              If it can be done digitally inside your business operations, we set it up to run automatically, with an AI agent handling execution and a human team overseeing every moving part.
             </p>
             <p style={{ fontSize:16, color:'rgba(245,240,232,0.45)', lineHeight:1.7, marginBottom:36 }}>
-              One monthly engagement. One team. Your leads, your bookings, your content, your CRM, your reputation, your reporting — all running on autopilot while you focus on the work only you can do.
+              One monthly engagement. One team. Your leads, your bookings, your content, your CRM, your reputation, your reporting, all running on autopilot while you focus on the work only you can do.
             </p>
             <div style={{ display:'flex', gap:14, flexWrap:'wrap' }}>
-              <a href="/consultation" style={{ background:G, color:'#0A0A0A', fontWeight:900, fontSize:16, padding:'17px 40px', textDecoration:'none', letterSpacing:'0.5px' }}>GET STARTED — BOOK A CALL →</a>
+              <a href="/consultation" style={{ background:G, color:'#0A0A0A', fontWeight:900, fontSize:16, padding:'17px 40px', textDecoration:'none', letterSpacing:'0.5px' }}>GET STARTED, BOOK A CALL →</a>
             </div>
             <p style={{ fontSize:12, color:'rgba(245,240,232,0.25)', marginTop:12 }}>Free 30-min strategy call. We assess your ops and scope the build. No commitment.</p>
           </div>
@@ -56,10 +56,10 @@ export default function BusinessPage() {
             <div style={{ fontSize:11, letterSpacing:'2px', color:G, marginBottom:20 }}>YOUR OPERATIONS TEAM</div>
             <div style={{ display:'flex', flexDirection:'column', gap:12, marginBottom:28 }}>
               {[
-                { role:'AI Lead Agent', task:'Responding to new inquiry — 14s', status:'active' },
-                { role:'AI Booking Agent', task:'Scheduling appointment — confirmed', status:'active' },
-                { role:'AI Content Agent', task:'Generating 5 posts — scheduled', status:'active' },
-                { role:'AI CRM Agent', task:'Updating pipeline — 3 deals moved', status:'active' },
+                { role:'AI Lead Agent', task:'Responding to new inquiry, 14s', status:'active' },
+                { role:'AI Booking Agent', task:'Scheduling appointment, confirmed', status:'active' },
+                { role:'AI Content Agent', task:'Generating 5 posts, scheduled', status:'active' },
+                { role:'AI CRM Agent', task:'Updating pipeline, 3 deals moved', status:'active' },
                 { role:'Human Strategist', task:'Reviewing weekly performance brief', status:'human' },
                 { role:'AI Reputation Agent', task:'Responding to 2 new reviews', status:'active' },
               ].map(item => (
@@ -109,10 +109,10 @@ export default function BusinessPage() {
             { icon:'📱', title:'Content', body:'Consistent social media presence across every platform. Brand-accurate. Scheduled. Done.' },
             { icon:'🗄️', title:'CRM Automation', body:'Clean pipeline data, automated stage progression, and task creation without manual input.' },
             { icon:'📞', title:'Phone Receptionist', body:'Every call answered professionally, captured, and routed correctly around the clock.' },
-            { icon:'⚙️', title:'Internal Operations', body:'The repetitive workflows that eat your team\'s time — automated and documented.' },
+            { icon:'⚙️', title:'Internal Operations', body:'The repetitive workflows that eat your team\'s time, automated and documented.' },
             { icon:'🔍', title:'Competitor Intel', body:'Weekly briefings on what your competition is doing across every channel they operate on.' },
             { icon:'📊', title:'Performance Reporting', body:'One weekly briefing with every KPI that matters. No dashboard-hunting required.' },
-            { icon:'🎯', title:'Sales Funnel', body:'Full funnel from first touch to closed deal — connected, automated, and conversion-optimized.' },
+            { icon:'🎯', title:'Sales Funnel', body:'Full funnel from first touch to closed deal, connected, automated, and conversion-optimized.' },
           ].map(item => (
             <div key={item.title} style={{ background:'#111', border:'1px solid #1a1a1a', padding:'24px 20px' }}>
               <div style={{ fontSize:28, marginBottom:12 }}>{item.icon}</div>
@@ -130,7 +130,7 @@ export default function BusinessPage() {
           <h2 style={{ fontSize:'clamp(24px,3.5vw,42px)', fontWeight:900, letterSpacing:'-1px', marginBottom:48 }}>From first call to fully automated in 30 days.</h2>
           <div className="biz-ops" style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:16 }}>
             {[
-              { step:'Week 1', title:'Operations Audit', body:'We map your entire business operations — every workflow, every tool, every gap. We show you exactly what we are building and why.' },
+              { step:'Week 1', title:'Operations Audit', body:'We map your entire business operations, every workflow, every tool, every gap. We show you exactly what we are building and why.' },
               { step:'Week 2', title:'Priority Build', body:'We deploy your top 3 highest-impact agents first. You start seeing results before the full build is complete.' },
               { step:'Week 3–4', title:'Full Deployment', body:'Remaining agents deployed. All systems connected. Human oversight layer configured. Testing and tuning complete.' },
               { step:'Ongoing', title:'Manage & Optimize', body:'Monthly performance reviews. Continuous optimization. New automations added as your business evolves. One team, permanently on your side.' },
@@ -153,7 +153,7 @@ export default function BusinessPage() {
             Pick your level.<br/><span style={{color:G}}>Scale from there.</span>
           </h2>
           <p style={{ fontSize:17, color:'rgba(245,240,232,0.5)', maxWidth:600, margin:'0 auto', lineHeight:1.7 }}>
-            Every plan starts with setup and agent training. You own the system from day one. Month-to-month — no contracts, no lock-in.
+            Every plan starts with setup and agent training. You own the system from day one. Month-to-month, no contracts, no lock-in.
           </p>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(300px,1fr))', gap:20, marginBottom:40 }}>
@@ -174,7 +174,7 @@ export default function BusinessPage() {
               tagline:'Every operation. On autopilot. 24/7.',
               agents:'9', training:'3 days included',
               desc:'24/7 real humans, both sides of the world. 9 agents. Every workflow automated. Weekly strategy calls. No blackout windows. Second human agent +$1,999/mo.',
-              items:['9 AI agents deployed','24/7 human team — global coverage','Weekly strategy VC calls','Unlimited optimization requests','Phone AI, competitor intel, full reporting'],
+              items:['9 AI agents deployed','24/7 human team, global coverage','Weekly strategy VC calls','Unlimited optimization requests','Phone AI, competitor intel, full reporting'],
             },
           ].map((tier: any) => (
             <div key={tier.name} style={{ background: tier.highlight ? '#0D1F1A' : '#111', border:`2px solid ${tier.highlight ? GOLD : '#1a1a1a'}`, padding:'32px 26px', position:'relative' }}>
@@ -200,7 +200,7 @@ export default function BusinessPage() {
           ))}
         </div>
         <div style={{ textAlign:'center' }}>
-          <p style={{ fontSize:14, color:'rgba(245,240,232,0.35)', marginBottom:12 }}>In-house agent training: <strong style={{color:GOLD}}>$799/day</strong> — 2 to 5 days on average. Second human agent add-on: +$499 / +$999 / +$1,999 per month based on your tier. Discussed in first call.</p>
+          <p style={{ fontSize:14, color:'rgba(245,240,232,0.35)', marginBottom:12 }}>In-house agent training: <strong style={{color:GOLD}}>$799/day</strong>, 2 to 5 days on average. Second human agent add-on: +$499 / +$999 / +$1,999 per month based on your tier. Discussed in first call.</p>
           <a href="/pricing" style={{ fontSize:14, color:G, textDecoration:'none', fontWeight:700 }}>View full pricing breakdown + FAQs →</a>
         </div>
       </section>

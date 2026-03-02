@@ -153,7 +153,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <div className="post-cta">
         <h3>Ready to Implement This in Your Business?</h3>
-        <p>We work exclusively with Las Vegas businesses. Book a free consultation and we&apos;ll map out exactly where to start — no obligation.</p>
+        <p>We work exclusively with Las Vegas businesses. Book a free consultation and we&apos;ll map out exactly where to start, no obligation.</p>
         <a href="/consultation">Book a Free Consultation →</a>
       </div>
 

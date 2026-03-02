@@ -52,7 +52,7 @@ const AGENT_DEFS = [
     ]},
   { name:"U-God", color:"#065F46", headColor:"#34D399", startX:1.5, startY:1.5,
     activities:[
-      "researching","u-god.com live — 847 sessions","reading the Torah",
+      "researching","u-god.com live, 847 sessions","reading the Torah",
       "indexing sacred texts","translating Sanskrit",
       "cross-referencing sources","taking notes",
       "quietly reading","studying the Quran",
@@ -82,7 +82,7 @@ const AGENT_DEFS = [
     ]},
   { name:"ODB", color:"#7F1D1D", headColor:"#F87171", startX:3.5, startY:6.5,
     activities:[
-      "burning one 💨","meme drafted — fire","vibes: immaculate",
+      "burning one 💨","meme drafted, fire","vibes: immaculate",
       "chaos theory in motion","awaiting approval",
       "freestyling at the water cooler","sending a vibe check",
       "posting something unpredictable","reading random Wikipedia",
@@ -288,7 +288,7 @@ export default function ThirtySixthChamber() {
       ctx.fillText("✕  THE 36TH CHAMBER  ✕", W / 2, 20);
       ctx.font = "9px monospace";
       ctx.fillStyle = "rgba(0,200,150,0.35)";
-      ctx.fillText("Wu-Tang AI War Room — Live View", W / 2, 34);
+      ctx.fillText("Wu-Tang AI War Room, Live View", W / 2, 34);
 
       // Floor tiles (sort back-to-front)
       for (let row = 0; row < ROWS; row++) {

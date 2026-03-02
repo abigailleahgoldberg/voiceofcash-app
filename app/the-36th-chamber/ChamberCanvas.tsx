@@ -5,7 +5,7 @@ const TW = 64, TH = 32, COLS = 16, ROWS = 12;
 
 const AGENTS_DEF = [
   { name:"GZA", alias:"The Genius", emoji:"🧠", color:"#8B5CF6", status:"active", mission:"Hive orchestration + strategy", fileCount:1018, model:"claude-opus-4-6", startX:7.5, startY:5.5 },
-  { name:"Method Man", alias:"Johnny Blaze", emoji:"💰", color:"#D4AF37", status:"building", mission:"Trading — UFC + Polymarket", fileCount:477, model:"claude-sonnet-4-6", startX:2.5, startY:1.5 },
+  { name:"Method Man", alias:"Johnny Blaze", emoji:"💰", color:"#D4AF37", status:"building", mission:"Trading, UFC + Polymarket", fileCount:477, model:"claude-sonnet-4-6", startX:2.5, startY:1.5 },
   { name:"Ghostface Killah", alias:"Tony Starks", emoji:"👻", color:"#F59E0B", status:"building", mission:"E-commerce ops", fileCount:105, model:"claude-sonnet-4-6", startX:13.5, startY:2.5 },
   { name:"Raekwon", alias:"The Chef", emoji:"🍳", color:"#10B981", status:"building", mission:"Content + SEO", fileCount:127, model:"claude-sonnet-4-6", startX:2.5, startY:5.5 },
   { name:"Inspectah Deck", alias:"Rebel INS", emoji:"🔍", color:"#3B82F6", status:"building", mission:"WeBearish mission lead", fileCount:85, model:"claude-sonnet-4-6", startX:13.5, startY:5.5 },
@@ -20,7 +20,7 @@ const THOUGHTS = [
   "Diversify the bonds","36 chambers deep","Killa beez on attack","💎 Building...",
   "The sword is the mind","Data flowing...","Executing the plan","📊 Numbers up",
   "Content locked in","Strategy loaded","🔥 Next level","Patience...",
-  "📜 Genesis 1:1...","In the beginning...","Proverbs 4:7 — Wisdom first",
+  "📜 Genesis 1:1...","In the beginning...","Proverbs 4:7, Wisdom first",
 ];
 
 const ZONES = [
@@ -230,7 +230,7 @@ export default function ChamberCanvas() {
       ctx.textAlign = "center";
       ctx.fillText("⚔  THE 36TH CHAMBER  ⚔", w/2, 28);
       ctx.font = "9px monospace"; ctx.fillStyle = "#555";
-      ctx.fillText("Wu-Tang AI War Room — Live View", w/2, 42);
+      ctx.fillText("Wu-Tang AI War Room, Live View", w/2, 42);
 
       drawFloor(w); drawZones(w); drawFurniture(w, f);
 

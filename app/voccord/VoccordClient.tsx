@@ -20,7 +20,7 @@ const CHAPTERS = [
       'Bots exist. None of them are actual community members.',
       'There is no infrastructure layer for community operations at scale.',
     ],
-    takeaway: 'A multi-billion dollar category — online communities — has no reliable operational stack. That is the gap.',
+    takeaway: 'A multi-billion dollar category, online communities, has no reliable operational stack. That is the gap.',
     discord: {
       server: 'Indie Game Dev Hub',
       messages: [
@@ -36,7 +36,7 @@ const CHAPTERS = [
     label: 'The Solution',
     headline: 'Voccord: Your community\'s vocal cords.',
     points: [
-      'Autonomous in-character Discord personas — not chatbots, operational agents.',
+      'Autonomous in-character Discord personas, not chatbots, operational agents.',
       'Persistent memory. Server-specific knowledge. Safety layers. Event orchestration.',
       'The Welcome Captain, the Lore Keeper, the Code Mentor, the Event Host.',
       'Powered by the Voice of Cash. Built for outcomes, not impressions.',
@@ -45,9 +45,9 @@ const CHAPTERS = [
     discord: {
       server: 'Indie Game Dev Hub',
       messages: [
-        { user: 'Vex', avatar: '🤖', role: 'Voccord Bot', color: G, time: 'Today 9:00 AM', msg: "Welcome to Indie Game Dev Hub, @pixelwitch! I'm Vex, your community host. Before you dive in — what are you currently building? I'll drop you in the right channels.", badge: 'APP' },
+        { user: 'Vex', avatar: '🤖', role: 'Voccord Bot', color: G, time: 'Today 9:00 AM', msg: "Welcome to Indie Game Dev Hub, @pixelwitch! I'm Vex, your community host. Before you dive in, what are you currently building? I'll drop you in the right channels.", badge: 'APP' },
         { user: 'pixelwitch', avatar: 'P', role: 'Member', color: '#9C27B0', time: 'Today 9:01 AM', msg: 'woah ok a real response! working on a roguelite platformer in godot', badge: null },
-        { user: 'Vex', avatar: '🤖', role: 'Voccord Bot', color: G, time: 'Today 9:01 AM', msg: "Perfect. I've added you to #godot-builders and #roguelite-dev. There's a playtest session this Friday at 7PM ET — want me to RSVP you?", badge: 'APP' },
+        { user: 'Vex', avatar: '🤖', role: 'Voccord Bot', color: G, time: 'Today 9:01 AM', msg: "Perfect. I've added you to #godot-builders and #roguelite-dev. There's a playtest session this Friday at 7PM ET, want me to RSVP you?", badge: 'APP' },
         { user: 'pixelwitch', avatar: 'P', role: 'Member', color: '#9C27B0', time: 'Today 9:02 AM', msg: 'yes please!! this server actually works lol', badge: null },
       ],
     },
@@ -57,16 +57,16 @@ const CHAPTERS = [
     label: 'The Product',
     headline: 'Five things every community needs. One platform.',
     points: [
-      'Onboarding: guided intros, rules, role assignment — zero mod effort.',
+      'Onboarding: guided intros, rules, role assignment, zero mod effort.',
       'Moderation: policy-driven interventions, escalation to humans, audit trails.',
-      'Programming: weekly events, office hours, quests, mini-games — auto-scheduled.',
-      'Domain help: TTRPG rules, coding hints, FAQ, lore — any knowledge base.',
+      'Programming: weekly events, office hours, quests, mini-games, auto-scheduled.',
+      'Domain help: TTRPG rules, coding hints, FAQ, lore, any knowledge base.',
     ],
     takeaway: 'Delivered as hosted agents, a configuration console, a persona library, analytics, and optional white-glove customization. The product is infrastructure, not a feature.',
     discord: {
       server: 'Dragon Realm TTRPG',
       messages: [
-        { user: 'Loreknight', avatar: '⚔️', role: 'Voccord Bot', color: GOLD, time: 'Friday 7:00 PM', msg: "⚔️ REALM EVENT: The Siege of Vareth begins in 30 minutes. @adventurers — your factions have been assigned. Check #quest-board for objectives. First blood wins the Crimson Signet.", badge: 'APP' },
+        { user: 'Loreknight', avatar: '⚔️', role: 'Voccord Bot', color: GOLD, time: 'Friday 7:00 PM', msg: "⚔️ REALM EVENT: The Siege of Vareth begins in 30 minutes. @adventurers, your factions have been assigned. Check #quest-board for objectives. First blood wins the Crimson Signet.", badge: 'APP' },
         { user: 'DnDruid', avatar: 'D', role: 'Member', color: '#4CAF50', time: 'Friday 7:02 PM', msg: "LETS GOOOOO finally an event thats actually organized", badge: null },
         { user: 'Loreknight', avatar: '⚔️', role: 'Voccord Bot', color: GOLD, time: 'Friday 7:03 PM', msg: "House Ashenveil leads with 23 members. House Ironmarch follows with 19. You have until 9PM. The lore record will be written after.", badge: 'APP' },
         { user: 'MageHex', avatar: 'M', role: 'Member', color: '#7C4DFF', time: 'Friday 7:04 PM', msg: 'this is the most active this server has been in months', badge: null },
@@ -78,16 +78,16 @@ const CHAPTERS = [
     label: 'The Moat',
     headline: 'Six moats. Each one compounding.',
     points: [
-      'Telemetry: what engagement patterns, event formats, and interventions actually work — by niche, size, and tone. Proprietary dataset competitors cannot replicate.',
+      'Telemetry: what engagement patterns, event formats, and interventions actually work, by niche, size, and tone. Proprietary dataset competitors cannot replicate.',
       'Operational maturity: rate limits, API quirks, edge-case social dynamics, incident response. Code can be copied. Operational knowledge cannot.',
       'Trust + brand: large servers will not trial unknown bots. The moat is being known as the one that does not embarrass mods.',
-      'Content IP: persona archetypes, event arc libraries, niche playbooks — content as defensibility.',
+      'Content IP: persona archetypes, event arc libraries, niche playbooks, content as defensibility.',
     ],
     takeaway: 'The best moats are boring and hard. Telemetry, operational maturity, and trust form a compounding bundle that gets stronger with every server deployed.',
     discord: {
       server: 'Code & Coffee Study Group',
       messages: [
-        { user: 'ByteBot', avatar: '💻', role: 'Voccord Bot', color: '#00BCD4', time: 'Monday 9:00 AM', msg: "Good morning, @coders. Weekly standup: drop your focus for the week. I'll track progress and run a Friday retro. Also: 3 members hit study streaks this week — congrats @amara @kofi @dev_sam.", badge: 'APP' },
+        { user: 'ByteBot', avatar: '💻', role: 'Voccord Bot', color: '#00BCD4', time: 'Monday 9:00 AM', msg: "Good morning, @coders. Weekly standup: drop your focus for the week. I'll track progress and run a Friday retro. Also: 3 members hit study streaks this week, congrats @amara @kofi @dev_sam.", badge: 'APP' },
         { user: 'amara_codes', avatar: 'A', role: 'Member', color: '#FF9800', time: 'Monday 9:03 AM', msg: 'finishing my React project. ByteBot the streak tracker is genuinely keeping me accountable', badge: null },
         { user: 'servermod_jin', avatar: 'J', role: 'Mod', color: '#F44336', time: 'Monday 9:05 AM', msg: "haven't had to manually run a standup in 3 weeks. this is genuinely unreal", badge: null },
       ],
@@ -98,16 +98,16 @@ const CHAPTERS = [
     label: 'Business Model',
     headline: 'Subscription-first. Marketplace next. Network later.',
     points: [
-      'Tier 1 — Starter: $49/month per server (up to 500 members). Core persona, onboarding, basic moderation.',
-      'Tier 2 — Growth: $149/month (up to 5,000 members). Multi-persona, event orchestration, analytics.',
-      'Tier 3 — Pro: $299/month+ (5,000+ members). Custom personas, knowledge base, audit logs, compliance.',
+      'Tier 1, Starter: $49/month per server (up to 500 members). Core persona, onboarding, basic moderation.',
+      'Tier 2, Growth: $149/month (up to 5,000 members). Multi-persona, event orchestration, analytics.',
+      'Tier 3, Pro: $299/month+ (5,000+ members). Custom personas, knowledge base, audit logs, compliance.',
       'Add-ons: Persona packs ($29-99 one-time), event arc DLC, knowledge base ingestion, managed services.',
     ],
-    takeaway: 'Revenue per server scales with server value. A 10,000-member server saves 20+ mod hours per month — $299/month is cheap. Unit economics are strong at every tier.',
+    takeaway: 'Revenue per server scales with server value. A 10,000-member server saves 20+ mod hours per month, $299/month is cheap. Unit economics are strong at every tier.',
     discord: {
       server: 'Voccord Admin Console',
       messages: [
-        { user: 'Voccord', avatar: '🎙️', role: 'System', color: G, time: 'This week', msg: '📊 Weekly Summary — Indie Game Dev Hub\n• 47 new member onboardings (0 mod effort)\n• 3 events run, 89% avg attendance\n• 2 moderation interventions, 0 escalations\n• Est. mod hours saved: 11.5 hrs', badge: 'SYSTEM' },
+        { user: 'Voccord', avatar: '🎙️', role: 'System', color: G, time: 'This week', msg: '📊 Weekly Summary, Indie Game Dev Hub\n• 47 new member onboardings (0 mod effort)\n• 3 events run, 89% avg attendance\n• 2 moderation interventions, 0 escalations\n• Est. mod hours saved: 11.5 hrs', badge: 'SYSTEM' },
         { user: 'LukeDev', avatar: 'L', role: 'Admin', color: '#E91E63', time: 'This week', msg: 'at $149/month this is the best money i spend. used to pay $300/mo for a community manager who did less', badge: null },
       ],
     },
@@ -117,16 +117,16 @@ const CHAPTERS = [
     label: 'Growth',
     headline: 'Five expansion vectors. All defensible.',
     points: [
-      'Community Analytics Suite: cohort retention, participation heatmaps, event ROI — first-party data no competitor has.',
+      'Community Analytics Suite: cohort retention, participation heatmaps, event ROI, first-party data no competitor has.',
       'Persona Marketplace: creator-built persona packs and event arcs with revenue share. Content velocity without marginal cost.',
       'Managed Services: white-glove persona design for large servers and enterprise communities.',
-      'Integration layer: Patreon, Twitch, GitHub, game APIs — Voccord becomes the community middleware.',
+      'Integration layer: Patreon, Twitch, GitHub, game APIs, Voccord becomes the community middleware.',
     ],
     takeaway: 'Each expansion vector reinforces the core moat. Analytics deepen the data advantage. Marketplace builds distribution. Integrations increase switching costs.',
     discord: {
       server: 'Creator Community HQ',
       messages: [
-        { user: 'Voccord', avatar: '🎙️', role: 'System', color: G, time: 'Today', msg: '🆕 New in your Persona Marketplace: "The Lore Architect" event arc — 8-week narrative quest for fantasy servers. 4.9★ from 312 servers. One-click install.', badge: 'SYSTEM' },
+        { user: 'Voccord', avatar: '🎙️', role: 'System', color: G, time: 'Today', msg: '🆕 New in your Persona Marketplace: "The Lore Architect" event arc, 8-week narrative quest for fantasy servers. 4.9★ from 312 servers. One-click install.', badge: 'SYSTEM' },
         { user: 'fantasymod_kai', avatar: 'K', role: 'Admin', color: '#673AB7', time: 'Today', msg: "bought this for $39 and the engagement spike was immediate. this marketplace is dangerous for my wallet", badge: null },
         { user: 'rpg_creator_sol', avatar: 'S', role: 'Creator', color: '#FF5722', time: 'Today', msg: "i made $2,400 last month selling event packs. platform is paying my rent", badge: null },
       ],
@@ -137,16 +137,16 @@ const CHAPTERS = [
     label: 'Ad Network Sidequest',
     headline: 'Post-PMF: the highest-ARPU layer.',
     points: [
-      'Phase 3 only — gated behind proven retention uplift and trust reputation. Not before.',
-      'Sponsored Quests, not banner ads: "Build a small project with Tool X — win prizes." Value-aligned, opt-in, admin-approved.',
-      'Contextual targeting by server category and channel topic — no personal surveillance.',
+      'Phase 3 only, gated behind proven retention uplift and trust reputation. Not before.',
+      'Sponsored Quests, not banner ads: "Build a small project with Tool X, win prizes." Value-aligned, opt-in, admin-approved.',
+      'Contextual targeting by server category and channel topic, no personal surveillance.',
       'Two-sided marketplace: servers earn revenue, advertisers get high-intent micro-audiences no other platform offers.',
     ],
-    takeaway: 'Discord communities are the highest-intent micro-audiences on the internet. A native sponsorship layer — done right — is a category-defining revenue multiplier. Done wrong, it ends the company. The plan gates it correctly.',
+    takeaway: 'Discord communities are the highest-intent micro-audiences on the internet. A native sponsorship layer, done right, is a category-defining revenue multiplier. Done wrong, it ends the company. The plan gates it correctly.',
     discord: {
       server: 'Indie Dev Tools Community',
       messages: [
-        { user: 'Vex', avatar: '🤖', role: 'Voccord Bot', color: G, time: 'Thursday 6:00 PM', msg: '🎯 SPONSORED QUEST — This week, Ship Something With Supabase.\n\nBuild any project using Supabase and post it in #show-and-tell by Sunday. Top 3 get 6-month Pro plans. Presented by Supabase.\n\nReact ✅ to join the quest. Admin-approved. Full details: /quest-details', badge: 'SPONSORED' },
+        { user: 'Vex', avatar: '🤖', role: 'Voccord Bot', color: G, time: 'Thursday 6:00 PM', msg: '🎯 SPONSORED QUEST, This week, Ship Something With Supabase.\n\nBuild any project using Supabase and post it in #show-and-tell by Sunday. Top 3 get 6-month Pro plans. Presented by Supabase.\n\nReact ✅ to join the quest. Admin-approved. Full details: /quest-details', badge: 'SPONSORED' },
         { user: 'builderguy_nico', avatar: 'N', role: 'Member', color: '#2196F3', time: 'Thursday 6:02 PM', msg: "ok i actually want to do this. supabase is on my list anyway", badge: null },
         { user: 'dev_mara', avatar: 'M', role: 'Member', color: '#9C27B0', time: 'Thursday 6:03 PM', msg: 'this is how sponsorships should work. relevant to what we do, actual prizes, not spam', badge: null },
         { user: 'servermod_rin', avatar: 'R', role: 'Mod', color: '#F44336', time: 'Thursday 6:05 PM', msg: "we approved this one. server gets 40% of the placement fee + Supabase sent us 20 community codes. this works.", badge: null },
@@ -158,17 +158,17 @@ const CHAPTERS = [
     label: 'Risks',
     headline: 'Sober plan. Every risk named and mitigated.',
     points: [
-      'Bot becomes a spam cannon — opt-in only, per-server caps, admin approvals for every placement. No exceptions.',
-      'Community backlash ("selling out") — transparency by design, server earns revenue share, members can mute sponsor content.',
-      'Discord platform policy — contextual targeting, no deceptive patterns, explicit disclosures. Positioned as sponsorship programming, not ads.',
-      'Scams and low-quality advertisers — verification pipeline, escrow hold periods, category bans, reputation scores.',
+      'Bot becomes a spam cannon, opt-in only, per-server caps, admin approvals for every placement. No exceptions.',
+      'Community backlash ("selling out"), transparency by design, server earns revenue share, members can mute sponsor content.',
+      'Discord platform policy, contextual targeting, no deceptive patterns, explicit disclosures. Positioned as sponsorship programming, not ads.',
+      'Scams and low-quality advertisers, verification pipeline, escrow hold periods, category bans, reputation scores.',
     ],
     takeaway: 'The ad network can destroy the company if mishandled. The plan gates it behind trust milestones precisely because the team knows this. That discipline is the feature.',
     discord: {
       server: 'Voccord Admin Console',
       messages: [
-        { user: 'Voccord', avatar: '🎙️', role: 'System', color: G, time: 'Today', msg: '⚠️ Sponsorship request BLOCKED — Advertiser "CryptoGemZ" failed verification. Category: high-risk financial product. Reason: unverified registration, no brand safety audit. Status: Rejected. Admin notified.', badge: 'SYSTEM' },
-        { user: 'Voccord', avatar: '🎙️', role: 'System', color: G, time: 'Today', msg: '✅ Sponsorship approved — "Linear" (productivity SaaS). Category: dev tools. Format: Sponsored Quest. Server: Code & Coffee Study Group. Admin sign-off: confirmed. Live: Friday 9AM.', badge: 'SYSTEM' },
+        { user: 'Voccord', avatar: '🎙️', role: 'System', color: G, time: 'Today', msg: '⚠️ Sponsorship request BLOCKED, Advertiser "CryptoGemZ" failed verification. Category: high-risk financial product. Reason: unverified registration, no brand safety audit. Status: Rejected. Admin notified.', badge: 'SYSTEM' },
+        { user: 'Voccord', avatar: '🎙️', role: 'System', color: G, time: 'Today', msg: '✅ Sponsorship approved, "Linear" (productivity SaaS). Category: dev tools. Format: Sponsored Quest. Server: Code & Coffee Study Group. Admin sign-off: confirmed. Live: Friday 9AM.', badge: 'SYSTEM' },
       ],
     },
   },
@@ -198,7 +198,7 @@ const CHAPTERS = [
     headline: 'Five things that move the needle.',
     points: [
       '1. Lighthouse cohort: 10 servers across 5 niches. Measure retention uplift, mod hours saved, participation delta. Build the case study library.',
-      '2. Persona OS: build the standardized persona spec format, skill framework, QA harness, and telemetry pipeline — the repeatable machinery.',
+      '2. Persona OS: build the standardized persona spec format, skill framework, QA harness, and telemetry pipeline, the repeatable machinery.',
       '3. KPI framework: 7-day and 30-day retention uplift, participation uplift, mod-hour savings, incident rate. Investors need hard numbers.',
       '4. Security + safety posture doc: data handling, permissions, audit logs, escalation. Trust is the product.',
     ],
@@ -393,7 +393,7 @@ export default function VoccordClient() {
               <div className={`chapter-fade${reveal ? ' in' : ''}`} style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
                 <div>
                   <div style={{ fontSize: 10, letterSpacing: '3px', color: G, marginBottom: 10 }}>
-                    {String(chapter + 1).padStart(2, '0')} — {ch.label.toUpperCase()}
+                    {String(chapter + 1).padStart(2, '0')}, {ch.label.toUpperCase()}
                   </div>
                   <h1 style={{ fontSize: 'clamp(24px,3.5vw,52px)', fontFamily: "'Bebas Neue', sans-serif", letterSpacing: '-0.5px', lineHeight: 1.05, maxWidth: 700 }}>
                     {ch.headline}
@@ -445,13 +445,13 @@ export default function VoccordClient() {
           <div style={{ background: 'rgba(212,175,55,0.08)', border: `1px solid rgba(212,175,55,0.25)`, padding: '20px 24px', marginBottom: 48 }}>
             <div style={{ fontSize: 10, letterSpacing: '2px', color: GOLD, marginBottom: 8 }}>HOW TO USE THIS PAGE</div>
             <p style={{ fontSize: 13, color: GRAY, lineHeight: 1.7 }}>
-              This page contains two views. <strong style={{ color: TEXT }}>Present mode</strong> walks through the Voccord opportunity as a guided visual presentation — one chapter at a time, with Discord mock scenes and investor takeaways. Use arrow keys or the sidebar to navigate. <strong style={{ color: TEXT }}>Report mode</strong> (you are here) renders the full executive report in a readable format. Share the URL with the access code. Password: <code style={{ color: G, background: 'rgba(0,200,150,0.1)', padding: '2px 6px' }}>1234!</code>
+              This page contains two views. <strong style={{ color: TEXT }}>Present mode</strong> walks through the Voccord opportunity as a guided visual presentation, one chapter at a time, with Discord mock scenes and investor takeaways. Use arrow keys or the sidebar to navigate. <strong style={{ color: TEXT }}>Report mode</strong> (you are here) renders the full executive report in a readable format. Share the URL with the access code. Password: <code style={{ color: G, background: 'rgba(0,200,150,0.1)', padding: '2px 6px' }}>1234!</code>
             </p>
           </div>
 
           {/* Title */}
           <div style={{ marginBottom: 56 }}>
-            <div style={{ fontSize: 10, letterSpacing: '3px', color: G, marginBottom: 12 }}>EXECUTIVE REPORT — CONFIDENTIAL</div>
+            <div style={{ fontSize: 10, letterSpacing: '3px', color: G, marginBottom: 12 }}>EXECUTIVE REPORT, CONFIDENTIAL</div>
             <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(48px,8vw,96px)', letterSpacing: '-2px', lineHeight: 0.9, marginBottom: 20 }}>
               VOCCORD
             </h1>
@@ -462,19 +462,19 @@ export default function VoccordClient() {
           {[
             {
               num: '01', title: 'Executive Summary',
-              body: `Voccord is a B2B SaaS platform that deploys autonomous, in-character Discord personas — moderators, hosts, lore-keepers, tutors, and event runners — that measurably increase community retention and participation while reducing moderator workload.
+              body: `Voccord is a B2B SaaS platform that deploys autonomous, in-character Discord personas, moderators, hosts, lore-keepers, tutors, and event runners, that measurably increase community retention and participation while reducing moderator workload.
 
 These are not generic chatbots. They are operational agents with persistent memory, server-specific knowledge, structured event capabilities, and safety and permissioning tuned for community operators at scale.
 
-The name is intentional: a play on Discord and vocal cords. Every community deserves a reliable voice. The monetization discipline embedded in the name — Powered by the Voice of Cash — signals that Voccord is designed from day one to translate community engagement into durable, scalable revenue: subscription value now, marketplace value next, sponsorship network later.
+The name is intentional: a play on Discord and vocal cords. Every community deserves a reliable voice. The monetization discipline embedded in the name, Powered by the Voice of Cash, signals that Voccord is designed from day one to translate community engagement into durable, scalable revenue: subscription value now, marketplace value next, sponsorship network later.
 
 The investable thesis: once you solve trust, safety, reliability, and repeatable persona outcomes across thousands of communities, you create a defensible position as the engagement layer of Discord. From there, the product expands into analytics, event marketplaces, persona content packs, cross-server identity, managed services, and ultimately a native ad network that monetizes high-intent micro-audiences with sponsored quests and value-aligned programming.
 
-The moat is not code or prompts. It is a compounding bundle of telemetry, operational maturity, trust, persona IP, and embedded workflows — harder to replicate with every server deployed.`,
+The moat is not code or prompts. It is a compounding bundle of telemetry, operational maturity, trust, persona IP, and embedded workflows, harder to replicate with every server deployed.`,
             },
             {
               num: '02', title: 'Core Product',
-              body: `Voccord sells a managed platform that lets Discord server operators deploy one or more server-native personas. Personas onboard newcomers with guided introductions, rules clarification, and role assignment. They moderate with nuance — policy-driven interventions, human escalation, and full audit trails. They run recurring programming: weekly events, office hours, mini-games, and community quests. They provide domain-specific help: TTRPG rule lookups, coding hints, FAQ answering. They build culture through consistent in-character presence, lore continuity, and community rituals.
+              body: `Voccord sells a managed platform that lets Discord server operators deploy one or more server-native personas. Personas onboard newcomers with guided introductions, rules clarification, and role assignment. They moderate with nuance, policy-driven interventions, human escalation, and full audit trails. They run recurring programming: weekly events, office hours, mini-games, and community quests. They provide domain-specific help: TTRPG rule lookups, coding hints, FAQ answering. They build culture through consistent in-character presence, lore continuity, and community rituals.
 
 Delivery: hosted agents, a configuration console, a persona library, safety layers, analytics, and optional done-for-you customization services.
 
@@ -486,7 +486,7 @@ Pricing: tiered subscription per server scaled by member count. Starter at $49/m
               num: '03', title: 'Competitive Position',
               body: `Voccord competes with generic Discord bots (Dyno, MEE6), manual moderation and volunteer programming, hired community managers, and the status quo of inaction. The positioning is clear: Voccord is not a utility bot. It is a community operations platform that happens to be persona-driven.
 
-Differentiation is framed around outcomes, not AI features. Outcome-driven personas are explicitly designed to increase retention and participation — not just respond. Agent capabilities include event orchestration, structured flows, and tool use rather than pure conversation. Server-specific memory and knowledge bases provide consistent lore and policy understanding. Safety and permissioning are built-in from the start, with layered moderation, clear escalation paths, and auditability. The Persona Management System creates repeatable methodology for design, rollout, telemetry, and iteration.
+Differentiation is framed around outcomes, not AI features. Outcome-driven personas are explicitly designed to increase retention and participation, not just respond. Agent capabilities include event orchestration, structured flows, and tool use rather than pure conversation. Server-specific memory and knowledge bases provide consistent lore and policy understanding. Safety and permissioning are built-in from the start, with layered moderation, clear escalation paths, and auditability. The Persona Management System creates repeatable methodology for design, rollout, telemetry, and iteration.
 
 The key positioning: Voccord is the first community operations platform. That framing is broader and more defensible than "AI bot."`,
             },
@@ -494,13 +494,13 @@ The key positioning: Voccord is the first community operations platform. That fr
               num: '04', title: 'Moat Analysis',
               body: `Six compounding moats:
 
-1. Telemetry: proprietary engagement datasets accumulated across thousands of deployments — which persona archetypes, event formats, and moderation interventions produce results by niche, server size, and tone. This dataset becomes impossible to replicate without the deployment history.
+1. Telemetry: proprietary engagement datasets accumulated across thousands of deployments, which persona archetypes, event formats, and moderation interventions produce results by niche, server size, and tone. This dataset becomes impossible to replicate without the deployment history.
 
 2. Operational maturity: running autonomous agents in real communities is operationally complex. Rate limits, API quirks, moderator expectations, edge-case social dynamics, and abuse patterns require battle-tested playbooks that competitors cannot acquire by copying a prompt.
 
 3. Trust and brand: large communities will not trial unknown bots. Being known as the agent platform that does not embarrass mods is a gate to enterprise distribution. Reputation is earned slowly and lost instantly.
 
-4. Content IP: a proprietary library of persona archetypes with proven ROI, event packs, seasonal arcs, and niche-specific playbooks. The best packs become cultural primitives for servers — sticky, referenced, and iterated.
+4. Content IP: a proprietary library of persona archetypes with proven ROI, event packs, seasonal arcs, and niche-specific playbooks. The best packs become cultural primitives for servers, sticky, referenced, and iterated.
 
 5. Distribution: partnerships with creator agencies, game studios, and community management firms reduce distribution cost per server as the network scales. A persona marketplace creates social proof loops.
 
@@ -510,7 +510,7 @@ The key positioning: Voccord is the first community operations platform. That fr
               num: '05', title: 'Growth Vectors',
               body: `The roadmap shows five expansion vectors beyond core subscriptions:
 
-Community Analytics Suite: cohort retention, participation heatmaps, and event ROI attribution — first-party data no competitor has access to.
+Community Analytics Suite: cohort retention, participation heatmaps, and event ROI attribution, first-party data no competitor has access to.
 
 Event Ops Tools: scheduling, RSVPs, reminders, prize distribution, and recap generation as standalone products or bundled features.
 
@@ -518,17 +518,17 @@ Persona Pack Marketplace: creator-built archetypes and event arcs with revenue s
 
 Managed Services: white-glove persona design and knowledge ingestion for large servers and enterprise communities willing to pay for certainty.
 
-Integration Layer: Patreon, Shopify, Twitch, GitHub, and game APIs turn Voccord into the community middleware — the operating system between a server and its tools.`,
+Integration Layer: Patreon, Shopify, Twitch, GitHub, and game APIs turn Voccord into the community middleware, the operating system between a server and its tools.`,
             },
             {
-              num: '06', title: 'Native Ad Network — The Sidequest',
+              num: '06', title: 'Native Ad Network, The Sidequest',
               body: `After PMF and reputational maturity, Voccord is positioned to build the highest-ARPU layer of the business: a Discord-native sponsorship network.
 
-Discord communities are high-intent micro-audiences — TTRPG buyers, indie dev tool users, language learners — that no other ad platform has access to. Standard ads are intrusive and community-destructive. Native sponsorship programming is not.
+Discord communities are high-intent micro-audiences, TTRPG buyers, indie dev tool users, language learners, that no other ad platform has access to. Standard ads are intrusive and community-destructive. Native sponsorship programming is not.
 
-The format is Sponsored Quests and Sponsored Events — opt-in, admin-approved, value-aligned programming that feels like content. A developer tools company sponsors a "Ship Something With X" quest, with prizes. A game studio sponsors a tournament. A SaaS product sponsors an office hours session. The persona behaves like a community host, not an ad unit.
+The format is Sponsored Quests and Sponsored Events, opt-in, admin-approved, value-aligned programming that feels like content. A developer tools company sponsors a "Ship Something With X" quest, with prizes. A game studio sponsors a tournament. A SaaS product sponsors an office hours session. The persona behaves like a community host, not an ad unit.
 
-Targeting is contextual, not personal — by server category, channel topic, and event format. No personal surveillance. The supply side (servers) earns revenue share and controls placement. The demand side (advertisers) gets contextual access they cannot buy elsewhere.
+Targeting is contextual, not personal, by server category, channel topic, and event format. No personal surveillance. The supply side (servers) earns revenue share and controls placement. The demand side (advertisers) gets contextual access they cannot buy elsewhere.
 
 This is Phase 3, gated explicitly behind proven retention uplift across many servers, mature admin controls, strong transparency, abuse prevention, and legal compliance readiness. The sequencing is deliberate: earn the right to monetize communities by first being the safest platform those communities have ever used.`,
             },
@@ -552,7 +552,7 @@ The plan is staged: you earn the right to run an ad network by first being the s
               num: '08', title: 'Investment Thesis',
               body: `The compelling case for Voccord is a platform play with a clear initial wedge.
 
-Clear wedge with measurable ROI: moderation cost reduction and engagement uplift in a massive and growing category. Every community operator has the same three problems — no time, no mod help, no programming. Voccord solves all three.
+Clear wedge with measurable ROI: moderation cost reduction and engagement uplift in a massive and growing category. Every community operator has the same three problems, no time, no mod help, no programming. Voccord solves all three.
 
 High retention potential: embedded in culture and operations, the product becomes stickier than any subscription software has a right to be. Switching costs compound with time.
 
@@ -574,7 +574,7 @@ Staged monetization discipline: the plan earns the right to run an ad network by
 
 3. KPI framework: define the core metrics investors need. Retention uplift, participation uplift, mod-hour savings, incident rate. Everything else is built on these.
 
-4. Security and safety posture document: data handling, permissions, audit logs, and escalation procedures. Trust is the product — it needs documentation.
+4. Security and safety posture document: data handling, permissions, audit logs, and escalation procedures. Trust is the product, it needs documentation.
 
 5. Unit economics model: gross margin, support burden, content pack attach rate, churn. Show the math at 100 servers, 1,000 servers, and 10,000 servers.`,
             },
@@ -603,7 +603,7 @@ Staged monetization discipline: the plan earns the right to run an ad network by
           {/* Footer */}
           <div style={{ textAlign: 'center', padding: '32px 0', borderTop: '1px solid #1a1a1a' }}>
             <p style={{ fontSize: 12, color: 'rgba(245,240,232,0.25)', marginBottom: 6 }}>
-              Confidential — Voice of Cash internal briefing
+              Confidential, Voice of Cash internal briefing
             </p>
             <a href="https://thevoiceofcash.com" style={{ fontSize: 12, color: G, textDecoration: 'none' }}>thevoiceofcash.com</a>
           </div>

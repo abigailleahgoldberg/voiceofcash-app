@@ -2,7 +2,7 @@ import VocFooter from '../components/VocFooter';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Pricing — AI Agent Services | Voice of Cash',
+  title: 'Pricing, AI Agent Services | Voice of Cash',
   description: 'Transparent AI agent pricing. Three plans starting at $999/mo. 3, 6, or 9 agents. Human skills agent add-on available. No contracts. No guesswork.',
   alternates: { canonical: 'https://www.thevoiceofcash.com/pricing' },
 };
@@ -72,15 +72,15 @@ export default function PricingPage() {
       forWho: 'For businesses doing or capable of doing serious volume. Real humans, both sides of the world, every day.',
       color: G,
       agents: 9,
-      support: '24/7 — real humans, 7 days',
-      portal: '24/7 — no blackout windows',
+      support: '24/7, real humans, 7 days',
+      portal: '24/7, no blackout windows',
       discord: 'Discord + priority VC weekly',
       training: '3 days included',
       humanAddOn: '+$1,999/mo',
       includes: [
         '9 AI agents across all operations',
         'Every core workflow automated',
-        '24/7 human team — global coverage',
+        '24/7 human team, global coverage',
         'Weekly strategy VC calls',
         'Unlimited optimization requests',
         'AI phone receptionist',
@@ -117,7 +117,7 @@ export default function PricingPage() {
           3, 6, or 9 agents. Month-to-month. Your setup is included. If your job requires two human skills agents after we talk, there is a straightforward add-on for that.
         </p>
         <p style={{ fontSize:13, color:'rgba(245,240,232,0.3)' }}>
-          Training included days vary by tier. If additional days are needed beyond what is included, they are billed at <strong style={{color:GOLD}}>$799/day</strong>. This is rare — most businesses are fully trained within the included days.
+          Training included days vary by tier. If additional days are needed beyond what is included, they are billed at <strong style={{color:GOLD}}>$799/day</strong>. This is rare, most businesses are fully trained within the included days.
         </p>
       </section>
 
@@ -204,14 +204,14 @@ export default function PricingPage() {
       {/* TRAINING ADD-ON */}
       <section style={{ padding:'0 5vw 72px', maxWidth:1100, margin:'0 auto' }}>
         <div style={{ background:'#111', border:'1px solid #1e1e1e', padding:'28px 40px', display:'flex', flexDirection:'column', gap:12 }}>
-          <div style={{ fontSize:10, letterSpacing:'2px', color:GOLD, marginBottom:4 }}>ADDITIONAL TRAINING DAYS — RARE, BUT WORTH KNOWING</div>
+          <div style={{ fontSize:10, letterSpacing:'2px', color:GOLD, marginBottom:4 }}>ADDITIONAL TRAINING DAYS, RARE, BUT WORTH KNOWING</div>
           <div style={{ display:'grid', gridTemplateColumns:'1fr auto', gap:24, alignItems:'center' }}>
             <div>
               <h3 style={{ fontSize:'clamp(16px,2vw,22px)', fontWeight:900, marginBottom:10 }}>
                 Extra training days if your team needs them: <span style={{color:GOLD}}>$799/day</span>
               </h3>
               <p style={{ fontSize:14, color:'rgba(245,240,232,0.55)', lineHeight:1.75, maxWidth:680 }}>
-                Every plan includes training days based on your tier. Most businesses are fully operational within those included days. In cases where your team is larger, your workflows are more complex, or your staff needs additional time to get comfortable alongside the agents, we add training days at $799/day. No padding, no minimum. We bill for the days you actually need. This comes up on fewer than 1 in 5 engagements — but we would rather you know upfront than be surprised.
+                Every plan includes training days based on your tier. Most businesses are fully operational within those included days. In cases where your team is larger, your workflows are more complex, or your staff needs additional time to get comfortable alongside the agents, we add training days at $799/day. No padding, no minimum. We bill for the days you actually need. This comes up on fewer than 1 in 5 engagements, but we would rather you know upfront than be surprised.
               </p>
             </div>
             <div style={{ textAlign:'center', minWidth:140, background:'rgba(0,0,0,0.4)', border:`1px solid ${GOLD}33`, padding:'20px 24px' }}>
@@ -223,7 +223,7 @@ export default function PricingPage() {
           <div style={{ display:'flex', gap:32, paddingTop:16, borderTop:'1px solid #1a1a1a', flexWrap:'wrap' }}>
             {[
               ['When it applies','Larger teams, complex multi-department workflows, or staff who need extra hands-on time with the agents'],
-              ['How common','Fewer than 1 in 5 engagements — included days cover the vast majority of clients'],
+              ['How common','Fewer than 1 in 5 engagements, included days cover the vast majority of clients'],
               ['How it works','Discussed and agreed on during setup, before any additional days are scheduled. Never added without your sign-off'],
             ].map(([label, val]) => (
               <div key={label} style={{ minWidth:200 }}>
@@ -246,7 +246,7 @@ export default function PricingPage() {
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:20 }}>
             {[
               { step:'Step 1', title:'Agent Configuration', price:'Included in setup', color:G, body:'We scope your workflows, configure every agent to your business, and integrate your stack. Not a template. Your actual operation.' },
-              { step:'Step 2', title:'In-House Training', price:'$799/day — 2–5 days avg', color:GOLD, body:'Your team learns to work alongside the agents — when to override, how to escalate, what to monitor. We bill for the days you actually need.' },
+              { step:'Step 2', title:'In-House Training', price:'$799/day, 2–5 days avg', color:GOLD, body:'Your team learns to work alongside the agents, when to override, how to escalate, what to monitor. We bill for the days you actually need.' },
               { step:'Step 3', title:'Monthly Ops Begin', price:'$999 / $3,999 / $7,999', color:G, body:'Agents live. Discord active. Portal open. We monitor, optimize, and improve continuously. The system gets better the longer it runs.' },
             ].map(p => (
               <div key={p.step} style={{ background:'rgba(0,0,0,0.4)', border:'1px solid #1a1a1a', padding:'26px 22px' }}>
@@ -268,7 +268,7 @@ export default function PricingPage() {
           <table className="compare-table" style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
             <thead>
               <tr>
-                {['', 'Starter — $999', 'Growth — $3,999', 'Full Ops — $7,999'].map((h,i) => (
+                {['', 'Starter, $999', 'Growth, $3,999', 'Full Ops, $7,999'].map((h,i) => (
                   <th key={i} style={{ padding:'12px 16px', textAlign: i===0 ? 'left' : 'center', fontSize:11, fontWeight:800, color: i===2 ? GOLD : i===0 ? 'rgba(245,240,232,0.4)' : G, letterSpacing:'0.5px', borderBottom:'1px solid #1a1a1a', whiteSpace:'nowrap' }}>{h}</th>
                 ))}
               </tr>
@@ -277,8 +277,8 @@ export default function PricingPage() {
               {[
                 ['AI Agents','3','6','9'],
                 ['Discord Channel','✓','✓','✓'],
-                ['Voice Chat','—','On request','Weekly'],
-                ['Brand Strategist','—','Monthly VC','Weekly VC'],
+                ['Voice Chat',', ','On request','Weekly'],
+                ['Brand Strategist',', ','Monthly VC','Weekly VC'],
                 ['Portal Access','Business hours','Hours + off-day','24/7'],
                 ['Human Support','Async, biz days','Hours + off-day msg','24/7 global'],
                 ['2nd Human Agent','+ $499/mo','+ $999/mo','+ $1,999/mo'],
@@ -286,7 +286,7 @@ export default function PricingPage() {
               ].map((row,ri) => (
                 <tr key={ri} style={{ borderBottom:'1px solid #0f0f0f', background: ri%2===0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
                   {row.map((cell,ci) => (
-                    <td key={ci} style={{ padding:'13px 16px', textAlign: ci===0 ? 'left' : 'center', color: ci===0 ? 'rgba(245,240,232,0.45)' : cell==='—' ? 'rgba(245,240,232,0.15)' : cell.startsWith('✓') ? G : cell.startsWith('+') ? GOLD : 'rgba(245,240,232,0.7)', fontWeight: ci===0 ? 600 : 400 }}>{cell}</td>
+                    <td key={ci} style={{ padding:'13px 16px', textAlign: ci===0 ? 'left' : 'center', color: ci===0 ? 'rgba(245,240,232,0.45)' : cell===', ' ? 'rgba(245,240,232,0.15)' : cell.startsWith('✓') ? G : cell.startsWith('+') ? GOLD : 'rgba(245,240,232,0.7)', fontWeight: ci===0 ? 600 : 400 }}>{cell}</td>
                   ))}
                 </tr>
               ))}

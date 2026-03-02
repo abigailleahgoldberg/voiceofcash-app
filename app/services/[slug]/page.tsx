@@ -151,7 +151,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div>
             <div style={{ fontSize:11, letterSpacing:'2px', color:G, marginBottom:8 }}>READY TO BUILD?</div>
             <h3 style={{ fontSize:'clamp(20px,3vw,32px)', fontWeight:900, marginBottom:8 }}>Let us build your {s.title}.</h3>
-            <p style={{ color:'rgba(245,240,232,0.5)', fontSize:15 }}>Free 30-minute strategy call. We map the build and give you exact pricing — no obligation.</p>
+            <p style={{ color:'rgba(245,240,232,0.5)', fontSize:15 }}>Free 30-minute strategy call. We map the build and give you exact pricing, no obligation.</p>
           </div>
           <a href="/consultation" style={{ background:G, color:'#0A0A0A', fontWeight:900, fontSize:15, padding:'16px 40px', textDecoration:'none', letterSpacing:'0.5px', whiteSpace:'nowrap' }}>BOOK FREE CALL →</a>
         </div>

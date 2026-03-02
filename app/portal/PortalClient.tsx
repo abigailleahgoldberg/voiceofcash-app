@@ -9,9 +9,9 @@ const STAGES = ['Lead','Proposal Sent','In Negotiation','Active Client','Complet
 const SERVICES = ['AI Agent Stack','Custom Automation','Consulting Retainer','AI Strategy Session','Content Automation','Full Ops Build','Other'];
 const TEAM_MEMBERS = ['Cash Colligan','Tim Gelhardt','Ammar Ul Haq','David Jones'];
 const INTERNAL_PROJECTS = [
-  { name:'The Voice of Cash', status:'Active', team:'All Partners', revenue:'Internal', description:'Core agency brand — AI agent services, consulting, automation.', color:G },
+  { name:'The Voice of Cash', status:'Active', team:'All Partners', revenue:'Internal', description:'Core agency brand, AI agent services, consulting, automation.', color:G },
   { name:'WeBearish',         status:'Active', team:'All Partners', revenue:'Internal', description:'Autism acceptance movement. 100% of profits reinvested into mission.', color:'#B8E887' },
-  { name:'U-God Sacred Texts', status:'Active', team:'All Partners', revenue:'Internal', description:'World religions digital platform at u-god.com — 200+ sacred pages.', color:GOLD },
+  { name:'U-God Sacred Texts', status:'Active', team:'All Partners', revenue:'Internal', description:'World religions digital platform at u-god.com, 200+ sacred pages.', color:GOLD },
 ];
 
 interface Client { id:string; name:string; company:string; service:string; stage:string; revenue:string; assignedTo:string; notes:string; createdAt:string; startDate:string; }
@@ -172,7 +172,7 @@ export default function PortalClient() {
                     <div style={{ fontSize:12, color:'rgba(245,240,232,0.4)' }}>{m.duties}</div>
                     <div style={{ marginTop:8, fontSize:11 }}>
                       {m.signed
-                        ? <span style={{ color:G }}>✓ Signed — {m.signed.timestamp?.split(' at')[0]}</span>
+                        ? <span style={{ color:G }}>✓ Signed, {m.signed.timestamp?.split(' at')[0]}</span>
                         : <span style={{ color:'rgba(245,240,232,0.3)' }}>⏳ Awaiting signature</span>}
                     </div>
                   </div>
@@ -190,7 +190,7 @@ export default function PortalClient() {
               </div>
               <div style={{ marginLeft:'auto', textAlign:'right' }}>
                 <div style={{ fontSize:11, color:'rgba(245,240,232,0.4)', marginBottom:4 }}>PAYMENT SCHEDULE</div>
-                <div style={{ fontSize:15, fontWeight:700, color:GOLD }}>Quarterly — 4x per year</div>
+                <div style={{ fontSize:15, fontWeight:700, color:GOLD }}>Quarterly, 4x per year</div>
                 <div style={{ fontSize:12, color:'rgba(245,240,232,0.4)' }}>Q1 due Apr 15 &nbsp;|&nbsp; Q2 due Jul 15</div>
               </div>
             </div>
@@ -268,11 +268,11 @@ export default function PortalClient() {
                   <div key={c.id} className="card" style={{ display:'grid', gridTemplateColumns:'2fr 1.5fr 1fr 1fr 1fr auto', gap:16, alignItems:'center', flexWrap:'wrap' }}>
                     <div>
                       <div style={{ fontWeight:700, fontSize:15 }}>{c.name}</div>
-                      <div style={{ fontSize:12, color:'rgba(245,240,232,0.4)' }}>{c.company || '—'}</div>
+                      <div style={{ fontSize:12, color:'rgba(245,240,232,0.4)' }}>{c.company || ', '}</div>
                     </div>
                     <div>
                       <div style={{ fontSize:12, color:'rgba(245,240,232,0.5)' }}>Service</div>
-                      <div style={{ fontSize:13, fontWeight:600 }}>{c.service || '—'}</div>
+                      <div style={{ fontSize:13, fontWeight:600 }}>{c.service || ', '}</div>
                     </div>
                     <div>
                       <div style={{ fontSize:12, color:'rgba(245,240,232,0.5)' }}>Stage</div>
@@ -280,11 +280,11 @@ export default function PortalClient() {
                     </div>
                     <div>
                       <div style={{ fontSize:12, color:'rgba(245,240,232,0.5)' }}>Revenue</div>
-                      <div style={{ fontSize:13, fontWeight:700, color:G }}>{c.revenue || '—'}</div>
+                      <div style={{ fontSize:13, fontWeight:700, color:G }}>{c.revenue || ', '}</div>
                     </div>
                     <div>
                       <div style={{ fontSize:12, color:'rgba(245,240,232,0.5)' }}>Owner</div>
-                      <div style={{ fontSize:12 }}>{c.assignedTo || '—'}</div>
+                      <div style={{ fontSize:12 }}>{c.assignedTo || ', '}</div>
                     </div>
                     <button onClick={()=>deleteClient(c.id)} style={{ background:'transparent', border:`1px solid #FF6B6B44`, color:'#FF6B6B', padding:'6px 12px', fontSize:11, cursor:'pointer' }}>✕</button>
                   </div>
@@ -332,7 +332,7 @@ export default function PortalClient() {
 
             <div style={{ marginTop:24, fontSize:11, letterSpacing:'2px', color:G, marginBottom:16 }}>PAYMENT SCHEDULE</div>
             <div className="portal-grid" style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:16 }}>
-              {[['Q1','Jan – Mar','Due Apr 15'],['Q2','Apr – Jun','Due Jul 15'],['Q3','Jul – Sep','Due Oct 15'],['Q4','Oct – Dec','Due Jan 15']].map(([q,p,d]) => (
+              {[['Q1','Jan, Mar','Due Apr 15'],['Q2','Apr, Jun','Due Jul 15'],['Q3','Jul, Sep','Due Oct 15'],['Q4','Oct, Dec','Due Jan 15']].map(([q,p,d]) => (
                 <div key={q} className="card" style={{ textAlign:'center' }}>
                   <div style={{ fontSize:24, fontWeight:900, color:GOLD, marginBottom:4 }}>{q}</div>
                   <div style={{ fontSize:13, color:'rgba(245,240,232,0.6)', marginBottom:4 }}>{p}</div>

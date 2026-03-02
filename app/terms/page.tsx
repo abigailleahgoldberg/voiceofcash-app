@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: { absolute: "Terms of Service | The Voice of Cash" },
-  description: "Terms of Service for The Voice of Cash — AI implementation services, website use, intellectual property, and client agreements.",
+  description: "Terms of Service for The Voice of Cash, AI implementation services, website use, intellectual property, and client agreements.",
 };
 
 const SECTIONS = [
@@ -19,18 +19,18 @@ These Terms constitute a legally binding agreement between you and The Voice of 
 Nothing on this Site constitutes an offer to provide services. Engagement begins only upon execution of a signed service agreement and receipt of any applicable retainer or deposit.`
   },
   {
-    title: "3. Intellectual Property — Site Content",
-    body: `All content on this Site — including but not limited to text, blog articles, copy, graphics, design elements, layouts, code, frameworks, processes, methodologies, system architectures, agent configurations, workflow designs, and the AI agent operational framework — is the exclusive intellectual property of The Voice of Cash LLC and is protected by United States copyright law, trade secret law, and applicable state and federal laws.
+    title: "3. Intellectual Property, Site Content",
+    body: `All content on this Site, including but not limited to text, blog articles, copy, graphics, design elements, layouts, code, frameworks, processes, methodologies, system architectures, agent configurations, workflow designs, and the AI agent operational framework, is the exclusive intellectual property of The Voice of Cash LLC and is protected by United States copyright law, trade secret law, and applicable state and federal laws.
 
 You may not reproduce, republish, distribute, transmit, modify, create derivative works from, sell, or exploit any content from this Site without the express prior written consent of The Voice of Cash LLC. Unauthorized use constitutes copyright infringement and may subject you to civil and criminal penalties.
 
 The Voice of Cash™ and associated agent identities, methodologies, and frameworks are proprietary designations of The Voice of Cash LLC. All rights reserved.`
   },
   {
-    title: "4. Intellectual Property — AI Systems & Methodologies",
+    title: "4. Intellectual Property, AI Systems & Methodologies",
     body: `The AI agent architectures, autonomous workflow systems, multi-agent operational frameworks, prompt systems, agent role configurations, and implementation methodologies developed by The Voice of Cash LLC constitute proprietary trade secrets and intellectual property.
 
-Any attempt to reverse-engineer, replicate, copy, or derive competitive advantage from the Company's AI systems, operational frameworks, or methodologies — whether encountered through this Site, through a client engagement, or through any other means — is strictly prohibited and will be pursued to the full extent of applicable law.
+Any attempt to reverse-engineer, replicate, copy, or derive competitive advantage from the Company's AI systems, operational frameworks, or methodologies, whether encountered through this Site, through a client engagement, or through any other means, is strictly prohibited and will be pursued to the full extent of applicable law.
 
 Client-specific systems developed under service agreements remain the property of the respective client as specified in the applicable service agreement. The Company retains all rights to underlying methodologies, frameworks, and tooling.`
   },
@@ -38,7 +38,7 @@ Client-specific systems developed under service agreements remain the property o
     title: "5. AI Disclosure",
     body: `The Voice of Cash LLC operates an AI-augmented team that includes autonomous AI agents (the "VoC Intelligence Team"). These agents are disclosed transparently on this Site. They are not human employees. They are AI systems purpose-built for specific operational functions.
 
-Content generated with AI assistance is reviewed by human team members before publication. AI agents do not make binding business commitments — all binding decisions, contracts, and client communications are handled by or reviewed by human team members.
+Content generated with AI assistance is reviewed by human team members before publication. AI agents do not make binding business commitments, all binding decisions, contracts, and client communications are handled by or reviewed by human team members.
 
 Use of AI systems in client engagements will be disclosed in applicable service agreements.`
   },

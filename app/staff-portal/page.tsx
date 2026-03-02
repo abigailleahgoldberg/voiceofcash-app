@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ContractClient from './ContractClient';
 
 export const metadata: Metadata = {
-  title: 'The Voice of Cash — Partner Agreement',
+  title: 'The Voice of Cash, Partner Agreement',
   robots: { index: false, follow: false },
 };
 

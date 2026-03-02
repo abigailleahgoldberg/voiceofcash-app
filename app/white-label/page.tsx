@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'White Label AI Agent Services | Voice of Cash',
-  description: 'Scale your agency with Voice of Cash. Offer AI agent services under your brand — fully built, deployed, and supported by us. Plans start at $999/month.',
+  description: 'Scale your agency with Voice of Cash. Offer AI agent services under your brand, fully built, deployed, and supported by us. Plans start at $999/month.',
   alternates: { canonical: 'https://www.thevoiceofcash.com/white-label' },
 };
 
@@ -13,15 +13,15 @@ const GOLD = '#D4AF37';
 export default function WhiteLabelPage() {
   const deliverables = [
     { icon:'🤖', title:'Agents Built Under Your Brand', body:'Every AI agent we build is delivered under your agency name. Your client never sees us. Your brand gets the credit. We do the work.' },
-    { icon:'⚙️', title:'Full Deployment and Integration', body:'We configure, integrate, and deploy. CRM connections, workflow builds, communication channels — all set up and running before your client sees it.' },
+    { icon:'⚙️', title:'Full Deployment and Integration', body:'We configure, integrate, and deploy. CRM connections, workflow builds, communication channels, all set up and running before your client sees it.' },
     { icon:'📊', title:'Reporting in Your Colors', body:'Performance reports formatted with your logo and brand. Your clients get a professional monthly brief that looks like it came from you.' },
-    { icon:'💬', title:'Support Backed by Our Team', body:'When your clients have questions, you have us. We are the infrastructure behind your client relationships — invisible and always available.' },
+    { icon:'💬', title:'Support Backed by Our Team', body:'When your clients have questions, you have us. We are the infrastructure behind your client relationships, invisible and always available.' },
     { icon:'📈', title:'Margin Is Yours to Set', body:'We charge you the wholesale rate. You price it to your clients however makes sense for your market. The margin between is yours.' },
     { icon:'🔒', title:'Confidentiality by Default', body:'No co-branding, no client poaching, no visibility into your relationships. What is yours stays yours.' },
   ];
 
   const useCases = [
-    { label:'Marketing Agencies', body:'Your clients are already asking about AI. Now you have an answer — and a team to back it up.' },
+    { label:'Marketing Agencies', body:'Your clients are already asking about AI. Now you have an answer, and a team to back it up.' },
     { label:'Web and Tech Agencies', body:'Add AI agent services to your retainer stack without hiring a single AI specialist.' },
     { label:'Business Consultants', body:'Your clients trust your recommendations. Give them something worth recommending that actually performs.' },
     { label:'PR and Comms Firms', body:'Offer reputation management, content agents, and media monitoring as a premium add-on to existing clients.' },
@@ -55,7 +55,7 @@ export default function WhiteLabelPage() {
               Scale your agency<br/>with the<br/><span style={{color:G}}>Voice of Cash.</span>
             </h1>
             <p style={{ fontSize:'clamp(15px,1.8vw,19px)', color:'rgba(245,240,232,0.55)', lineHeight:1.75, maxWidth:520, marginBottom:32 }}>
-              You bring the client relationships. We build the AI infrastructure behind them — under your name, on your timeline, to your standard. Your agency grows. Your clients get results. We stay invisible.
+              You bring the client relationships. We build the AI infrastructure behind them, under your name, on your timeline, to your standard. Your agency grows. Your clients get results. We stay invisible.
             </p>
             <div style={{ display:'flex', gap:12, flexWrap:'wrap' }}>
               <a href="/consultation" style={{ background:G, color:'#0A0A0A', fontWeight:900, fontSize:15, padding:'16px 36px', textDecoration:'none', letterSpacing:'0.5px' }}>BOOK A PARTNER CALL →</a>
@@ -75,7 +75,7 @@ export default function WhiteLabelPage() {
                 'Client reporting in your colors',
                 'Dedicated partner support',
                 'No client visibility into our involvement',
-                'You set the margin — we set the floor',
+                'You set the margin, we set the floor',
                 'Month-to-month, no lock-in',
               ].map((item,i) => (
                 <div key={i} style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
@@ -115,7 +115,7 @@ export default function WhiteLabelPage() {
             Everything your clients see is yours.<br/><span style={{color:G}}>Everything behind it is ours.</span>
           </h2>
           <p style={{ fontSize:16, color:'rgba(245,240,232,0.45)', maxWidth:640, marginBottom:56, lineHeight:1.7 }}>
-            We are the infrastructure. You are the agency. That division is clean, protected, and designed to make your relationships stronger — not dependent on ours.
+            We are the infrastructure. You are the agency. That division is clean, protected, and designed to make your relationships stronger, not dependent on ours.
           </p>
           <div className="wl-grid" style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:20 }}>
             {deliverables.map(d => (
@@ -184,10 +184,10 @@ export default function WhiteLabelPage() {
         <h2 style={{ fontSize:'clamp(22px,3vw,38px)', fontWeight:900, letterSpacing:'-1px', marginBottom:40 }}>Questions partners ask us first.</h2>
         {[
           { q:'Will my clients ever know Voice of Cash is involved?', a:'Not unless you want them to. We operate fully behind your brand. All deliverables, reports, and communications go through you. Our name does not appear anywhere the client sees.' },
-          { q:'What services can I offer under white label?', a:'Any service in our catalog — lead response agents, customer service agents, CRM automation, reputation management, content agents, SEO, reporting dashboards, and more. If we build it, you can sell it.' },
+          { q:'What services can I offer under white label?', a:'Any service in our catalog, lead response agents, customer service agents, CRM automation, reputation management, content agents, SEO, reporting dashboards, and more. If we build it, you can sell it.' },
           { q:'How do we handle scope and delivery?', a:'You scope the engagement with your client. You relay the specs to us. We build it, deliver it to you, and you present it. Communication flows through the agency relationship, not around it.' },
           { q:'What if my client needs support after delivery?', a:'We handle the technical backend. You handle the client relationship. If something needs attention, you flag it to us. Your client never gets bounced to a third party they were not expecting.' },
-          { q:'Is there a minimum commitment?', a:'Plans start at $999/month per engagement. Month-to-month — same as all our plans. The floor exists because quality requires infrastructure. There is no ceiling.' },
+          { q:'Is there a minimum commitment?', a:'Plans start at $999/month per engagement. Month-to-month, same as all our plans. The floor exists because quality requires infrastructure. There is no ceiling.' },
         ].map((faq,i) => (
           <div key={i} style={{ borderBottom:'1px solid #1a1a1a', padding:'24px 0' }}>
             <div style={{ fontSize:16, fontWeight:800, color:'#F5F0E8', marginBottom:10 }}>{faq.q}</div>

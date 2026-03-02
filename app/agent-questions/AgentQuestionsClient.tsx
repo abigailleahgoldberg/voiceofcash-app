@@ -15,7 +15,7 @@ const QUESTIONS = [
   // VOICE & TONE
   { id: 6, section: 'Voice & Tone', label: 'On a scale of 1 to 10, how formal should your agent be? (1 = text from a friend, 10 = legal brief)', type: 'scale', min: 1, max: 10 },
   { id: 7, section: 'Voice & Tone', label: 'How much humor do you want? (1 = zero, 10 = the agent is basically a comedian)', type: 'scale', min: 1, max: 10 },
-  { id: 8, section: 'Voice & Tone', label: 'What human — real or fictional — would you most want your agent to sound like?', type: 'textarea', placeholder: 'A celebrity, a character, a person you know, a public figure. Anyone. Explain why.' },
+  { id: 8, section: 'Voice & Tone', label: 'What human, real or fictional, would you most want your agent to sound like?', type: 'textarea', placeholder: 'A celebrity, a character, a person you know, a public figure. Anyone. Explain why.' },
   { id: 9, section: 'Voice & Tone', label: 'How should your agent handle a frustrated client?', type: 'textarea', placeholder: 'Walk us through the ideal response. Tone, approach, what it says, what it avoids.' },
   { id: 10, section: 'Voice & Tone', label: 'Should your agent ever push back or challenge a client? How and when?', type: 'textarea', placeholder: 'Some agents should be agreeable. Others should advocate. Where does yours land?' },
 
@@ -24,7 +24,7 @@ const QUESTIONS = [
   { id: 12, section: 'Culture & Taste', label: 'What is your all-time favorite food? And what does that say about you?', type: 'textarea', placeholder: 'This is not random. We use these to train authentic personality into your agent.' },
   { id: 13, section: 'Culture & Taste', label: 'What movies or shows would your business binge?', type: 'textarea', placeholder: 'Not what you think sounds good. What you actually watch.' },
   { id: 14, section: 'Culture & Taste', label: 'What books have shaped how you think about business?', type: 'textarea', placeholder: 'Business books, biographies, fiction. Whatever actually moved you.' },
-  { id: 15, section: 'Culture & Taste', label: 'What city does your business feel like it lives in — even if you are not there?', type: 'text', placeholder: 'e.g. New York. Tokyo. New Orleans. Lagos. Miami. Why?' },
+  { id: 15, section: 'Culture & Taste', label: 'What city does your business feel like it lives in, even if you are not there?', type: 'text', placeholder: 'e.g. New York. Tokyo. New Orleans. Lagos. Miami. Why?' },
 
   // VALUES
   { id: 16, section: 'Values', label: 'What is the one thing your business refuses to compromise on?', type: 'textarea', placeholder: 'The line you will not cross, no matter what. Speed? Quality? Honesty? Loyalty?' },
@@ -34,7 +34,7 @@ const QUESTIONS = [
   { id: 20, section: 'Values', label: 'Finish this sentence: "At the end of the day, this business exists because ___."', type: 'textarea', placeholder: 'Skip the mission statement. Tell us what drives it.' },
 
   // COMMUNICATION
-  { id: 21, section: 'Communication', label: 'How should your agent open a conversation with a new lead?', type: 'textarea', placeholder: 'First impression. Opening line. Energy. Not a template — the approach.' },
+  { id: 21, section: 'Communication', label: 'How should your agent open a conversation with a new lead?', type: 'textarea', placeholder: 'First impression. Opening line. Energy. Not a template, the approach.' },
   { id: 22, section: 'Communication', label: 'What is the one question your agent should always ask, no matter what?', type: 'textarea', placeholder: 'The question that reveals the most about whether someone is the right fit.' },
   { id: 23, section: 'Communication', label: 'What words or phrases should your agent never use?', type: 'textarea', placeholder: 'Banned language. Corporate speak, buzzwords, or anything that makes you wince.' },
   { id: 24, section: 'Communication', label: 'How should your agent handle silence or a non-response?', type: 'textarea', placeholder: 'Follow up? How many times? How long to wait? What tone on the second reach?' },
@@ -124,18 +124,18 @@ export default function AgentQuestionsClient() {
           Who do you want<br/><span style={{ color:G }}>to hang out with?</span>
         </h1>
         <p style={{ fontSize:'clamp(16px,1.8vw,20px)', color:'rgba(245,240,232,0.55)', lineHeight:1.75, maxWidth:700, marginBottom:16 }}>
-          Before we build your AI agent, we need to know who it is — not just what it does. Every great agent has a soul behind the system. A personality. A voice. A set of values it holds even when no one is watching.
+          Before we build your AI agent, we need to know who it is, not just what it does. Every great agent has a soul behind the system. A personality. A voice. A set of values it holds even when no one is watching.
         </p>
         <p style={{ fontSize:16, color:'rgba(245,240,232,0.45)', lineHeight:1.75, maxWidth:700, marginBottom:48 }}>
-          This is not a technical questionnaire. There are no wrong answers. Think of it as building the person you want sitting at the front of your business — the one who represents everything you stand for, every conversation, every day.
+          This is not a technical questionnaire. There are no wrong answers. Think of it as building the person you want sitting at the front of your business, the one who represents everything you stand for, every conversation, every day.
         </p>
 
         {/* WHY SOUL MATTERS */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))', gap:16, marginBottom:80, paddingBottom:80, borderBottom:'1px solid #1a1a1a' }}>
           {[
-            { icon:'🧠', title:'Personality is not decoration.', body:'The agents that convert are the ones that feel like talking to a person who actually knows the business. Tone, humor, warmth, directness — these are not aesthetic choices. They are performance variables.' },
+            { icon:'🧠', title:'Personality is not decoration.', body:'The agents that convert are the ones that feel like talking to a person who actually knows the business. Tone, humor, warmth, directness, these are not aesthetic choices. They are performance variables.' },
             { icon:'🎯', title:'Your voice is your edge.', body:'Generic agents give generic results. When your agent sounds exactly like your best salesperson on their best day, every interaction becomes a brand touchpoint. That is not automation. That is leverage.' },
-            { icon:'🔒', title:'Soul is what holds under pressure.', body:'Any agent can handle a smooth conversation. The ones with real soul handle the frustrated client, the weird question, the uncomfortable moment — and come out the other side still representing you well.' },
+            { icon:'🔒', title:'Soul is what holds under pressure.', body:'Any agent can handle a smooth conversation. The ones with real soul handle the frustrated client, the weird question, the uncomfortable moment, and come out the other side still representing you well.' },
             { icon:'♾️', title:'It compounds over time.', body:'The more clearly we know who your agent is, the better it gets over months of optimization. A well-defined soul gives us a north star for every improvement. Without it, we are just guessing.' },
           ].map(c => (
             <div key={c.title} style={{ background:'#111', border:'1px solid #1a1a1a', padding:'28px 24px' }}>

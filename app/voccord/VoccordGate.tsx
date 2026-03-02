@@ -35,7 +35,7 @@ export default function VoccordGate() {
     }}>
       <div style={{ textAlign: 'center', padding: '40px 24px', maxWidth: 400 }}>
         <div style={{ fontSize: 11, letterSpacing: '3px', color: '#00C896', marginBottom: 20 }}>
-          VOICE OF CASH — INTERNAL
+          VOICE OF CASH, INTERNAL
         </div>
         <h1 style={{
           fontSize: 'clamp(28px,5vw,48px)',
@@ -92,7 +92,7 @@ export default function VoccordGate() {
           </button>
         </form>
         <p style={{ fontSize: 11, color: 'rgba(245,240,232,0.2)', marginTop: 24 }}>
-          thevoiceofcash.com — internal use only
+          thevoiceofcash.com, internal use only
         </p>
       </div>
     </div>

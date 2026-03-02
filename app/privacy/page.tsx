@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: { absolute: "Privacy Policy | The Voice of Cash" },
-  description: "Privacy Policy for The Voice of Cash — how we collect, use, and protect your information.",
+  description: "Privacy Policy for The Voice of Cash, how we collect, use, and protect your information.",
 };
 
 const SECTIONS = [

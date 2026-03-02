@@ -43,7 +43,7 @@ const SERVICES = [
 ];
 
 const PROCESS_STEPS = [
-  { step: "01", title: "Study", desc: "We audit your current operations, tech stack, and pain points. Every business is different. Cookie-cutter never works." },
+  { step: "01", title: "Study", desc: "We audit your current operations, tech stack, and problems. Every business is different. Cookie-cutter never works." },
   { step: "02", title: "Learn", desc: "We map your workflows, understand your customers, and identify where automation delivers the highest impact." },
   { step: "03", title: "Plan", desc: "We build a clear, no-BS roadmap: what to automate first, what ROI to expect, and how fast you'll see results." },
   { step: "04", title: "Create", desc: "We build, test, deploy, and support. From AI agent to live system, with a human making sure everything works right." },
@@ -190,8 +190,8 @@ function WarRoom() {
       </div>
       <style>{`
         @keyframes slideIn {
-          from { opacity:0; transform:translateY(-8px); }
-          to { opacity:1; transform:translateY(0); }
+          from { opacity:0; transform: translateY(-8px); }
+          to { opacity:1; transform: translateY(0); }
         }
 
         /* ─── RESPONSIVE SYSTEM ─────────────────── */
@@ -723,8 +723,8 @@ export default function VoiceOfCash() {
           height: 2px;
           background: var(--gold);
           transform: scaleX(0);
-          transform-origin: left;
-          transition: transform 0.4s;
+          change-origin: left;
+          transition: change 0.4s;
         }
         .voc-service-card:hover::before { transform: scaleX(1); }
         .voc-service-card:hover { background: var(--charcoal); }
@@ -1050,7 +1050,7 @@ export default function VoiceOfCash() {
               "@id": "https://thevoiceofcash.com/#person",
               "name": "Cash Colligan",
               "jobTitle": "AI Implementation Partner",
-              "description": "30+ years as an internet native, 15+ years guiding startups and enterprises through technology transformation.",
+              "description": "30+ years as an internet native, 15+ years guiding startups and enterprises through technology change.",
               "url": "https://thevoiceofcash.com",
               "worksFor": { "@id": "https://thevoiceofcash.com/#business" },
               "sameAs": ["https://www.linkedin.com/in/thevoiceofcash/", "https://x.com/thevoiceofcash"]
@@ -1096,7 +1096,7 @@ export default function VoiceOfCash() {
           <div className="voc-services-menu">
             <a href="#services">Services ▾</a>
             <div className="voc-services-dropdown">
-              <div style={{fontSize:10,letterSpacing:"2px",color:"#00C896",marginBottom:12,fontWeight:700}}>AI AGENT SERVICES — FROM $149/HR</div>
+              <div style={{fontSize:10,letterSpacing:"2px",color:"#00C896",marginBottom:12,fontWeight:700}}>AI AGENT SERVICES, FROM $149/HR</div>
               <div className="voc-dd-grid">
                 {[
                   ["⚡","Lead Response","/services/ai-lead-response-agent"],
@@ -1198,7 +1198,7 @@ export default function VoiceOfCash() {
               onMouseEnter={e=>{(e.currentTarget as HTMLElement).style.background="rgba(0,200,150,0.12)"}}
               onMouseLeave={e=>{(e.currentTarget as HTMLElement).style.background="rgba(0,200,150,0.06)"}}
               >
-                ⚔ VIEW WAR ROOM — THE 36TH CHAMBER →
+                ⚔ VIEW WAR ROOM, THE 36TH CHAMBER →
               </a>
             </div>
           </FadeIn>
@@ -1220,7 +1220,7 @@ export default function VoiceOfCash() {
             </div>
             <div className="voc-stat-label">{s.label}</div>
             <div style={{ marginTop:8, fontSize:10, color:"rgba(0,200,150,0.45)", letterSpacing:"0.5px", fontStyle:"italic" }}>
-              — {s.source}
+             , {s.source}
             </div>
           </FadeIn>
         ))}
@@ -1261,15 +1261,75 @@ export default function VoiceOfCash() {
       </section>
 
       {/* MANIFESTO */}
+      {/* INFRASTRUCTURE DIFFERENTIATION */}
+      <section className="voc-section voc-section-dark" style={{borderTop:'1px solid rgba(0,200,150,0.1)',borderBottom:'1px solid rgba(0,200,150,0.1)'}}>
+        <FadeIn>
+          <div className="voc-section-label">What Makes Us Different</div>
+          <div className="voc-section-title" style={{marginBottom:16}}>Not A Chatbot Company.</div>
+          <p className="voc-section-desc" style={{marginBottom:48}}>
+            Most &quot;AI agencies&quot; resell wrapper tools. We build and operate the actual infrastructure.
+          </p>
+        </FadeIn>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:24,maxWidth:1100,margin:'0 auto'}}>
+          {[
+            {
+              icon: '🖥️',
+              title: 'Enterprise Hardware',
+              body: 'Deployed on dedicated server infrastructure with proper RAID arrays, redundant networking, and enterprise-grade service management. Not shared cloud instances. Not serverless functions. Real metal.',
+            },
+            {
+              icon: '🧠',
+              title: 'Multi-Model AI Routing',
+              body: 'A cost-optimized routing layer that sends each task to the right model at the right price point. GPT-4, Claude, Gemini, and open-source models, selected by task type, not subscription tier.',
+            },
+            {
+              icon: '🗣️',
+              title: 'Natural Language Deployment',
+              body: 'The entire infrastructure is orchestrated through natural language. No prompt engineering degrees required on your end. You describe what you need. The system executes.',
+            },
+            {
+              icon: '👤',
+              title: 'Human Quality Control',
+              body: 'A human operator is at the frontend of every client operation. AI handles the volume and velocity. The human handles the judgment calls. Quality stays intact because someone is always watching.',
+            },
+            {
+              icon: '⚙️',
+              title: 'Proper Service Management',
+              body: 'Processes that start on boot, restart on failure, log for audit, and escalate when something needs attention. Built like infrastructure because it is infrastructure.',
+            },
+            {
+              icon: '📊',
+              title: 'End-to-End Operations',
+              body: 'Lead response, customer service, appointment booking, reputation management, content, CRM, reporting, all running as one integrated system, not a collection of disconnected tools.',
+            },
+          ].map((item,i) => (
+            <FadeIn key={i} delay={i*0.08}>
+              <div style={{background:'rgba(255,255,255,0.02)',border:'1px solid rgba(0,200,150,0.08)',padding:'28px 24px',height:'100%'}}>
+                <div style={{fontSize:28,marginBottom:14}}>{item.icon}</div>
+                <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:18,letterSpacing:1,color:'#F5F0E8',marginBottom:10}}>{item.title}</div>
+                <p style={{fontSize:13,color:'rgba(245,240,232,0.5)',lineHeight:1.7}}>{item.body}</p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+        <FadeIn>
+          <div style={{marginTop:56,background:'rgba(0,200,150,0.04)',border:'1px solid rgba(0,200,150,0.15)',padding:'28px 36px',maxWidth:900,margin:'56px auto 0'}}>
+            <p style={{fontSize:'clamp(16px,2vw,20px)',color:'#F5F0E8',lineHeight:1.75,fontStyle:'italic',textAlign:'center'}}>
+              &ldquo;This isn&apos;t a chat agent system for your business. This is an AI-orchestrated infrastructure deployment, executed entirely through natural language on enterprise hardware, with proper RAID, proper networking, proper service management, and a cost-optimized multi-model AI routing layer that has a human at the frontend to make sure quality stays intact.&rdquo;
+            </p>
+            <p style={{textAlign:'center',marginTop:16,fontSize:12,color:'rgba(0,200,150,0.6)',letterSpacing:'2px'}}>,  THE VOICE OF CASH</p>
+          </div>
+        </FadeIn>
+      </section>
+
       <div className="voc-manifesto">
         <FadeIn>
           <h2>
-            We Don&apos;t Just Talk Strategy.<br />
-            <span className="gold">We Build The Machine.</span><br />
-            We Stay To Make Sure It Works.
+            This Isn&apos;t A Chat Agent System.<br />
+            <span className="gold">This Is AI-Orchestrated Infrastructure.</span>
           </h2>
           <p>
-            That&apos;s the difference. Most companies will sell you a tool and walk away. We&apos;ve already built AI systems, run them, broken them, fixed them, and scaled them. We know what works because we&apos;ve done the work. When you hire us, you get a team that has been in the trenches.<br/><span style={{color:'#00C896',fontWeight:700}}>Not consultants. Builders.</span>
+            Deployed entirely through natural language. Running on enterprise hardware with proper RAID, proper networking, and proper service management. A cost-optimized multi-model AI routing layer. A human at the frontend to make sure quality stays intact.<br/><br/><span style={{color:'#00C896',fontWeight:700}}>Not a tool. Not a chatbot. An operational system built for your business, and a team that stays to make sure it works.</span>
           </p>
           <div style={{marginTop:32,display:'flex',gap:16,flexWrap:'wrap',justifyContent:'center'}}>
             <a href="/free-guide" style={{display:'inline-flex',alignItems:'center',gap:10,background:'#fff',color:'#0A0A0A',fontWeight:900,fontSize:14,padding:'14px 28px',textDecoration:'none',letterSpacing:'1px',boxShadow:'0 0 24px rgba(255,255,255,0.15)'}}>
@@ -1285,7 +1345,7 @@ export default function VoiceOfCash() {
       {/* SERVICES */}
       <section className="voc-section" id="services">
         <FadeIn>
-          <div className="voc-section-label">What We Deliver</div>
+          <div className="voc-section-label">What We Build</div>
           <div className="voc-section-title">Real Automation. Real Outcomes.</div>
           <p className="voc-section-desc">
             From AI agent programming to month-over-month support, every engagement is designed
@@ -1335,7 +1395,7 @@ export default function VoiceOfCash() {
       <section className="voc-section" id="data">
         <FadeIn>
           <div className="voc-section-label">The Numbers Don&apos;t Lie</div>
-          <div className="voc-section-title">What Automation Actually Delivers</div>
+          <div className="voc-section-title">What Automation Actually Build</div>
           <p className="voc-section-desc">
             These aren&apos;t projections. This is what businesses are seeing right now when
             they bring a professional in to implement AI and automation correctly.
@@ -1355,7 +1415,7 @@ export default function VoiceOfCash() {
                 <div className="voc-data-val">{d.val}</div>
                 <div className="voc-data-label">{d.label}</div>
                 <div className="voc-data-source" style={{fontStyle:"italic",letterSpacing:"0.3px"}}>
-                  — {d.source}
+                 , {d.source}
                 </div>
               </div>
             </FadeIn>
@@ -1377,7 +1437,7 @@ export default function VoiceOfCash() {
         <div style={{marginBottom:64}}>
           <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:13,letterSpacing:4,color:"rgba(0,200,150,0.5)",textTransform:"uppercase",marginBottom:24}}>Human Leadership</div>
           <div className="team-leadership-grid">
-            {/* Left — War Room live feed */}
+            {/* Left, War Room live feed */}
             <div>
               <div style={{
                 display:"flex",alignItems:"center",justifyContent:"space-between",
@@ -1393,13 +1453,13 @@ export default function VoiceOfCash() {
                     boxShadow:"0 0 8px rgba(0,200,150,0.8)",
                     animation:"pulse-dot 1.5s infinite"
                   }}/>
-                  <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:13,letterSpacing:3,color:"#00C896"}}>WAR ROOM — LIVE</span>
+                  <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:13,letterSpacing:3,color:"#00C896"}}>WAR ROOM, LIVE</span>
                 </div>
                 <span style={{fontSize:10,color:"rgba(0,200,150,0.4)",letterSpacing:1}}>9 AGENTS ACTIVE</span>
               </div>
               <WarRoom />
             </div>
-            {/* Right — Cash + Tim */}
+            {/* Right, Cash + Tim */}
             <div className="human-cards-col">
               {[
                 { name:"Cash Colligan", title:"DOV / CMO", desc:"30+ years on the internet. 15+ years building businesses and scaling brands. The human who makes sure the machines serve the mission. The market knows it." },
@@ -1420,7 +1480,7 @@ export default function VoiceOfCash() {
 
         {/* AI team */}
         <div>
-          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:13,letterSpacing:4,color:"rgba(0,200,150,0.5)",textTransform:"uppercase",marginBottom:8}}>AI Operations — The Voice of Cash Intelligence Team</div>
+          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:13,letterSpacing:4,color:"rgba(0,200,150,0.5)",textTransform:"uppercase",marginBottom:8}}>AI Operations, The Voice of Cash Intelligence Team</div>
           <p style={{fontSize:14,color:"var(--gray)",marginBottom:28,maxWidth:640,lineHeight:1.6}}>
             Autonomous AI agents, each purpose-built for a specific function. They are not people and they are not pretending to be. They are something new: persistent, specialized intelligence that runs continuously alongside our human team.
           </p>
@@ -1463,7 +1523,7 @@ export default function VoiceOfCash() {
       </section>
 
 
-            {/* TESTIMONIALS — real LinkedIn reviews */}
+            {/* TESTIMONIALS, real LinkedIn reviews */}
       <section className="voc-section" id="testimonials">
         <FadeIn>
           <div className="voc-section-label">What People Say</div>
@@ -1539,7 +1599,7 @@ export default function VoiceOfCash() {
         </div>
       </section>
 
-      {/* BLOG PREVIEW — Fix #8 */}
+      {/* BLOG PREVIEW, Fix #8 */}
       <section className="voc-section voc-section-dark" id="insights">
         <FadeIn>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-end",marginBottom:48,flexWrap:"wrap",gap:16}}>
@@ -1570,8 +1630,8 @@ export default function VoiceOfCash() {
               }}>
                 <div style={{
                   position:"absolute",top:0,left:0,right:0,height:2,
-                  background:"var(--gold)",transform:"scaleX(0)",
-                  transformOrigin:"left",transition:"transform 0.4s"
+                  background:"var(--gold)",transform: "scaleX(0)",
+                  transformOrigin:"left",transition:"change 0.4s"
                 }} className="blog-hover-line"/>
                 <div style={{
                   fontSize:11,letterSpacing:2,color:"var(--gold)",
@@ -1591,7 +1651,7 @@ export default function VoiceOfCash() {
         </div>
       </section>
 
-      {/* CTA — Fix #7 trust signals + Fix #4 email capture */}
+      {/* CTA, Fix #7 trust signals + Fix #4 email capture */}
       <section className="voc-cta-section" id="contact">
         <FadeIn>
           <div className="voc-section-label">Ready?</div>

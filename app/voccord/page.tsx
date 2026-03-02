@@ -4,7 +4,7 @@ import VoccordGate from './VoccordGate';
 import VoccordClient from './VoccordClient';
 
 export const metadata: Metadata = {
-  title: 'Voccord — Internal Briefing',
+  title: 'Voccord, Internal Briefing',
   description: 'Confidential executive report and interactive presentation.',
   robots: 'noindex, nofollow',
 };

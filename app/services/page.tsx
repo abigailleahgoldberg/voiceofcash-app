@@ -25,7 +25,7 @@ export default function ServicesPage() {
         <h1 style={{ fontSize:'clamp(32px,5vw,60px)', fontWeight:900, letterSpacing:'-2px', lineHeight:1.0, marginBottom:20 }}>
           12 AI Agent Services.<br/><span style={{color:G}}>One team that builds them all.</span>
         </h1>
-        <p style={{ fontSize:18, color:'rgba(245,240,232,0.5)', maxWidth:640, lineHeight:1.7, marginBottom:16 }}>Every service starts at <strong style={{color:GOLD}}>$149/hr</strong>. Monthly retainers available. Or let us run everything — <a href="/business" style={{color:G, textDecoration:'none', fontWeight:700}}>see our full-service option →</a></p>
+        <p style={{ fontSize:18, color:'rgba(245,240,232,0.5)', maxWidth:640, lineHeight:1.7, marginBottom:16 }}>Every service starts at <strong style={{color:GOLD}}>$149/hr</strong>. Monthly retainers available. Or let us run everything, <a href="/business" style={{color:G, textDecoration:'none', fontWeight:700}}>see our full-service option →</a></p>
       </section>
       <section style={{ padding:'0 5vw 100px', maxWidth:1100, margin:'0 auto' }}>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(300px,1fr))', gap:16 }}>

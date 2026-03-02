@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_TO || 'thevoiceofcash@gmail.com',
-      subject: `Agent Soul Intake — ${name}`,
+      subject: `Agent Soul Intake, ${name}`,
       text: `New agent questionnaire submitted.\n\nName: ${name}\nEmail: ${email}\n\n---\n\n${answerLines}`,
     });
 
@@ -36,8 +36,8 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
-      subject: 'We received your Agent Soul Questionnaire — Voice of Cash',
-      text: `${name},\n\nWe have everything we need to start building your agent.\n\nOur team will review your responses and reach out within one business day to confirm details before we begin.\n\nIf you have anything to add before we talk, reply to this email.\n\n— The Voice of Cash Team\nhttps://thevoiceofcash.com`,
+      subject: 'We received your Agent Soul Questionnaire, Voice of Cash',
+      text: `${name},\n\nWe have everything we need to start building your agent.\n\nOur team will review your responses and reach out within one business day to confirm details before we begin.\n\nIf you have anything to add before we talk, reply to this email.\n\n,  The Voice of Cash Team\nhttps://thevoiceofcash.com`,
     });
   } catch (_) {}
 

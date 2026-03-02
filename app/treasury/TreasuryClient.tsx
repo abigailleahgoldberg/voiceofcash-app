@@ -170,15 +170,15 @@ export default function TreasuryClient() {
         {/* Total */}
         <div style={{ padding:28, background:'#141414', borderLeft:`4px solid ${G}`, border:`1px solid ${G}33` }}>
           <p style={{ fontSize:11, letterSpacing:2, color:'rgba(245,240,232,0.3)', textTransform:'uppercase', margin:'0 0 8px' }}>Total Portfolio Value</p>
-          <p style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:52, color:G, margin:0, letterSpacing:2 }}>{wallet ? fmt(wallet.totalUsd) : '—'}</p>
+          <p style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:52, color:G, margin:0, letterSpacing:2 }}>{wallet ? fmt(wallet.totalUsd) : ', '}</p>
           {wallet && <p style={{ fontSize:12, color:'rgba(245,240,232,0.2)', margin:'6px 0 0' }}>Updated: {wallet.lastUpdated}</p>}
         </div>
 
         {/* Wallet Cards */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:16 }}>
           {[
-            { label:'Base Chain (EVM)', val:wallet ? fmt(wallet.ethUsd) : '—', sub:wallet ? wallet.ethBalance.toFixed(6)+' ETH' : '—', addr:EVM_ADDRESS, link:'https://base.blockscout.com/address/'+EVM_ADDRESS, color:'#3b82f6' },
-            { label:'Solana',           val:wallet ? fmt(wallet.solUsd)  : '—', sub:wallet ? wallet.solBalance.toFixed(6)+' SOL' : '—', addr:SOL_ADDRESS,  link:'https://solscan.io/account/'+SOL_ADDRESS,  color:'#a855f7' },
+            { label:'Base Chain (EVM)', val:wallet ? fmt(wallet.ethUsd) : ', ', sub:wallet ? wallet.ethBalance.toFixed(6)+' ETH' : ', ', addr:EVM_ADDRESS, link:'https://base.blockscout.com/address/'+EVM_ADDRESS, color:'#3b82f6' },
+            { label:'Solana',           val:wallet ? fmt(wallet.solUsd)  : ', ', sub:wallet ? wallet.solBalance.toFixed(6)+' SOL' : ', ', addr:SOL_ADDRESS,  link:'https://solscan.io/account/'+SOL_ADDRESS,  color:'#a855f7' },
           ].map(w => (
             <div key={w.label} style={{ padding:20, background:'#141414', border:'1px solid rgba(255,255,255,0.06)' }}>
               <div style={{ display:'flex', justifyContent:'space-between', marginBottom:10 }}>
@@ -227,7 +227,7 @@ export default function TreasuryClient() {
 
         {/* Wallet Allocation */}
         <div style={{ padding:24, background:'#141414', border:'1px solid rgba(255,255,255,0.06)' }}>
-          <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:20, letterSpacing:2, color:'#F5F0E8', margin:'0 0 16px' }}>WALLET ALLOCATION — 25/55/20</h2>
+          <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:20, letterSpacing:2, color:'#F5F0E8', margin:'0 0 16px' }}>WALLET ALLOCATION, 25/55/20</h2>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12 }}>
             {[
               { label:'Vault', pct:25, color:'#3b82f6', desc:'Untouchable savings' },
@@ -241,7 +241,7 @@ export default function TreasuryClient() {
                 <div style={{ height:3, background:'rgba(255,255,255,0.06)', borderRadius:2 }}>
                   <div style={{ height:'100%', width:w.pct+'%', background:w.color, borderRadius:2 }} />
                 </div>
-                <p style={{ fontSize:14, fontWeight:700, color:'rgba(245,240,232,0.4)', margin:'8px 0 0' }}>{wallet ? fmt(wallet.totalUsd * w.pct / 100) : '—'}</p>
+                <p style={{ fontSize:14, fontWeight:700, color:'rgba(245,240,232,0.4)', margin:'8px 0 0' }}>{wallet ? fmt(wallet.totalUsd * w.pct / 100) : ', '}</p>
               </div>
             ))}
           </div>
@@ -266,7 +266,7 @@ export default function TreasuryClient() {
           {/* Stats */}
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(120px,1fr))', gap:12, marginBottom:20 }}>
             {[
-              { label:'Record', val:`${wins}W – ${losses}L`, color: wins >= losses ? '#22c55e' : '#ef4444' },
+              { label:'Record', val:`${wins}W, ${losses}L`, color: wins >= losses ? '#22c55e' : '#ef4444' },
               { label:'Net P&L', val:`${netPL >= 0 ? '+' : ''}$${netPL.toFixed(2)}`, color: netPL >= 0 ? '#22c55e' : '#ef4444' },
               { label:'Exposure', val:`$${activeExposure.toFixed(2)}`, color:GOLD },
               { label:'Potential', val:`$${activePotential.toFixed(2)}`, color:'#3b82f6' },
@@ -414,7 +414,7 @@ export default function TreasuryClient() {
         </div>
 
         <p style={{ textAlign:'center', fontSize:11, color:'rgba(245,240,232,0.12)', paddingTop:8 }}>
-          🔒 Restricted — The Voice of Cash Internal Use Only
+          🔒 Restricted, The Voice of Cash Internal Use Only
         </p>
       </div>
     </div>

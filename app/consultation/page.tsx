@@ -10,13 +10,13 @@ const STEPS = [
   { id: "challenges", label: "Step 3 of 8", question: "What are your biggest operational challenges right now?", sub: "Select up to 3", type: "checkbox",
     options: ["Too much manual / repetitive work","Slow customer response times","Inconsistent lead follow-up","High staffing costs","No system to track customers or leads","Disconnected tools that don't talk to each other","I don't know where to start with AI"] },
   { id: "priorAI", label: "Step 4 of 8", question: "Have you tried any automation or AI tools before?", type: "radio",
-    options: ["No — we're starting fresh","Yes — but it didn't stick or wasn't set up right","Yes — we have tools but need help scaling","We have a lot of tech and need someone to tie it together"] },
+    options: ["No, we're starting fresh","Yes, but it didn't stick or wasn't set up right","Yes, we have tools but need help scaling","We have a lot of tech and need someone to tie it together"] },
   { id: "budget", label: "Step 5 of 8", question: "What's your monthly budget for AI & automation?", type: "radio",
-    options: ["Under $500/mo","$500–$1,500/mo","$1,500–$5,000/mo","$5,000+/mo","Not sure yet — I need guidance first"] },
+    options: ["Under $500/mo","$500–$1,500/mo","$1,500–$5,000/mo","$5,000+/mo","Not sure yet, I need guidance first"] },
   { id: "timeline", label: "Step 6 of 8", question: "How soon are you looking to get started?", type: "radio",
-    options: ["ASAP — this is urgent","Within the next 30 days","Next 1–3 months","Just exploring right now"] },
+    options: ["ASAP, this is urgent","Within the next 30 days","Next 1–3 months","Just exploring right now"] },
   { id: "goal", label: "Step 7 of 8", question: "If you could wave a wand, what's the ONE thing you'd want AI to handle first?", sub: "e.g. \"Never miss a lead again\" or \"Stop answering the same 50 emails every week\"", type: "text" },
-  { id: "contact", label: "Step 8 of 8", question: "Last step — how do we reach you?", type: "contact" },
+  { id: "contact", label: "Step 8 of 8", question: "Last step, how do we reach you?", type: "contact" },
 ];
 
 export default function ConsultationPage() {
@@ -80,12 +80,12 @@ export default function ConsultationPage() {
         .con-nav{padding:24px 5vw;border-bottom:1px solid rgba(0,200,150,0.1);display:flex;align-items:center;justify-content:space-between;}
         .con-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--gold);text-decoration:none;}
         .con-logo span{color:var(--white);}
-        .con-back{font-size:13px;color:var(--gray);text-decoration:none;letter-spacing:1px;text-transform:uppercase;transition:color 0.3s;}
+        .con-back{font-size:13px;color:var(--gray);text-decoration:none;letter-spacing:1px;text-change:uppercase;transition:color 0.3s;}
         .con-back:hover{color:var(--gold);}
         .con-wrap{max-width:680px;margin:0 auto;padding:80px 5vw 120px;}
         .con-progress{height:2px;background:rgba(0,200,150,0.1);border-radius:2px;margin-bottom:56px;position:relative;overflow:hidden;}
         .con-progress-fill{height:100%;background:var(--gold);border-radius:2px;transition:width 0.5s cubic-bezier(.22,1,.36,1);}
-        .con-step-label{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:12px;}
+        .con-step-label{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:4px;color:var(--gold);text-change:uppercase;margin-bottom:12px;}
         .con-question{font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,4vw,42px);line-height:1.05;margin-bottom:12px;}
         .con-sub{font-size:14px;color:var(--gray);margin-bottom:36px;line-height:1.5;}
         .con-options{display:flex;flex-direction:column;gap:12px;margin-bottom:40px;}
@@ -102,13 +102,13 @@ export default function ConsultationPage() {
         .con-text-input::placeholder{color:var(--gray);}
         .con-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;} @media(max-width:600px){.con-contact-grid{grid-template-columns:1fr;}}
         .con-field{display:flex;flex-direction:column;gap:8px;}
-        .con-field label{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gray);}
+        .con-field label{font-size:12px;letter-spacing:2px;text-change:uppercase;color:var(--gray);}
         .con-field input{background:rgba(0,200,150,0.03);border:1px solid rgba(0,200,150,0.15);color:var(--white);font-family:'DM Sans',sans-serif;font-size:15px;padding:14px 16px;outline:none;transition:border-color 0.3s;}
         .con-field input:focus{border-color:var(--gold);}
         .con-field input::placeholder{color:var(--gray);}
         .con-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
         .con-btn-next{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--black);font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;padding:16px 32px;border:none;cursor:pointer;transition:all 0.3s;width:100%;justify-content:center;max-width:320px;}
-        .con-btn-next:hover:not(:disabled){background:var(--gold-light);transform:translateY(-2px);}
+        .con-btn-next:hover:not(:disabled){background:var(--gold-light);change:translateY(-2px);}
         .con-btn-next:disabled{opacity:0.4;cursor:not-allowed;}
         .con-btn-back{background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--gray);font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2px;padding:16px 28px;cursor:pointer;transition:all 0.3s;}
         .con-btn-back:hover{border-color:var(--gold);color:var(--gold);}
@@ -142,7 +142,7 @@ export default function ConsultationPage() {
             <div style={{ marginBottom: 8 }}>
               <div className="con-local-badge">
                 <span style={{width:8,height:8,background:"var(--gold)",borderRadius:"50%",display:"inline-block"}}></span>
-                Las Vegas Businesses Only — Serving the Valley
+                Las Vegas Businesses Only, Serving the Valley
               </div>
             </div>
 

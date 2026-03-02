@@ -47,7 +47,7 @@ export default function WarRoomClient() {
       <div style={{ textAlign:'center', padding:'40px 20px 24px' }}>
         <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(0,200,150,0.08)', border:'1px solid rgba(0,200,150,0.2)', padding:'7px 18px', marginBottom:20 }}>
           <span style={{ width:7, height:7, borderRadius:'50%', background:G, display:'inline-block' }} />
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:12, letterSpacing:3, color:G }}>LIVE — WAR ROOM ACTIVE</span>
+          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:12, letterSpacing:3, color:G }}>LIVE, WAR ROOM ACTIVE</span>
         </div>
         <h1 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(40px,9vw,76px)', color:'#F5F0E8', letterSpacing:2, margin:'0 0 12px', lineHeight:1 }}>
           THE <span style={{ color:G }}>36TH CHAMBER</span>
@@ -90,7 +90,7 @@ export default function WarRoomClient() {
                 src="https://36th-chamber.vercel.app/embed"
                 style={{ width:'100%', height:'clamp(340px, 70vw, 760px)', border:'none', display:'block', background:'#060d14' }}
                 className="chamber-iframe"
-                title="The 36th Chamber — Voice of Cash War Room"
+                title="The 36th Chamber, Voice of Cash War Room"
                 allow="autoplay"
               />
             </div>
@@ -133,7 +133,7 @@ export default function WarRoomClient() {
             {[
               { title:'What Is the 36th Chamber?', body:"The 36th Chamber is the Voice of Cash live operations center. Nine autonomous AI agents, each with a distinct role, running 24/7 to power the businesses we build and serve in Las Vegas." },
               { title:'Who Are the Agents?', body:"GZA handles strategy. Method Man runs trading and revenue. Raekwon owns content and SEO. Ghostface Killah manages e-commerce. Inspectah Deck validates data. ODB brings the chaos and creativity. Masta Killa leads long-form publishing. U-God manages sacred texts and data infrastructure. Slim Shady handles security and IT ops." },
-              { title:'What Does This Mean For Your Business?', body:"These aren't demo bots. They run real systems, make real decisions, and produce real output every day. When you work with The Voice of Cash, you get access to this entire infrastructure — built around your specific business needs." },
+              { title:'What Does This Mean For Your Business?', body:"These aren't demo bots. They run real systems, make real decisions, and produce real output every day. When you work with The Voice of Cash, you get access to this entire infrastructure, built around your specific business needs." },
             ].map(s => (
               <div key={s.title} style={{ padding:24, background:'#141414', border:'1px solid rgba(255,255,255,0.06)' }}>
                 <h3 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:18, letterSpacing:1, color:G, margin:'0 0 10px' }}>{s.title}</h3>

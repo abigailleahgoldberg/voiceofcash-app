@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     from: `"Voice of Cash Website" <${process.env.EMAIL_USER}>`,
     to: "thevoiceofcash@gmail.com",
     replyTo: data.email,
-    subject: `New Consultation: ${data.name} — ${data.businessName}`,
+    subject: `New Consultation: ${data.name}, ${data.businessName}`,
     html,
   });
 
