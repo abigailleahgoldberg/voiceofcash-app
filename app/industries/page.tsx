@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Industries We Serve | The Voice of Cash | Las Vegas AI Automation',
   description: 'The Voice of Cash builds AI automation systems for Las Vegas businesses across 25 industries. From hotels to healthcare, real estate to restaurants. Local expertise. Real results.',
