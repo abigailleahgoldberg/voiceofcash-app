@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const revalidate = false; // fully static — never revalidate
+export const dynamic = 'force-dynamic';
 
 
 export const metadata: Metadata = {
