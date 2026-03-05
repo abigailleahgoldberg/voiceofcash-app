@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Pricing, AI Agent Services | Voice of Cash',
-  description: 'Transparent AI agent pricing. Three plans starting at $999/mo. 3, 6, or 9 agents. Human skills agent add-on available. No contracts. No guesswork.',
+  description: 'Transparent AI agent pricing. Three plans starting at $799/mo. 3, 6, or 9 agents. Human skills agent add-on available. No contracts. No guesswork.',
   alternates: { canonical: 'https://www.thevoiceofcash.com/pricing' },
 };
 
@@ -14,7 +14,7 @@ export default function PricingPage() {
   const tiers = [
     {
       name: 'Starter',
-      price: 999,
+      price: 799,
       badge: null,
       highlight: false,
       tagline: 'Your first agents. Running fast.',
@@ -25,7 +25,7 @@ export default function PricingPage() {
       portal: 'During operating hours',
       discord: 'Dedicated Discord channel',
       training: '1 day included',
-      humanAddOn: '+$499/mo',
+      humanAddOn: '+$299/mo',
       includes: [
         '3 AI agents configured to your business',
         '1-2 core workflows automated',
@@ -39,7 +39,7 @@ export default function PricingPage() {
     },
     {
       name: 'Growth',
-      price: 3999,
+      price: 1999,
       badge: 'MOST POPULAR',
       highlight: true,
       tagline: 'Not replacing a person. Creating profit.',
@@ -50,7 +50,7 @@ export default function PricingPage() {
       portal: 'Hours + off-day access',
       discord: 'Discord + VC on request',
       training: '2 days included',
-      humanAddOn: '+$999/mo',
+      humanAddOn: '+$599/mo',
       includes: [
         '6 AI agents across revenue and operations',
         '3 workflows fully automated',
@@ -65,7 +65,7 @@ export default function PricingPage() {
     },
     {
       name: 'Full Ops',
-      price: 7999,
+      price: 4999,
       badge: 'COMPLETE SOLUTION',
       highlight: false,
       tagline: 'Every operation. On autopilot. 24/7.',
@@ -76,7 +76,7 @@ export default function PricingPage() {
       portal: '24/7, no blackout windows',
       discord: 'Discord + priority VC weekly',
       training: '3 days included',
-      humanAddOn: '+$1,999/mo',
+      humanAddOn: '+$599/mo',
       includes: [
         '9 AI agents across all operations',
         'Every core workflow automated',
@@ -187,11 +187,11 @@ export default function PricingPage() {
               Some jobs need two human agents on it.<br/>We are upfront about when that is.
             </h3>
             <p style={{ fontSize:14, color:'rgba(245,240,232,0.55)', lineHeight:1.75, maxWidth:640 }}>
-              After we evaluate your operation, if the scope genuinely requires a second human skills agent to deliver the results we promise, we add one. The fee is straightforward based on your tier: <strong style={{color:GOLD}}>+$499</strong> on Starter, <strong style={{color:GOLD}}>+$999</strong> on Growth, <strong style={{color:GOLD}}>+$1,999</strong> on Full Ops. We do not add this unless it is actually needed. That conversation happens in your first call.
+              After we evaluate your operation, if the scope genuinely requires a second human skills agent to deliver the results we promise, we add one. The fee is straightforward based on your tier: <strong style={{color:GOLD}}>+$299</strong> on Starter, <strong style={{color:GOLD}}>+$599</strong> on Growth, <strong style={{color:GOLD}}>+$999</strong> on Full Ops. We do not add this unless it is actually needed. That conversation happens in your first call.
             </p>
           </div>
           <div style={{ display:'flex', flexDirection:'column', gap:12, minWidth:160, textAlign:'center' }}>
-            {[['Starter','+$499'],['Growth','+$999'],['Full Ops','+$1,999']].map(([plan,price]) => (
+            {[['Starter','+$299'],['Growth','+$599'],['Full Ops','+$999']].map(([plan,price]) => (
               <div key={plan} style={{ background:'rgba(0,0,0,0.4)', border:'1px solid #1a1a1a', padding:'12px 20px' }}>
                 <div style={{ fontSize:10, color:'rgba(245,240,232,0.35)', letterSpacing:'1px' }}>{plan.toUpperCase()}</div>
                 <div style={{ fontSize:18, fontWeight:900, color:GOLD }}>{price}<span style={{fontSize:11,fontWeight:400,color:'rgba(245,240,232,0.3)'}}>/mo</span></div>
@@ -247,7 +247,7 @@ export default function PricingPage() {
             {[
               { step:'Step 1', title:'Agent Configuration', price:'Included in setup', color:G, body:'We scope your workflows, configure every agent to your business, and integrate your stack. Not a template. Your actual operation.' },
               { step:'Step 2', title:'In-House Training', price:'$799/day, 2–5 days avg', color:GOLD, body:'Your team learns to work alongside the agents, when to override, how to escalate, what to monitor. We bill for the days you actually need.' },
-              { step:'Step 3', title:'Monthly Ops Begin', price:'$999 / $3,999 / $7,999', color:G, body:'Agents live. Discord active. Portal open. We monitor, optimize, and improve continuously. The system gets better the longer it runs.' },
+              { step:'Step 3', title:'Monthly Ops Begin', price:'$799 / $1,999 / $4,999', color:G, body:'Agents live. Discord active. Portal open. We monitor, optimize, and improve continuously. The system gets better the longer it runs.' },
             ].map(p => (
               <div key={p.step} style={{ background:'rgba(0,0,0,0.4)', border:'1px solid #1a1a1a', padding:'26px 22px' }}>
                 <div style={{ fontSize:10, letterSpacing:'2px', color:'rgba(245,240,232,0.3)', marginBottom:8 }}>{p.step}</div>
@@ -268,7 +268,7 @@ export default function PricingPage() {
           <table className="compare-table" style={{ width:'100%', borderCollapse:'collapse', fontSize:13 }}>
             <thead>
               <tr>
-                {['', 'Starter, $999', 'Growth, $3,999', 'Full Ops, $7,999'].map((h,i) => (
+                {['', 'Starter, $799', 'Growth, $1,999', 'Full Ops, $4,999'].map((h,i) => (
                   <th key={i} style={{ padding:'12px 16px', textAlign: i===0 ? 'left' : 'center', fontSize:11, fontWeight:800, color: i===2 ? GOLD : i===0 ? 'rgba(245,240,232,0.4)' : G, letterSpacing:'0.5px', borderBottom:'1px solid #1a1a1a', whiteSpace:'nowrap' }}>{h}</th>
                 ))}
               </tr>
@@ -281,7 +281,7 @@ export default function PricingPage() {
                 ['Brand Strategist',', ','Monthly VC','Weekly VC'],
                 ['Portal Access','Business hours','Hours + off-day','24/7'],
                 ['Human Support','Async, biz days','Hours + off-day msg','24/7 global'],
-                ['2nd Human Agent','+ $499/mo','+ $999/mo','+ $1,999/mo'],
+                ['2nd Human Agent','+ $299/mo','+ $599/mo','+ $999/mo'],
                 ['Training Included','1 day','2 days','3 days'],
               ].map((row,ri) => (
                 <tr key={ri} style={{ borderBottom:'1px solid #0f0f0f', background: ri%2===0 ? 'transparent' : 'rgba(255,255,255,0.01)' }}>
@@ -301,9 +301,9 @@ export default function PricingPage() {
         <h2 style={{ fontSize:'clamp(20px,2.8vw,36px)', fontWeight:900, letterSpacing:'-1px', marginBottom:36 }}>The questions you are already asking.</h2>
         {[
           { q:'What does it actually cost to get started?',
-            a:'Setup plus training plus month one. Starter: setup typically $1,500 to $2,500, 1 training day included, then $999/month. Full Ops: $3,500 to $6,000 in setup and training, then $7,999/month. Book the call and we give you an exact number for your specific business.' },
+            a:'Setup plus training plus month one. Starter: setup typically $1,500 to $2,500, 1 training day included, then $799/month. Full Ops: $3,500 to $6,000 in setup and training, then $4,999/month. Book the call and we give you an exact number for your specific business.' },
           { q:'When does the second human agent add-on apply?',
-            a:'After we evaluate your operation. If the complexity or volume of your job genuinely requires two human agents to deliver results, we tell you that in the first call and add the fee. Starter is +$499, Growth is +$999, Full Ops is +$1,999 per month. We do not add it to pad the bill.' },
+            a:'After we evaluate your operation. If the complexity or volume of your job genuinely requires two human agents to deliver results, we tell you that in the first call and add the fee. Starter is +$299, Growth is +$599, Full Ops is +$999 per month. We do not add it to pad the bill.' },
           { q:'Why is 9 the maximum agent count?',
             a:'Because quality over quantity. Nine well-trained, properly integrated agents covering your real workflows outperforms fifteen loosely configured ones every time. If your operation needs more than nine, we evaluate it as a custom scope engagement.' },
           { q:'Are there contracts?',

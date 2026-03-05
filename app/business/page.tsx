@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Full-Service AI Operations for Businesses | Voice of Cash',
-  description: 'Complete AI agent deployment for established businesses. Three plans from $999/month. Agents, training, strategy, and 24/7 human support all under one engagement.',
+  description: 'Complete AI agent deployment for established businesses. Three plans from $799/month. Agents, training, strategy, and 24/7 human support all under one engagement.',
   alternates: { canonical: 'https://www.thevoiceofcash.com/business' },
 };
 
@@ -90,6 +90,11 @@ export default function BusinessPage() {
           <p style={{ fontSize:'clamp(16px,2vw,20px)', color:'rgba(245,240,232,0.6)', lineHeight:1.8 }}>
             We build the agents that run each of these. We connect them to each other. We put a human in the loop for the decisions that need one. And then we hand you back your time.
           </p>
+          <div style={{ marginTop:40 }}>
+            <a href="/industries" style={{ display:'inline-block', background:'#00C896', color:'#050508', fontWeight:900, fontSize:14, padding:'16px 36px', textDecoration:'none', letterSpacing:'1px' }}>
+              SEE YOUR INDUSTRY →
+            </a>
+          </div>
         </div>
       </section>
 
@@ -97,7 +102,7 @@ export default function BusinessPage() {
       <section style={{ padding:'72px 5vw', maxWidth:1100, margin:'0 auto' }}>
         <div style={{ fontSize:11, letterSpacing:'2px', color:G, marginBottom:16 }}>WHAT IS INCLUDED IN FULL-SERVICE</div>
         <h2 style={{ fontSize:'clamp(24px,3.5vw,42px)', fontWeight:900, letterSpacing:'-1px', marginBottom:48 }}>
-          One engagement. Every digital operation covered.
+          <span style={{whiteSpace:'nowrap'}}>One engagement. <span style={{color:'#00C896'}}>Every digital operation covered.</span></span>
         </h2>
         <div className="biz-incl" style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:16 }}>
           {[
@@ -158,22 +163,22 @@ export default function BusinessPage() {
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(300px,1fr))', gap:20, marginBottom:40 }}>
           {[
-            { name:'Starter', price:999, color:G, badge:null, highlight:false,
+            { name:'Starter', price:799, color:G, badge:null, highlight:false,
               tagline:'Your first agents. Running fast.',
               agents:'3', training:'1 day included',
               desc:'Start automated. Discord channel active from day one. Portal during operating hours. Agents running 24/7. Second human agent available for +$499/mo.',
               items:['3 AI agents configured','1-2 core workflows automated','Dedicated Discord channel','Client portal during business hours','CRM integration + monthly report'],
             },
-            { name:'Growth', price:3999, color:GOLD, badge:'MOST POPULAR', highlight:true,
+            { name:'Growth', price:1999, color:GOLD, badge:'MOST POPULAR', highlight:true,
               tagline:'Not replacing a person. Creating profit.',
               agents:'6', training:'2 days included',
-              desc:'Complex enough that automation unlocks revenue, not just cuts cost. Brand strategist, monthly VC sessions, off-day messaging. Second human agent +$999/mo.',
+              desc:'Complex enough that automation unlocks revenue, not just cuts cost. Brand strategist, monthly VC sessions, off-day messaging. Second human agent +$599/mo.',
               items:['6 agents across revenue and ops','Monthly brand strategy VC session','Discord + voice chat on demand','Portal hours + off-day messaging','Guaranteed growth-tier output'],
             },
-            { name:'Full Ops', price:7999, color:G, badge:'9 AGENTS MAX', highlight:false,
+            { name:'Full Ops', price:4999, color:G, badge:'9 AGENTS MAX', highlight:false,
               tagline:'Every operation. On autopilot. 24/7.',
               agents:'9', training:'3 days included',
-              desc:'24/7 real humans, both sides of the world. 9 agents. Every workflow automated. Weekly strategy calls. No blackout windows. Second human agent +$1,999/mo.',
+              desc:'24/7 real humans, both sides of the world. 9 agents. Every workflow automated. Weekly strategy calls. No blackout windows. Second human agent +$999/mo.',
               items:['9 AI agents deployed','24/7 human team, global coverage','Weekly strategy VC calls','Unlimited optimization requests','Phone AI, competitor intel, full reporting'],
             },
           ].map((tier: any) => (
@@ -200,7 +205,7 @@ export default function BusinessPage() {
           ))}
         </div>
         <div style={{ textAlign:'center' }}>
-          <p style={{ fontSize:14, color:'rgba(245,240,232,0.35)', marginBottom:12 }}>In-house agent training: <strong style={{color:GOLD}}>$799/day</strong>, 2 to 5 days on average. Second human agent add-on: +$499 / +$999 / +$1,999 per month based on your tier. Discussed in first call.</p>
+          <p style={{ fontSize:12, color:'rgba(245,240,232,0.35)', marginBottom:12, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>In-house agent training: <strong style={{color:GOLD}}>$799/day</strong>, 2 to 5 days on average. Second human agent add-on: +$299 / +$599 / +$999 per month based on your tier. Discussed in first call.</p>
           <a href="/pricing" style={{ fontSize:14, color:G, textDecoration:'none', fontWeight:700 }}>View full pricing breakdown + FAQs →</a>
         </div>
       </section>
