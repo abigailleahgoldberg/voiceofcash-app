@@ -2837,4 +2837,4 @@ Want us to implement these for your business? [Book a free consultation](/consul
 
 *Some links may be affiliate links.*`,
   },
-] as BlogPost[];
+];
