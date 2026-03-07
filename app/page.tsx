@@ -1700,6 +1700,15 @@ export default function VoiceOfCash() {
             ))}
           </div>
         </div>
+        <div style={{borderTop:"1px solid rgba(0,200,150,0.06)",paddingTop:24,marginBottom:20,display:"flex",gap:24,flexWrap:"wrap",alignItems:"center"}}>
+          <span style={{fontSize:11,letterSpacing:"2px",fontWeight:700,color:"rgba(0,200,150,0.5)"}}>OUR NETWORK</span>
+          {[["WeBearish","https://www.webearish.com"],["AI Skills Agents","https://aiskillsagents.com"],["JewSA","https://www.jewsa.com"],["U-God Sacred Texts","https://u-god.com"]].map(([label,href]) => (
+            <a key={href} href={href} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"rgba(255,255,255,0.3)",textDecoration:"none",fontWeight:600,transition:"color 0.3s"}}
+              onMouseEnter={e=>(e.currentTarget.style.color="#00C896")}
+              onMouseLeave={e=>(e.currentTarget.style.color="rgba(255,255,255,0.3)")}
+            >{label}</a>
+          ))}
+        </div>
         <div style={{
           borderTop:"1px solid rgba(0,200,150,0.06)",
           paddingTop:24,
