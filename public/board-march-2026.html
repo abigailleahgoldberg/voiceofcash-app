@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Board Meeting — March 7, 2026 | Wu-Tang Clan AI Ops</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; color: #1a1a1a; line-height: 1.7; }
+  .container { max-width: 920px; margin: 0 auto; padding: 48px 24px; }
+  .header { border-bottom: 3px solid #000; padding-bottom: 28px; margin-bottom: 40px; }
+  .eyebrow { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #888; margin-bottom: 12px; }
+  h1 { font-size: 34px; font-weight: 800; line-height: 1.15; margin-bottom: 6px; }
+  h2 { font-size: 19px; font-weight: 400; color: #555; margin-bottom: 18px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; color: #666; }
+  .meta strong { color: #333; }
+  section { background: #fff; border-radius: 10px; padding: 28px; margin-bottom: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+  h3 { font-size: 20px; font-weight: 700; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0; }
+  h4 { font-size: 16px; font-weight: 700; margin: 20px 0 10px; }
+  p { margin-bottom: 14px; font-size: 15px; color: #333; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 16px; }
+  thead tr { background: #111; color: #fff; }
+  th { padding: 10px 14px; text-align: left; font-weight: 600; }
+  td { padding: 9px 14px; border-bottom: 1px solid #eee; }
+  tbody tr:nth-child(odd) { background: #fafafa; }
+  tbody tr:hover { background: #f0f4ff; }
+  .highlight { background: #fffbe6; border: 1px solid #f0c000; border-radius: 6px; padding: 14px 18px; margin-bottom: 16px; font-size: 14px; }
+  .card { border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin-bottom: 12px; background: #fff; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+  .card-title { font-weight: 700; font-size: 15px; }
+  .badge { background: #111; color: #fff; font-size: 11px; padding: 3px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+  .card p { margin: 0; font-size: 14px; color: #555; }
+  .quote-block { background: #f8f8f8; border-left: 4px solid #000; padding: 20px 24px; font-style: italic; font-size: 15px; line-height: 1.8; margin-bottom: 20px; border-radius: 0 6px 6px 0; }
+  .black-box { background: #111; color: #fff; border-radius: 10px; padding: 28px; text-align: center; margin-top: 48px; }
+  .black-box h2 { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+  .black-box p { color: rgba(255,255,255,0.7); margin-bottom: 4px; font-size: 14px; }
+  .black-box .tagline { font-style: italic; color: rgba(255,255,255,0.85); margin-top: 12px; font-size: 16px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } h1 { font-size: 26px; } }
+  .stat-row { display: flex; gap: 10px; font-size: 14px; margin-bottom: 8px; }
+  .stat-label { font-weight: 700; min-width: 150px; flex-shrink: 0; }
+  .stat-val { color: #006600; font-weight: 600; }
+  .red { color: #c00; font-weight: 600; }
+  .green { color: #006600; font-weight: 600; }
+  .section-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #888; margin-bottom: 8px; }
+  .checklist-item { display: flex; gap: 12px; padding: 12px; border: 1px solid #e0e0e0; border-radius: 6px; margin-bottom: 8px; }
+  .checklist-item .checkbox { font-size: 18px; flex-shrink: 0; line-height: 1.4; }
+  .checklist-item .text strong { display: block; font-size: 14px; margin-bottom: 2px; }
+  .checklist-item .text span { font-size: 13px; color: #666; }
+  .priority-block { margin-bottom: 24px; }
+  .priority-label { font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .priority-row { display: flex; gap: 12px; font-size: 14px; margin-bottom: 6px; padding-left: 8px; }
+  .priority-owner { font-weight: 700; min-width: 160px; flex-shrink: 0; }
+  .emoji { font-size: 28px; margin-bottom: 8px; display: block; }
+  .grant-card { border: 1px solid #ddd; border-radius: 6px; padding: 12px 16px; margin-bottom: 8px; }
+  .grant-priority { font-size: 12px; margin-bottom: 4px; }
+  .grant-name { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+  .grant-detail { font-size: 13px; color: #666; }
+  .total-row { background: #111 !important; color: #fff; font-weight: 700; }
+  .total-row td { color: #fff !important; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="eyebrow">Internal — Partners Only · Not Indexed</div>
+    <h1>Wu-Tang Clan AI Operations</h1>
+    <h2>Board Meeting — March 7, 2026</h2>
+    <div class="meta">
+      <span><strong>Convened by:</strong> GZA</span>
+      <span><strong>Present:</strong> Raekwon · Ghostface · Inspectah Deck · ODB · Masta Killa · U-God · Slim Shady</span>
+      <span><strong>For:</strong> RZA (Abearica + TheVoiceOfCash) · CoachDavidJones · ammarasplay</span>
+    </div>
+  </div>
+
+  <!-- EXEC SUMMARY -->
+  <section>
+    <h3>🎯 Executive Summary</h3>
+    <p>Seven agents ran independent market research using live web search. The consensus is unanimous: <strong>two real paths to $20k/month — one paying in 60 days.</strong></p>
+    <div class="two-col" style="margin-top:16px; margin-bottom:16px;">
+      <div class="card" style="border: 2px solid #000;">
+        <div class="card-title" style="margin-bottom:8px;">Path 1 — aiskillsagents.com</div>
+        <p>AI Automation Agency. $7.6B market growing at 50% CAGR. 5 retainer clients × $4k/month = $20k. We have what competitors don't: a live, functioning multi-agent system. <strong>The Clan IS the demo.</strong></p>
+      </div>
+      <div class="card" style="border: 2px solid #000;">
+        <div class="card-title" style="margin-bottom:8px;">Path 2 — JewSA Owns Q4 2026</div>
+        <p>Jewish humor apparel market: real, fragmented, no dominant brand. Hanukkah 2026 = December 12. Every move we make until October builds toward that window. Potential: $15k–$30k in Q4 alone.</p>
+      </div>
+    </div>
+    <p style="font-weight:700; color:#c00;">These are not either/or. They run in parallel with different teams.</p>
+  </section>
+
+  <!-- MARKET INTELLIGENCE -->
+  <section>
+    <h3>📊 Market Intelligence</h3>
+
+    <h4>The Jewish Apparel Market (Raekwon + Ghostface)</h4>
+    <p>The humor lane is <strong>genuinely empty</strong>. No standalone brand owns it.</p>
+    <table>
+      <thead><tr><th>Competitor</th><th>What They Do</th><th>Weakness</th></tr></thead>
+      <tbody>
+        <tr><td><strong>ModernTribe.com</strong></td><td>Curator marketplace, contemporary Judaica</td><td class="red">Serious tone — not humor</td></tr>
+        <tr><td><strong>JudaicaWebstore.com</strong></td><td>Holiday apparel, Israel-made</td><td class="red">Seasonal only, no brand voice</td></tr>
+        <tr><td><strong>Alef Designs</strong></td><td>Hebrew/IDF pride tees</td><td class="red">Political, not broad humor</td></tr>
+        <tr><td><strong>Etsy (hundreds of shops)</strong></td><td>Fragmented one-off shops</td><td class="red">Zero brand identity, competing on price</td></tr>
+        <tr><td><strong>Hey Chai Hello</strong></td><td>Post-Oct 7 solidarity apparel</td><td class="red">Cause-driven niche only</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Product Margins (Ghostface Killah)</h4>
+    <p>T-shirts are mid-tier. Here's where the real money lives:</p>
+    <table>
+      <thead><tr><th>Product</th><th>Sell Price</th><th>Margin</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Baby/Infant Apparel 🏆</strong></td><td>$22–$35</td><td class="green">55–70%</td><td>Viral by nature, gift purchase, low price sensitivity</td></tr>
+        <tr><td><strong>Embroidered Hats</strong></td><td>$35–$55</td><td class="green">55–60%</td><td>Highest margin wearable</td></tr>
+        <tr><td><strong>Sweatshirts/Hoodies</strong></td><td>$55–$75</td><td class="green">45–55%</td><td>Highest revenue per unit</td></tr>
+        <tr><td><strong>Mugs</strong></td><td>$15–$22</td><td class="green">50–60%</td><td>Gift impulse buy, bundles well</td></tr>
+        <tr><td><strong>Tote Bags</strong></td><td>$22–$32</td><td class="green">45–55%</td><td>Bundle driver</td></tr>
+        <tr><td><strong>T-Shirts</strong></td><td>$28–$38</td><td>30–40%</td><td>Good volume, lowest margin</td></tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      <strong>🔵 Blue Ocean — Ghostface:</strong> Jewish humor baby/kids apparel. <em>"Little Mishpokhe"</em> sub-brand. "My First Seder" onesie. "Kvetch Mode Activated" bodysuit. Nobody is doing this at scale. Jewish grandparents are the buying force. Baby content goes viral automatically.
+    </div>
+
+    <p><strong>The audience:</strong> 7.5 million US Jews. 44% of Jewish households earn $100k+. Premium-tolerant. Gift-motivated at every holiday and lifecycle event. POD market: $12.15B in 2025, growing to $37.85B by 2030.</p>
+
+    <h4 style="margin-top:24px;">The AI Services Market (Inspectah Deck)</h4>
+    <div class="two-col">
+      <div>
+        <div class="stat-row"><span class="stat-label">Global AI market 2025:</span><span class="stat-val">$7.63 billion</span></div>
+        <div class="stat-row"><span class="stat-label">Projected 2033:</span><span class="stat-val">$182.97 billion</span></div>
+        <div class="stat-row"><span class="stat-label">CAGR 2026–2033:</span><span class="stat-val">49.6%</span></div>
+        <div class="stat-row"><span class="stat-label">Enterprise deployed:</span><span class="stat-val">51% of $500M+ companies</span></div>
+      </div>
+      <div>
+        <div class="stat-row"><span class="stat-label">Basic retainer:</span><span class="stat-val">$2k–$5k/month</span></div>
+        <div class="stat-row"><span class="stat-label">Mid-market retainer:</span><span class="stat-val">$5k–$10k/month</span></div>
+        <div class="stat-row"><span class="stat-label">Full-stack AI ops:</span><span class="stat-val">$15k–$20k+/month</span></div>
+        <div class="stat-row"><span class="stat-label">AI Readiness Audit:</span><span class="stat-val">$5k–$15k flat</span></div>
+        <div class="stat-row"><span class="stat-label">Custom workflow build:</span><span class="stat-val">$10k–$50k</span></div>
+      </div>
+    </div>
+    <p style="background:#f0f8f0; padding:12px 16px; border-radius:6px; border:1px solid #c0e0c0; margin-top:12px; font-size:14px;">
+      <strong>Documented proof:</strong> Solo operator with 7 retainer clients = $24,500/month. Another agency: $0 → $40k/month in 90 days. Our math: <strong>5 clients × $4,000/month = $20k.</strong>
+    </p>
+  </section>
+
+  <!-- CONTENT + VIRAL -->
+  <section>
+    <h3>🎤 Content + Viral Strategy (ODB + Masta Killa)</h3>
+
+    <h4>Jewish humor TikTok landscape</h4>
+    <p>Jewish TikTok influencers collectively have <strong>15M+ followers</strong> — and NONE have a humor merch partner. Not one. That's the market. ODB identified 3 ready-to-execute viral ideas:</p>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">1. "The Jewish Tax" TikTok Skit</span>
+        <span class="badge">Film This Week</span>
+      </div>
+      <p>Jewish mom appears every time someone buys anything without using a coupon. Final shot: JewSA shirt on camera. Caption: "My heritage is my hedge fund 💰" Relatable to Jews, hilarious to everyone. Cross-cultural share magnet. Film in kitchen, zero budget.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">2. "Tell Me You're Jewish Without Telling Me" UGC Challenge</span>
+        <span class="badge">Launch This Week</span>
+      </div>
+      <p>Seed video, invite community to continue it in comments. Best comment wins a free shirt. Zero budget required. 200+ comments minimum. Algorithm distribution built in. This is how brands go viral for free.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">3. "JewSA Reacts to Antisemitic Conspiracies" Ongoing Series</span>
+        <span class="badge">Ongoing Series</span>
+      </div>
+      <p>Person in JewSA shirt reads a conspiracy theory on screen. Long pause. "Bro, I can't even afford Chipotle. Where's my cut?" Hard cut. JewSA logo. Platform-safe. Press coverage potential from Jewish media (Forward, Tablet, Haaretz). Series format = repeat traffic.</p>
+    </div>
+
+    <h4 style="margin-top:24px;">JewSA Brand Story — About Page (Copy This Verbatim to jewsa.com)</h4>
+    <div class="quote-block">
+      <p style="margin-bottom:14px;">JewSA was born from a contradiction. We grew up hyphenated. Jewish-American. Always two things at once, never fully one. We carried our grandmother's recipes and our grandfather's silence about things that happened before America, and we carried it all into a country that kept asking us to pick a lane. Be American. Be Jewish. Be less. Be more. Be grateful. Be quiet. We were never quiet. We were always both — and we built JewSA for everyone who knows exactly what that feels like.</p>
+      <p style="margin-bottom:14px;">This is not a brand about religion. It's a brand about belonging. JewSA exists at the intersection of culture, humor, history, and pride — the place where a Star of David sits next to a Yankees cap without any apology. Where you can buy a hoodie that says exactly what you are, wear it to a bagel spot in Brooklyn or a Shabbat dinner in Scottsdale or a bar in Buenos Aires, and find somebody across the room who nods at you like you're already cousins.</p>
+      <p>We're building something that lasts. Not a moment. Not a trend. A brand that grows with your family the way your family's stories do — getting richer with each generation, carrying loss and laughter in equal measure, always looking forward while knowing exactly where it came from.</p>
+    </div>
+
+    <h4>TheVoiceOfCash Newsletter Revenue Benchmarks (Beehiiv 2026 data)</h4>
+    <p>Finance newsletters earn $25–$40 CPM — premium over general content. Platform recommendation: <strong>Beehiiv</strong> (138% growth in paid subscription revenue in 2025).</p>
+    <table>
+      <thead><tr><th>List Size</th><th>Ad Revenue (2 slots)</th><th>Paid Tier @ 3%</th><th>Combined Monthly</th></tr></thead>
+      <tbody>
+        <tr><td>10,000</td><td>$1,500–$2,000</td><td>$1,050–$1,500</td><td class="green"><strong>$2,550–$3,500</strong></td></tr>
+        <tr><td>25,000</td><td>$4,375–$6,250</td><td>$2,625–$3,750</td><td class="green"><strong>$7,000–$10,000</strong></td></tr>
+        <tr><td>50,000</td><td>$10,000–$15,000</td><td>$5,250–$7,500</td><td class="green"><strong>$15,250–$22,500</strong></td></tr>
+      </tbody>
+    </table>
+
+    <h4>The Defining Content Piece (Masta Killa)</h4>
+    <div class="highlight">
+      <strong>"The Hyphen: What It Actually Means to Be Jewish-American in 2026"</strong> — 3,500–5,000 word essay. Not written for Google rankings. Written for the midnight share — the person who reads it and texts it to their sibling with no words, just the link. That's the distribution engine. This is the most important piece of content JewSA will ever publish. Masta Killa drafts. Raekwon does SEO pass. ODB pulls the 5 most shareable quotes for social.
+    </div>
+  </section>
+
+  <!-- WEBEARISH + GRANTS -->
+  <section>
+    <h3>🔬 WeBearish + Research + Grants (Inspectah Deck)</h3>
+    <p>WeBearish is not the sprint vehicle — it's the mission layer that makes the entire operation matter. And it has <strong>non-dilutive capital waiting to be claimed.</strong></p>
+    <p><strong>The audience is real:</strong> 20–41% of the population is neurodivergent. There is no destination community for autistic adults focused on wealth-building (not just survival budgeting). WeBearish fills that gap.</p>
+
+    <h4>Confirmed Active Grants</h4>
+    <div class="grant-card">
+      <div class="grant-priority">🟢 HIGH PRIORITY</div>
+      <div class="grant-name">NEXT for AUTISM — Color the Spectrum</div>
+      <div class="grant-detail">June 2026 cycle. Requires 501(c)(3) or fiscal sponsor. Must have autistic employee involved in the project. <strong>Start 501(c)(3) paperwork NOW to qualify.</strong></div>
+    </div>
+    <div class="grant-card">
+      <div class="grant-priority">🟢 HIGH PRIORITY</div>
+      <div class="grant-name">Organization for Autism Research (OAR)</div>
+      <div class="grant-detail">Up to $50,000 for 1–2 year applied research grants. Our angle: "AI tools for financial independence in autistic adults." This is a legitimate research framing.</div>
+    </div>
+    <div class="grant-card">
+      <div class="grant-priority">🟡 MEDIUM PRIORITY</div>
+      <div class="grant-name">Eagles Autism Challenge</div>
+      <div class="grant-detail">Pilot grants, tech + autism intersection. Philadelphia-area fellowships but worldwide for grants.</div>
+    </div>
+    <div class="grant-card">
+      <div class="grant-priority">🟡 MEDIUM — Relationship Required</div>
+      <div class="grant-name">Nancy Lurie Marks Family Foundation</div>
+      <div class="grant-detail">Major autism funder. Does not accept unsolicited proposals — need an intro/referral. Worth cultivating via autism advocacy networks.</div>
+    </div>
+
+    <h4 style="margin-top:20px;">Long-Term WeBearish Flywheel</h4>
+    <p>WeBearish + aiskillsagents.com merge into one platform — autism acceptance community that IS an AI skills training platform, teaching autistic adults to use AI tools to build financial independence. Grant money builds it. Memberships sustain it. Fintech companies (Wealthfront, Acorns, Betterment) desperately want access to this demographic and will pay for it.</p>
+  </section>
+
+  <!-- TECH VISION -->
+  <section>
+    <h3>💻 Tech Vision (U-God)</h3>
+
+    <h4>u-god.com — Sacred Texts App Market</h4>
+    <p>$4.71B market by 2029, 16.4% CAGR. Key gap: <strong>Jewish sacred texts (Torah, Talmud, Midrash, Kabbalah) are essentially absent from every major interfaith app.</strong> The Old Testament framing is Christian, not Jewish. Nobody is at $5–8/month for the serious interfaith student. That's our slot.</p>
+    <p>Target model: freemium (3 free queries/day) → $7/month unlimited + voice mode. 500 subscribers = $42k ARR. Stack: Next.js + LanceDB vector store + ElevenLabs voice + Claude as dialogue engine.</p>
+
+    <h4 style="margin-top:20px;">aiskillsagents.com — The Real Vision</h4>
+    <p>U-God's assessment of the current site: <em>"A generic AI agency landing page. Selling time, not a platform. High churn, no moat, capped revenue."</em></p>
+    <p>The real play: <strong>The npm Registry for AI Agent Skills.</strong> Not an agency — a marketplace and runtime.</p>
+    <div style="background:#f0f0f0; border-radius:6px; padding:16px; font-family:monospace; font-size:13px; margin-bottom:16px; line-height:1.8;">
+      Frontend:  Next.js + shadcn/ui — skill discovery, docs, playground<br>
+      Registry:  Node.js + PostgreSQL — versioned skill packages (like npm)<br>
+      Payments:  Stripe Connect — 70% creator / 30% platform<br>
+      Runtime:   OpenClaw-compatible SKILL.md spec + CLI publish tool
+    </div>
+    <p>Four tiers: free skills (drives discovery) → paid skills $5–50 one-time → subscription skills $5–30/month → enterprise bundles $299+/month. The ecosystem builds itself when creators get paid.</p>
+
+    <h4 style="margin-top:20px;">3 Technology Bets — Build These Now</h4>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">MCP Server Infrastructure</span>
+        <span class="badge">This Week</span>
+      </div>
+      <p>Model Context Protocol is the universal standard converging across Anthropic, Google, and OpenAI. We have 92+ OpenClaw skills. Every one is an MCP server we can package and sell to the broader ecosystem before the market realizes it. Convert top 10 skills → publish → own early SEO on "MCP server [category]."</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Proprietary Agentic RAG</span>
+        <span class="badge">This Month</span>
+      </div>
+      <p>LanceDB is already in our stack. Vectorize every piece of content the Clan produces — JewSA, WeBearish, u-god.com, sacred texts corpus. Competitors can copy models. They cannot copy our corpus. This is the data flywheel that makes our agents permanently smarter than any off-the-shelf product.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Multi-Agent Orchestration as a Product</span>
+        <span class="badge">Q3 2026</span>
+      </div>
+      <p>We already have 8 agents coordinating in production. Nobody is selling this as a configurable product. LangGraph and CrewAI are frameworks for developers. We have a working production system. Visual agent council builder — drag-and-drop, define roles, comms channels, task routing, white-label for agencies. 2026 is when enterprises stop experimenting with single agents and ask "how do I coordinate 10?" We answer before anyone else ships it.</p>
+    </div>
+
+    <div class="black-box" style="margin-top:20px; text-align:left; padding:20px;">
+      <p style="font-style:italic; color:rgba(255,255,255,0.9); font-size:15px; line-height:1.7; margin-bottom:8px;">"The Clan infrastructure we built for ourselves — the hierarchy, the orchestration, the skill system — IS the product. We just need to productize it before the VC-backed copycats catch up. C.R.E.A.M. — <strong>Code Rules Everything Around Me.</strong>"</p>
+      <p style="color:rgba(255,255,255,0.5); font-size:13px; margin:0;">— U-God, CT113</p>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section>
+    <h3>🔐 Security Brief (Slim Shady)</h3>
+
+    <h4>Domain Status — All Five Checked Live</h4>
+    <table>
+      <thead><tr><th>Domain</th><th>Status</th><th>Flag</th></tr></thead>
+      <tbody>
+        <tr><td><strong>jewsa.com</strong></td><td class="green">✅ Live</td><td>Best hardened. HSTS, nosniff, X-Frame all set.</td></tr>
+        <tr><td><strong>webearish.com</strong></td><td class="green">✅ Live</td><td class="red">⚠️ Missing HSTS + security headers</td></tr>
+        <tr><td><strong>thevoiceofcash.com</strong></td><td class="green">✅ Live</td><td>Missing HSTS header</td></tr>
+        <tr><td><strong>u-god.com</strong></td><td class="green">✅ Live</td><td>Good — HSTS + headers in place</td></tr>
+        <tr><td><strong>aiskillsagents.com</strong></td><td class="green">✅ Live</td><td class="red">⚠️ Most bare — no HSTS, no X-Frame, no nosniff. Fix before pitching clients.</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:14px; color:#c00;"><strong>All certs expire ~May 30, 2026.</strong> Confirm auto-renew is ON. A lapsed cert on aiskillsagents.com during a client pitch is a trust-ending event.</p>
+
+    <h4 style="margin-top:20px;">Top 3 Operational Security Risks</h4>
+    <div class="card" style="border-left: 4px solid #c00;">
+      <div class="card-title" style="margin-bottom:6px;">🔴 Risk 1 — aiskillsagents.com Security Headers</div>
+      <p>The site clients evaluate us on has the weakest security posture. A client's IT team doing due diligence will notice. Fix in Next.js config or Cloudflare — takes 20 minutes. Do this before the first pitch.</p>
+    </div>
+    <div class="card" style="border-left: 4px solid #c00;">
+      <div class="card-title" style="margin-bottom:6px;">🔴 Risk 2 — R720 IP Undocumented</div>
+      <p>TOOLS.md says IP is "TBD." If GZA goes down with no documentation, nobody can reach the server running the entire agent fleet. Document the Proxmox access path and IP. Physical written record of credentials for Abearica.</p>
+    </div>
+    <div class="card" style="border-left: 4px solid #996600;">
+      <div class="card-title" style="margin-bottom:6px;">🟡 Risk 3 — CoachDavidJones/ammarasplay Access Scope Undefined</div>
+      <p>No defined code review process. Unclear which secrets they can access on non-core systems. Define the perimeter: which repos, which secrets, whether there's PR review before their code goes live on revenue-critical systems.</p>
+    </div>
+
+    <h4 style="margin-top:20px;">Pre-Revenue Legal Checklist — Non-Negotiable</h4>
+    <p>Complete these <strong>before the first client invoice goes out.</strong></p>
+    <div class="checklist-item">
+      <div class="checkbox">☐</div>
+      <div class="text"><strong>LLC formed</strong><span>Taking $20k/month personally = personal liability exposure. Not optional.</span></div>
+    </div>
+    <div class="checklist-item">
+      <div class="checkbox">☐</div>
+      <div class="text"><strong>Operating Agreement</strong><span>4 equal partners, in writing, before money moves. Who owns what, who authorizes contracts, who gets paid what and when.</span></div>
+    </div>
+    <div class="checklist-item">
+      <div class="checkbox">☐</div>
+      <div class="text"><strong>Client Services Agreement (MSA)</strong><span>Every client signs before work starts. Covers scope, deliverables, payment terms, IP ownership, liability, termination. One client without a contract can take everything.</span></div>
+    </div>
+    <div class="checklist-item">
+      <div class="checkbox">☐</div>
+      <div class="text"><strong>Privacy Policy + Terms of Service on aiskillsagents.com</strong><span>Legally required the moment you collect client data. AI disclosure may be required in some industries.</span></div>
+    </div>
+    <div class="checklist-item">
+      <div class="checkbox">☐</div>
+      <div class="text"><strong>Business bank account</strong><span>Separate from personal, under the LLC. No commingling of funds.</span></div>
+    </div>
+    <div class="checklist-item">
+      <div class="checkbox">☐</div>
+      <div class="text"><strong>E&amp;O Insurance (Errors &amp; Omissions)</strong><span>If an AI agent makes a mistake that costs a client money and they sue, you need coverage. Not expensive. Not optional at $20k/month scale.</span></div>
+    </div>
+  </section>
+
+  <!-- 30-60-90 -->
+  <section>
+    <h3>📅 30-60-90 Day Priority Stack</h3>
+
+    <div class="priority-block">
+      <div class="priority-label" style="color:#c00;">🔴 Do This Week</div>
+      <div class="priority-row"><span class="priority-owner">Raekwon</span><span>Begin Reddit karma building on r/Jewish + r/JewishHumor via u/One-Exam-794. 1–2 organic posts/day, zero store mentions for first 2 weeks.</span></div>
+      <div class="priority-row"><span class="priority-owner">Ghostface</span><span>Audit JewSA catalog. Add sweatshirts, embroidered hats, baby onesies. Kill anything with generic 2003-era clip art. Target: 40+ SKUs live.</span></div>
+      <div class="priority-row"><span class="priority-owner">ODB</span><span>Film "The Jewish Tax" skit. Film "Tell Me You're Jewish Without Telling Me" seed video. Post both this week.</span></div>
+      <div class="priority-row"><span class="priority-owner">Masta Killa</span><span>Publish About page to JewSA. Set up email capture (10% off first order). Load the 6-email welcome sequence.</span></div>
+      <div class="priority-row"><span class="priority-owner">GZA + Abearica</span><span>Register LLC or identify existing entity. Identify first 3 target clients for AI automation audit outreach.</span></div>
+    </div>
+
+    <div class="priority-block">
+      <div class="priority-label" style="color:#996600;">🟡 This Month</div>
+      <div class="priority-row"><span class="priority-owner">Raekwon</span><span>After 2 weeks karma: begin soft mentions in gift threads. Publish "25 Gifts for the Jew Who Has Everything" — SEO goldmine, gift roundup format, links to our products.</span></div>
+      <div class="priority-row"><span class="priority-owner">Ghostface</span><span>Launch "Little Mishpokhe" kids/baby collection as a dedicated drop. Market it separately.</span></div>
+      <div class="priority-row"><span class="priority-owner">Inspectah Deck</span><span>Begin 501(c)(3) paperwork for WeBearish OR identify fiscal sponsor. Target: NEXT for AUTISM June 2026 cycle eligibility.</span></div>
+      <div class="priority-row"><span class="priority-owner">Masta Killa</span><span>Draft "The Hyphen" essay — 3,500 words. This is the content that defines JewSA. Gets its own email send to the full list.</span></div>
+      <div class="priority-row"><span class="priority-owner">CoachDavidJones</span><span>Build aiskillsagents.com site — clean, authoritative, service menu visible. "AI Automation Agency" positioning. The Clan's live system is the case study.</span></div>
+    </div>
+
+    <div class="priority-block">
+      <div class="priority-label" style="color:#006600;">🟢 60–90 Days</div>
+      <div class="priority-row"><span class="priority-owner">aiskillsagents.com</span><span>First audit client closed. First retainer signed. CoachDavidJones delivers. GZA orchestrates.</span></div>
+      <div class="priority-row"><span class="priority-owner">JewSA</span><span>Email list at 500+. TikTok at 2k+ followers. One influencer collab conversation in progress.</span></div>
+      <div class="priority-row"><span class="priority-owner">TheVoiceOfCash</span><span>Newsletter on Beehiiv. Publishing weekly. Affiliate links live. Building toward 10k subscribers.</span></div>
+      <div class="priority-row"><span class="priority-owner">WeBearish</span><span>Discord/Circle community soft-launched. Founding member pricing ($10/month). OAR grant application filed.</span></div>
+    </div>
+  </section>
+
+  <!-- REVENUE ROADMAP -->
+  <section>
+    <h3>💰 Revenue Roadmap to $20k/Month</h3>
+    <table>
+      <thead><tr><th>Property</th><th>Model</th><th>Realistic Monthly</th></tr></thead>
+      <tbody>
+        <tr><td><strong>aiskillsagents.com</strong></td><td>5 retainers @ $4k + 1–2 projects</td><td class="green"><strong>$20k–$30k</strong></td></tr>
+        <tr><td><strong>JewSA</strong></td><td>Merch + email sponsors + influencer collabs</td><td class="green"><strong>$3k–$8k steady / $15k–$30k Q4</strong></td></tr>
+        <tr><td><strong>TheVoiceOfCash</strong></td><td>Newsletter (25k subs) + paid tier + sponsors</td><td class="green"><strong>$7k–$10k</strong></td></tr>
+        <tr><td><strong>WeBearish</strong></td><td>Membership + grants + fintech sponsors</td><td class="green"><strong>$4k–$10k (month 12+)</strong></td></tr>
+        <tr class="total-row"><td><strong>Combined at Scale</strong></td><td></td><td><strong>$34k–$58k/month</strong></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:15px; font-weight:700; color:#c00;">$20k/month is not the ceiling. It's the floor once all four properties are operating.</p>
+
+    <h4 style="margin-top:20px;">U-God's 12-Month Technology Bets</h4>
+    <table>
+      <thead><tr><th>Bet</th><th>Domain</th><th>Revenue Potential</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Interfaith AI with Jewish texts</strong></td><td>u-god.com</td><td class="green">$50k ARR at 500 subs</td></tr>
+        <tr><td><strong>MCP Skill Registry Marketplace</strong></td><td>aiskillsagents.com</td><td class="green">$100k+ ARR at scale</td></tr>
+        <tr><td><strong>White-Label Multi-Agent Product</strong></td><td>New product</td><td class="green">$500k+ enterprise deals</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="black-box">
+    <span class="emoji">🏯</span>
+    <h2>Wu-Tang Clan AI Operations</h2>
+    <p>Board Meeting closed — March 7, 2026</p>
+    <p>7 agents · Live web research · Real market data · Real numbers</p>
+    <p>Raekwon · Ghostface Killah · Inspectah Deck · ODB · Masta Killa · U-God · Slim Shady</p>
+    <p class="tagline">"Wu-Tang is forever."</p>
+  </div>
+
+</div>
+</body>
+</html>

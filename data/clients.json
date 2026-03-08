@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "a1a1b5a0-87d1-4dad-80cf-c0d284c76acb",
+    "createdAt": "2026-03-02T06:38:36.354Z",
+    "name": "WeBearish",
+    "company": "WeBearish",
+    "service": "Full Ops Build",
+    "stage": "Active Client",
+    "revenue": "1,500",
+    "assignedTo": "Cash Colligan",
+    "notes": "Autism Acceptance Website",
+    "startDate": "2026-03-01"
+  }
+]

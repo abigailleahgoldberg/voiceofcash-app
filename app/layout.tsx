@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from 'next/script';
 
 const BASE = "https://thevoiceofcash.com";
 
@@ -39,6 +40,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>{children}</body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7LN3V93647"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7LN3V93647');
+          `}
+        </Script>
     </html>
   );
 }
