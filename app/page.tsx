@@ -1211,6 +1211,12 @@ export default function VoiceOfCash() {
         <a href="/free-guide" style={{background:"#fff",color:"#0A0A0A",fontWeight:900,fontSize:13,padding:"10px 24px",textDecoration:"none",letterSpacing:"1px",whiteSpace:"nowrap",boxShadow:"0 0 20px rgba(255,255,255,0.3)"}}>DOWNLOAD FREE →</a>
       </div>
 
+      {/* SHADYSCANNER BANNER */}
+      <div style={{background:"#000d08",borderTop:"1px solid rgba(0,200,150,0.12)",borderBottom:"1px solid rgba(0,200,150,0.12)",padding:"18px 5vw",display:"flex",alignItems:"center",justifyContent:"center",gap:24,flexWrap:"wrap",textAlign:"center"}}>
+        <span style={{fontSize:14,color:"rgba(245,240,232,0.55)"}}>Is your site shady? Find out in 30 seconds -- free security scan.</span>
+        <a href="https://shadyscanner.com/" target="_blank" rel="noopener noreferrer" style={{background:"#00C896",color:"#000",fontWeight:900,fontSize:13,padding:"10px 24px",textDecoration:"none",letterSpacing:"1px",whiteSpace:"nowrap",boxShadow:"0 0 20px rgba(0,200,150,0.25)"}}>SCAN FOR FREE NOW →</a>
+      </div>
+
       {/* STATS BAR */}
       <div className="voc-stats">
         {STATS.map((s, i) => (
