@@ -15,6 +15,9 @@ const tools = [
     { name: 'Jasper AI', desc: 'AI writing trained for marketing copy and business content. Faster than starting from scratch.', use: 'Blog drafts, email sequences, ad copy starting points', link: 'https://www.jasper.ai/?utm_source=thevoiceofcash', price: 'From $39/mo' },
     { name: 'Claude (Anthropic)', desc: 'Our primary AI model for complex reasoning, coding, analysis, and long-form work.', use: 'Agent development, content strategy, technical writing', link: 'https://claude.ai', price: 'Free + Pro available' },
   ]},
+  { category: 'Research & Intelligence', items: [
+    { name: 'Perplexity AI', desc: 'AI-powered research and search with real-time web answers and citations. Cuts research time in half.', use: 'Market research, competitor analysis, quick fact-checking', link: 'https://www.perplexity.ai/', price: 'Free tier available' },
+  ]},
   { category: 'Project & Operations', items: [
     { name: 'Notion', desc: 'All-in-one workspace for docs, wikis, databases, and project tracking. The backbone of how we organize client work.', use: 'SOPs, client wikis, project management, content calendars', link: 'https://www.notion.so/?utm_source=thevoiceofcash', price: 'Free tier available' },
     { name: 'Monday.com', desc: 'Visual project and operations management for teams running multiple client engagements simultaneously.', use: 'Client project tracking, team assignments, delivery timelines', link: 'https://monday.com/?utm_source=thevoiceofcash', price: 'From $9/seat/mo' },
@@ -22,6 +25,13 @@ const tools = [
   { category: 'Communication & Delivery', items: [
     { name: 'Loom', desc: 'Async video messaging. We use it for client walkthroughs, system demos, and internal handoffs.', use: 'Client onboarding videos, feature walkthroughs, async updates', link: 'https://www.loom.com/?utm_source=thevoiceofcash', price: 'Free tier available' },
     { name: 'Slack', desc: 'Real-time team and client communication. Every active client gets their own Slack channel.', use: 'Client communication, internal team coordination', link: 'https://slack.com/?utm_source=thevoiceofcash', price: 'Free tier available' },
+    { name: 'Intercom', desc: 'AI-powered customer messaging and support automation. Routes conversations, deploys chatbots, and escalates to humans when needed.', use: 'Client support workflows, chatbot deployment, conversation routing', link: 'https://www.intercom.com/?utm_source=thevoiceofcash', price: 'From $39/mo' },
+  ]},
+  { category: 'Sales & Lead Research', items: [
+    { name: 'Clay', desc: 'AI-powered data enrichment and lead research. Pulls from 75+ data sources to build accurate prospect lists automatically.', use: 'Prospecting, CRM enrichment, outbound research automation', link: 'https://www.clay.com/?utm_source=thevoiceofcash', price: 'Free tier available' },
+  ]},
+  { category: 'Security', items: [
+    { name: 'ShadyScanner', desc: 'Free AI-powered security scanner for any website or API. Checks SSL, HTTP headers, open ports, DNS records (SPF/DKIM/DMARC), blacklists, malicious scripts, and more in one scan.', use: 'Quick security audits before client go-lives, competitive research, site health checks', link: 'https://shadyscanner.com/', price: 'Free' },
   ]},
   { category: 'Development & Deployment', items: [
     { name: 'Vercel', desc: 'Where we deploy every client web project. Instant deployments, global edge network, zero config.', use: 'All client web deployments, preview environments', link: 'https://vercel.com/?utm_source=thevoiceofcash', price: 'Free tier available' },
@@ -43,6 +53,19 @@ export default function ToolsPage() {
         <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', marginTop: 16 }}>
           Some links are affiliate links. We only list tools we actually use.
         </p>
+      </div>
+
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '40px 5vw 0' }}>
+        <a href="https://shadyscanner.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'block', background: 'rgba(0,200,150,0.1)', border: '1px solid #00C896', padding: '32px 36px', textDecoration: 'none', marginBottom: 0 }}>
+          <div style={{ fontSize: 11, letterSpacing: '3px', color: '#00C896', fontWeight: 700, marginBottom: 10, textTransform: 'uppercase' }}>Free Security Tool</div>
+          <div style={{ fontSize: 22, fontWeight: 900, color: '#fff', marginBottom: 10, lineHeight: 1.2 }}>Run a Free Website Security Scan</div>
+          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 14, lineHeight: 1.6, margin: '0 0 20px' }}>
+            See exactly what vulnerabilities your site is exposing -- SSL, headers, DNS, blacklists, and more. Free. Takes 30 seconds.
+          </p>
+          <span style={{ display: 'inline-block', background: '#00C896', color: '#050508', fontWeight: 900, fontSize: 13, padding: '12px 28px', letterSpacing: '0.5px' }}>
+            Scan Your Site Now →
+          </span>
+        </a>
       </div>
 
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '56px 5vw' }}>
