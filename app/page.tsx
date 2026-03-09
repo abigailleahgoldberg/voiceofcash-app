@@ -1211,11 +1211,6 @@ export default function VoiceOfCash() {
         <a href="/free-guide" style={{background:"#fff",color:"#0A0A0A",fontWeight:900,fontSize:13,padding:"10px 24px",textDecoration:"none",letterSpacing:"1px",whiteSpace:"nowrap",boxShadow:"0 0 20px rgba(255,255,255,0.3)"}}>DOWNLOAD FREE →</a>
       </div>
 
-      {/* SHADYSCANNER BANNER */}
-      <div style={{background:"#000d08",borderTop:"1px solid rgba(0,200,150,0.12)",borderBottom:"1px solid rgba(0,200,150,0.12)",padding:"18px 5vw",display:"flex",alignItems:"center",justifyContent:"center",gap:24,flexWrap:"wrap",textAlign:"center"}}>
-        <span style={{fontSize:14,color:"rgba(245,240,232,0.55)"}}>Is your site shady? Find out in 30 seconds -- free security scan.</span>
-        <a href="https://shadyscanner.com/" target="_blank" rel="noopener noreferrer" style={{background:"#00C896",color:"#000",fontWeight:900,fontSize:13,padding:"10px 24px",textDecoration:"none",letterSpacing:"1px",whiteSpace:"nowrap",boxShadow:"0 0 20px rgba(0,200,150,0.25)"}}>SCAN FOR FREE NOW →</a>
-      </div>
 
       {/* STATS BAR */}
       <div className="voc-stats">
@@ -1262,6 +1257,21 @@ export default function VoiceOfCash() {
                 </FadeIn>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* SHADY SCANNER PROMO BANNER */}
+      <section style={{background:'rgba(0,200,150,0.07)',borderTop:'1px solid rgba(0,200,150,0.15)',borderBottom:'1px solid rgba(0,200,150,0.15)',padding:'28px 24px'}}>
+        <div style={{maxWidth:1100,margin:'0 auto',display:'flex',flexDirection:'column',alignItems:'center',gap:16}}>
+
+          <div style={{background:'rgba(0,200,150,0.06)',border:'1px solid rgba(0,200,150,0.2)',borderRadius:4,padding:'12px 24px',display:'flex',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between',gap:16,width:'100%',maxWidth:760}}>
+            <p style={{margin:0,fontSize:15,color:'rgba(245,240,232,0.75)',fontFamily:"'Inter',sans-serif"}}>
+              Is your site shady? Find out in 30 seconds &mdash;&mdash; free security scan.
+            </p>
+            <a href="https://shadyscanner.com" target="_blank" rel="noopener noreferrer" style={{display:'inline-block',background:'rgba(0,200,150,0.15)',border:'1px solid rgba(0,200,150,0.6)',color:'#00C896',padding:'8px 20px',fontSize:13,fontWeight:700,letterSpacing:1,textDecoration:'none',whiteSpace:'nowrap',fontFamily:"'Inter',sans-serif"}}>
+              SCAN FOR FREE NOW →
+            </a>
           </div>
         </div>
       </section>
