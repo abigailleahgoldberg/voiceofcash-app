@@ -1753,3 +1753,154 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 700; line-height: 1.2;
   .scene-3-block-stats,
   .scene-3-block-close { min-height: auto !important; padding: 4rem 0 !important; }
 }
+
+/* ============================================================
+   ENHANCEMENTS #2-#6
+   ============================================================ */
+
+/* ── #2: STICKY SCENE LABEL ── */
+.scene-indicator {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.75rem;
+  z-index: 500;
+  font-size: 0.7rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  background: rgba(13,13,13,0.7);
+  padding: 0.4em 0.9em;
+  border-radius: 3px;
+  border-left: 2px solid var(--accent);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.scene-indicator.visible { opacity: 1; }
+@media print { .scene-indicator { display: none !important; } }
+
+/* ── #3: PRINT / PDF MODE ── */
+.pdf-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2.5rem;
+  z-index: 500;
+  background: var(--card-bg);
+  border: 1px solid rgba(212,168,67,0.35);
+  color: var(--accent);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.55em 1.1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  backdrop-filter: blur(6px);
+}
+.pdf-btn:hover { background: rgba(212,168,67,0.12); box-shadow: 0 0 16px rgba(212,168,67,0.2); }
+.pdf-btn:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media print { .pdf-btn { display: none !important; } .scroll-progress { display: none !important; } }
+
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  html, body { background: #0D0D0D !important; color: #F5E6C8 !important; }
+  .scene { page-break-inside: avoid; padding: 4rem 3rem !important; min-height: auto !important; }
+  .scene-1 { min-height: auto !important; }
+  .scene-1-beat, .scene-1-beat-sm { height: 2rem !important; }
+  .constellation-wrap { height: 600px !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .whisper-card { opacity: 1 !important; filter: none !important; transform: none !important; }
+  .income-card { min-height: auto !important; page-break-inside: avoid; }
+  .timeline-node { min-height: auto !important; page-break-inside: avoid; }
+  .pricing-note { display: none !important; }
+  .pw-gate { display: none !important; }
+  .scene-3-block-header,
+  .scene-3-block-stats,
+  .scene-3-block-close { min-height: auto !important; padding: 2rem 0 !important; }
+}
+
+/* ── #4: MOBILE FONT SIZING — dedicated pass ── */
+@media (max-width: 767px) {
+  .section-header { font-size: clamp(1.6rem, 6vw, 2.4rem) !important; line-height: 1.15 !important; }
+  .callout-text { font-size: clamp(1.05rem, 4.5vw, 1.45rem) !important; line-height: 1.5 !important; }
+  .body-text { font-size: clamp(0.95rem, 3.5vw, 1.1rem) !important; line-height: 1.75 !important; }
+  .scene-1-line { font-size: clamp(1.2rem, 5vw, 1.8rem) !important; }
+  .scene-1-line.zinger { font-size: clamp(2rem, 9vw, 3.5rem) !important; padding: 5vh 0 !important; }
+  .stat-line { font-size: clamp(0.95rem, 3.8vw, 1.15rem) !important; }
+  .income-card h3 { font-size: clamp(1.2rem, 5vw, 1.75rem) !important; }
+  .income-card > p { font-size: clamp(0.9rem, 3.5vw, 1.05rem) !important; }
+  .rate-big { font-size: clamp(2.8rem, 12vw, 4.5rem) !important; }
+  .total-line { font-size: clamp(0.95rem, 3.5vw, 1.2rem) !important; }
+  .shimmer-callout { font-size: clamp(0.95rem, 3.5vw, 1.2rem) !important; }
+  .card h3 { font-size: 1.1rem !important; }
+  .service-card h3 { font-size: 1.05rem !important; }
+  .service-price { font-size: 0.82rem !important; }
+  .whisper-card h3 { font-size: 1.1rem !important; }
+  .whisper-card p { font-size: clamp(0.9rem, 3.5vw, 1rem) !important; }
+  .scene { padding: 5rem 1.25rem !important; }
+  .scene-1-content { padding: 12vh 1.25rem 0 !important; }
+  .phase-label { font-size: 0.65rem !important; }
+  .panel-item { font-size: clamp(0.88rem, 3.2vw, 1rem) !important; }
+  .flow-item { font-size: clamp(0.85rem, 3.2vw, 1rem) !important; }
+  .revenue-table td, .revenue-table th { padding: 0.75rem 0.75rem !important; font-size: 0.85rem !important; }
+  .scene-13 .section-header { font-size: clamp(1.4rem, 5.5vw, 2.2rem) !important; }
+  .scene-13 .cta-btn { font-size: 1.1rem !important; padding: 1rem 2.5rem !important; }
+}
+
+/* ── #5: LOADING SCREEN ── */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(160deg, #1B1030, #1A1207);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  gap: 1.5rem;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.loading-screen.fade-out { opacity: 0; visibility: hidden; }
+.loading-wordmark {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  color: var(--text-primary);
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+.loading-bar-track {
+  width: 160px;
+  height: 2px;
+  background: rgba(212,168,67,0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.loading-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  border-radius: 2px;
+  animation: loadFill 1.2s ease-out forwards;
+}
+@keyframes loadFill { 0%{width:0%} 60%{width:75%} 85%{width:90%} 100%{width:100%} }
+@media print { .loading-screen { display: none !important; } }
+
+/* ── #6: CONSTELLATION TABLET BREAKPOINT ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .constellation-wrap {
+    max-width: 650px !important;
+    height: 650px !important;
+    margin: 4rem auto !important;
+  }
+  .node-circle.central { width: 80px !important; height: 80px !important; }
+  .node-circle.anchor { width: 56px !important; height: 56px !important; }
+  .node-circle.regular { width: 44px !important; height: 44px !important; }
+  .node-label { font-size: 0.68rem !important; max-width: 80px !important; }
+  .node-tooltip { max-width: 240px !important; min-width: 160px !important; }
+}

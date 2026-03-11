@@ -221,6 +221,51 @@ export default function CactusJoesPage() {
     }, { threshold: 0.4 });
     document.querySelectorAll(".timeline-node").forEach((el) => timelineIO.observe(el));
 
+    // Loading screen — fade out once fonts/content ready
+    const loadingScreen = document.getElementById("loadingScreen");
+    if (loadingScreen) {
+      const fadeOut = () => loadingScreen.classList.add("fade-out");
+      if (document.readyState === "complete") {
+        setTimeout(fadeOut, 1300);
+      } else {
+        window.addEventListener("load", () => setTimeout(fadeOut, 1300), { once: true });
+      }
+    }
+
+    // Sticky scene label
+    const sceneIndicator = document.getElementById("sceneIndicator");
+    const sceneMap: [string, string][] = [
+      ["scene1", "The Hook"],
+      ["scene2", "Who's in the Room"],
+      ["scene3", "The Problem"],
+      ["scene4", "Who We Are"],
+      ["scene5", "The Ecosystem"],
+      ["scene6", "The Income Generators"],
+      ["scene7", "The Systems"],
+      ["scene8", "Local Marketing Strategy"],
+      ["scene9", "Two Brands, One Property"],
+      ["scene10", "The 180-Day Plan"],
+      ["scene12", "The Investment"],
+      ["scene13", "Let's Begin"],
+    ];
+    if (sceneIndicator) {
+      const labelIO = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            const match = sceneMap.find(([id]) => id === e.target.id);
+            if (match) {
+              sceneIndicator.textContent = match[1];
+              sceneIndicator.classList.add("visible");
+            }
+          }
+        });
+      }, { threshold: 0.15 });
+      sceneMap.forEach(([id]) => {
+        const el = document.getElementById(id);
+        if (el) labelIO.observe(el);
+      });
+    }
+
     // Scene 12: rate reveal
     const rateReveal = document.getElementById("rateReveal");
     if (rateReveal) {
@@ -285,10 +330,22 @@ export default function CactusJoesPage() {
 
   return (
     <>
+      {/* Loading screen */}
+      <div className="loading-screen" id="loadingScreen" aria-hidden="true">
+        <p className="loading-wordmark">THE VOICE OF CASH<br/><span style={{fontSize:"0.65em", letterSpacing:"0.2em", color:"var(--text-secondary)"}}>× CACTUS JOE&apos;S × THE CRYSTAL GARDEN</span></p>
+        <div className="loading-bar-track"><div className="loading-bar-fill"></div></div>
+      </div>
+
       <a href="#main-content" className="skip-link">Skip to content</a>
       <div className="scroll-progress" aria-hidden="true">
         <div className="scroll-progress-fill" ref={scrollFillRef}></div>
       </div>
+
+      {/* Sticky scene indicator */}
+      <div className="scene-indicator" id="sceneIndicator" aria-live="polite" aria-label="Current section"></div>
+
+      {/* PDF / Print button */}
+      <button className="pdf-btn" onClick={() => window.print()} aria-label="Save as PDF">⬇ Save PDF</button>
 
       <main id="main-content">
 
