@@ -1602,3 +1602,154 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 700; line-height: 1.2;
   .scene-3-block-stats,
   .scene-3-block-close { min-height: auto; padding: 3rem 0; }
 }
+
+/* ============================================================
+   VIEWPORT FIT PASS — callout width, timeline, fold fixes
+   ============================================================ */
+
+/* FIX 1: Scene 12 callout — full width, not bunched */
+.scene-12 .callout-text {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  font-size: clamp(1.15rem, 2.5vw, 2rem) !important;
+  line-height: 1.55 !important;
+  text-align: left !important;
+}
+.scene-12 .body-text {
+  max-width: 100% !important;
+  text-align: left !important;
+  margin: 2rem 0 !important;
+}
+
+/* FIX 2: Scene 10 timeline — each milestone is its own scroll block, nothing cut off */
+.scene-10 { padding: 8rem 0 !important; }
+.scene-10 .scene-inner { padding: 0 3rem !important; max-width: 100% !important; }
+.scene-10 .section-header,
+.scene-10 .body-text { padding: 0 3rem; max-width: 900px; }
+
+/* Timeline node — each is its own viewport-sized block */
+.timeline-node {
+  min-height: 70vh !important;
+  padding: 4rem 4rem 4rem 5rem !important;
+  border-bottom: 1px solid rgba(196,169,125,0.1) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 2.5rem !important;
+  position: relative;
+}
+.timeline-node:last-child { border-bottom: none !important; }
+
+/* Day label — large and prominent before title */
+.timeline-card strong {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(1.3rem, 2.8vw, 2rem) !important;
+  color: var(--text-primary) !important;
+  display: block !important;
+  margin-bottom: 1.25rem !important;
+  line-height: 1.2 !important;
+}
+.timeline-node.active .timeline-card strong { color: var(--accent) !important; }
+
+/* Bullet items in timeline - bigger, more space */
+.timeline-card > div {
+  font-size: clamp(1rem, 1.6vw, 1.2rem) !important;
+  color: var(--text-secondary) !important;
+  padding: 0.5rem 0 !important;
+  line-height: 1.7 !important;
+  border-bottom: 1px solid rgba(196,169,125,0.06);
+}
+.timeline-card > div:last-child { border-bottom: none; }
+
+/* Timeline dot — bigger, better positioned */
+.timeline-dot {
+  width: 24px !important;
+  height: 24px !important;
+  margin-top: 0.5rem !important;
+  flex-shrink: 0 !important;
+  border-width: 3px !important;
+}
+
+/* Timeline rail — runs along far left */
+.timeline-rail,
+.timeline-rail-bg {
+  left: 2.5rem !important;
+}
+
+/* FIX 3: Global viewport-fit rules — no content cut below fold */
+
+/* All callout-text blocks: generous width, no cramping */
+.callout-text {
+  max-width: min(960px, 100%) !important;
+  padding: 0 !important;
+}
+
+/* All scene inner — consistent padding, no overflow */
+.scene-inner {
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Scene blocks that should be viewport-height: ensure they show full content */
+.scene-3-block-header,
+.scene-3-block-stats,
+.scene-3-block-close {
+  min-height: 90vh !important;
+  padding: 6rem 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+/* Scene 2 panels — content never overflow */
+.two-col { width: 100% !important; }
+.card { overflow: visible !important; }
+
+/* Scene 6 income cards — full width, nothing cut off */
+.scene-6 .scene-inner { max-width: 1100px !important; }
+.income-card {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Scene 7 service cards — full width */
+.service-card { width: 100% !important; box-sizing: border-box !important; }
+
+/* Scene 8 whisper cards — full width */
+.whisper-card { width: 100% !important; box-sizing: border-box !important; }
+
+/* Scene 12 retail block — widen it */
+.retail-block {
+  max-width: 700px !important;
+  width: 100% !important;
+}
+
+/* Rate reveal — ensure it's fully visible */
+.rate-reveal {
+  max-width: 800px !important;
+  margin: 6rem auto !important;
+  padding: 0 1rem !important;
+}
+.rate-reveal p {
+  max-width: 640px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 1.25rem !important;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .timeline-node {
+    min-height: auto !important;
+    padding: 3rem 1.5rem 3rem 4rem !important;
+    gap: 1.5rem !important;
+  }
+  .timeline-rail,
+  .timeline-rail-bg { left: 1.5rem !important; }
+  .scene-12 .callout-text { font-size: clamp(1rem,4vw,1.3rem) !important; }
+  .scene-3-block-header,
+  .scene-3-block-stats,
+  .scene-3-block-close { min-height: auto !important; padding: 4rem 0 !important; }
+}
