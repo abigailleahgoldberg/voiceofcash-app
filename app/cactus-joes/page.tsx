@@ -226,18 +226,31 @@ export default function CactusJoesPage() {
     }, { threshold: 0.4 });
     document.querySelectorAll(".timeline-node").forEach((el) => timelineIO.observe(el));
 
-    // Scene 13: shimmer on final line (one-time)
-    const finalLine = document.getElementById("scene13FinalLine");
-    if (finalLine) {
-      const shimmerIO = new IntersectionObserver((entries) => {
+    // Scene 12: rate reveal
+    const rateReveal = document.getElementById("rateReveal");
+    if (rateReveal) {
+      const rateIO = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { rateReveal.classList.add("visible"); rateIO.unobserve(rateReveal); }
+        });
+      }, { threshold: 0.3 });
+      rateIO.observe(rateReveal);
+    }
+
+    // Scene 13: unified fade-in
+    const scene13Content = document.getElementById("scene13Content");
+    const scene13Final = document.getElementById("scene13Final");
+    if (scene13Content) {
+      const s13IO = new IntersectionObserver((entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            finalLine.classList.add("shimmer");
-            shimmerIO.unobserve(finalLine);
+            scene13Content.classList.add("visible");
+            if (scene13Final) scene13Final.style.opacity = "0.6";
+            s13IO.unobserve(scene13Content);
           }
         });
-      }, { threshold: 0.8 });
-      shimmerIO.observe(finalLine);
+      }, { threshold: 0.2 });
+      s13IO.observe(scene13Content);
     }
 
     updateScroll();
@@ -1011,9 +1024,77 @@ export default function CactusJoesPage() {
         </section>
 
         {/* ============================================================
-            SCENES 11-13 PLACEHOLDER
+            SCENE 12 — THE INVESTMENT
             ============================================================ */}
-        <section style={{ minHeight: "20vh", background: "var(--bg-dark)" }} id="more-scenes"></section>
+        <section className="scene scene-12" id="scene12" aria-label="The Investment">
+          <div className="scene-inner">
+            <h2 className="section-header reveal">No surprises. Here&apos;s the math.</h2>
+
+            <div className="retail-block reveal">
+              <p className="label">Phase 1 Monthly Retail Value:</p>
+              <p className="amount">$4,100/month</p>
+              <p className="label">Phase 1 Setup (one-time):</p>
+              <p className="amount">~$6,700</p>
+              <p className="label">Full ecosystem at scale (all phases, retail):</p>
+              <p className="amount">$8,000–$12,000/month</p>
+            </div>
+
+            <div className="beat-space" aria-hidden="true"></div>
+
+            <div className="rate-reveal" id="rateReveal">
+              <p style={{ fontSize: "clamp(0.85rem,1.2vw,0.95rem)", color: "var(--text-secondary)", marginBottom: "0.75rem", letterSpacing: "0.06em", textTransform: "uppercase" }}>Your Engagement Rate</p>
+              <p className="rate-big">$500/month + expenses</p>
+              <p style={{ marginTop: "1.25rem", color: "var(--text-primary)", fontSize: "clamp(0.95rem,1.4vw,1.1rem)", maxWidth: "560px", margin: "1.25rem auto 0" }}>
+                That&apos;s your rate. Not retail. Not a trial. Your engagement rate with The Voice of Cash.
+              </p>
+              <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontSize: "clamp(0.82rem,1.1vw,0.9rem)", maxWidth: "520px", margin: "1rem auto 0", lineHeight: "1.7" }}>
+                Expenses include third-party platform costs (Shopify, email service, SMS credits, etc.) billed at cost — no markup. The $500/month covers our time, our systems, our infrastructure, and our ongoing optimization. You get the full ecosystem. We grow as you grow.
+              </p>
+            </div>
+
+            <p className="callout-text reveal" style={{ marginTop: "4rem" }}>
+              We&apos;re not asking you to spend $8,000 a month. We&apos;re asking you to spend $500 a month and let us prove what this property can do. If it works — and it will — the investment scales with the revenue. If it doesn&apos;t, you&apos;ve risked less than the cost of a part-time employee for a few months.
+            </p>
+
+            <p className="body-text reveal reveal-delay-2" style={{ marginTop: "2rem", color: "var(--text-secondary)", textAlign: "center", margin: "2rem auto" }}>
+              This rate reflects a strategic partnership, not a vendor transaction. We believe in what this property can become. That&apos;s why the rate is what it is.
+            </p>
+          </div>
+        </section>
+
+        {/* ============================================================
+            SCENE 13 — THE CLOSE
+            ============================================================ */}
+        <section className="scene scene-13" id="scene13" aria-label="Let's Begin">
+          <svg className="desert-silhouette desert-silhouette-warm" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="none">
+            <path d="M0,200 L0,140 Q180,80 360,120 Q540,160 720,90 Q900,20 1080,80 Q1260,140 1440,100 L1440,200 Z" fill="rgba(212,168,67,0.2)"/>
+            <path d="M0,200 L0,160 Q200,110 400,140 Q600,170 800,120 Q1000,70 1200,120 Q1350,150 1440,130 L1440,200 Z" fill="rgba(212,168,67,0.3)"/>
+            <path d="M0,200 L0,175 Q300,155 600,165 Q900,175 1200,155 Q1350,145 1440,160 L1440,200 Z" fill="rgba(224,124,62,0.25)"/>
+          </svg>
+
+          <div className="scene-13-content" id="scene13Content">
+            <h2 className="section-header" style={{ fontSize: "clamp(1.75rem,4vw,3rem)", textAlign: "center", marginBottom: "1rem" }}>
+              The property is ready. The plan is written. The systems are built.
+            </h2>
+            <p style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.1rem,2.5vw,1.6rem)", color: "var(--text-secondary)", textAlign: "center", marginBottom: "2.5rem" }}>
+              All that&apos;s missing is the word &ldquo;go.&rdquo;
+            </p>
+
+            <a href="mailto:jordan@thevoiceofcash.com" className="cta-btn" aria-label="Start the conversation — email Jordan at The Voice of Cash">
+              Let&apos;s start the conversation.
+            </a>
+
+            <div className="scene-13-contact">
+              <p>Jordan — The Voice of Cash</p>
+              <p>jordan@thevoiceofcash.com</p>
+              <p>Las Vegas, NV</p>
+            </div>
+          </div>
+
+          <p className="scene-13-final" id="scene13Final">
+            Built for Cactus Joe&apos;s &amp; The Crystal Garden. Spring 2025.
+          </p>
+        </section>
 
       </main>
     </>
