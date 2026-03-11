@@ -1125,3 +1125,220 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 700; line-height: 1.2;
 }
 .scene-13-content.visible ~ .scene-13-final { opacity: 0.6; }
 .desert-silhouette-warm path { fill-opacity: 0.3; }
+
+/* ============================================================
+   NUCLEAR ENHANCEMENT PASS — Global upgrades
+   ============================================================ */
+
+/* Bigger, more dramatic section headers */
+.section-header {
+  font-size: clamp(2rem, 5.5vw, 4.5rem) !important;
+  letter-spacing: -0.02em;
+  line-height: 1.1 !important;
+  margin-bottom: 2.5rem !important;
+}
+
+/* Scene 1 lines — much bigger, more weight */
+.scene-1-line {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem) !important;
+  padding: 3vh 0 !important;
+  letter-spacing: -0.01em;
+}
+.scene-1-line.zinger {
+  font-size: clamp(3rem, 8vw, 6rem) !important;
+  padding: 8vh 0 !important;
+  letter-spacing: -0.03em;
+}
+.scene-1-tag {
+  font-size: 0.85rem !important;
+  letter-spacing: 0.2em;
+}
+
+/* Scene 1 — more generous vertical content spacing */
+.scene-1-content { padding: 20vh 4rem 0 !important; max-width: 1000px !important; }
+.scene-1-beat { height: 40vh !important; }
+.scene-1-beat-sm { height: 25vh !important; }
+
+/* Callout text — bigger punch */
+.callout-text {
+  font-size: clamp(1.3rem, 3vw, 2.2rem) !important;
+  line-height: 1.35 !important;
+  margin: 4rem auto !important;
+}
+
+/* Body text — more readable at presentation scale */
+.body-text {
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem) !important;
+  line-height: 1.85 !important;
+  max-width: 780px !important;
+}
+
+/* More breathing room in all scenes */
+.scene { padding: 10rem 3rem !important; }
+.scene-inner { max-width: 1100px !important; }
+
+/* Scene 3 stat lines — bigger impact */
+.stat-line {
+  font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+  padding: 1rem 0 1rem 1.5rem !important;
+  margin: 1rem 0 !important;
+  border-left-width: 4px !important;
+  letter-spacing: -0.01em;
+}
+
+/* Revenue progress bar — taller, more dramatic */
+.revenue-bar { height: 20px !important; border-radius: 10px !important; }
+.revenue-bar-captured { border-radius: 10px 0 0 10px !important; }
+.revenue-bar-labels { font-size: 0.85rem !important; margin-bottom: 0.75rem !important; }
+
+/* Scene 4 cards — bigger shelf */
+.cards-shelf { gap: 2.5rem !important; margin: 4rem 0 !important; }
+.card { padding: 2.5rem !important; }
+.card h3 { font-size: 1.35rem !important; margin-bottom: 1rem !important; }
+
+/* NUCLEAR CONSTELLATION — much larger, more epic */
+.constellation-wrap {
+  width: 100% !important;
+  max-width: 900px !important;
+  height: 900px !important;
+  margin: 6rem auto !important;
+}
+.node-circle.central {
+  width: 100px !important;
+  height: 100px !important;
+  font-size: 0.85rem !important;
+  font-weight: 700;
+  box-shadow: 0 0 50px rgba(212,168,67,0.6) !important;
+}
+.node-circle.anchor {
+  width: 68px !important;
+  height: 68px !important;
+  box-shadow: 0 0 35px rgba(212,168,67,0.55) !important;
+}
+.node-circle.regular { width: 54px !important; height: 54px !important; }
+.node-label {
+  font-size: 0.78rem !important;
+  max-width: 100px !important;
+  margin-top: 6px !important;
+  color: var(--text-primary) !important;
+  font-weight: 500;
+}
+.constellation-svg line {
+  stroke-width: 2px !important;
+  stroke: rgba(212,168,67,0.35) !important;
+}
+.constellation-node:hover .node-circle,
+.constellation-node:focus .node-circle {
+  transform: scale(1.3) !important;
+  box-shadow: 0 0 45px rgba(212,168,67,0.8) !important;
+}
+.node-tooltip {
+  font-size: 0.82rem !important;
+  max-width: 220px !important;
+  padding: 0.65rem 0.9rem !important;
+  background: rgba(15,12,6,0.97) !important;
+  border-color: rgba(212,168,67,0.4) !important;
+}
+
+/* Income cards — more presence */
+.income-card {
+  padding: 2.5rem !important;
+  margin-bottom: 2rem !important;
+  border-left-width: 5px !important;
+}
+.income-card h3 { font-size: 1.4rem !important; margin-bottom: 1rem !important; }
+.income-card p { font-size: clamp(0.95rem,1.5vw,1.1rem) !important; }
+.data-points li { font-size: clamp(0.9rem,1.3vw,1.05rem) !important; padding: 0.5rem 0 0.5rem 1.5rem !important; }
+
+/* Revenue table — bigger numbers */
+.revenue-table td, .revenue-table th { padding: 1.1rem 1.25rem !important; font-size: clamp(0.9rem,1.3vw,1.1rem) !important; }
+.revenue-table td.amount { font-size: clamp(1rem,1.5vw,1.2rem) !important; }
+.total-line {
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem) !important;
+  padding: 2rem !important;
+}
+
+/* Service cards */
+.service-card { padding: 2rem !important; margin-bottom: 1.5rem !important; }
+.service-card h3 { font-size: 1.2rem !important; }
+.service-price { font-size: 0.95rem !important; }
+
+/* Phase summary */
+.phase-summary { padding: 2.25rem !important; }
+.phase-summary .amount { font-size: 1.5rem !important; }
+.shimmer-callout { font-size: clamp(1.1rem, 2.2vw, 1.6rem) !important; }
+
+/* Scene 8 whisper cards */
+.whisper-card { padding: 2.5rem !important; margin-bottom: 2rem !important; }
+.whisper-card h3 { font-size: 1.3rem !important; }
+.whisper-card p { font-size: clamp(0.95rem,1.5vw,1.1rem) !important; }
+
+/* Scene 10 timeline */
+.timeline-card { max-width: 180px !important; font-size: 0.82rem !important; padding: 1.25rem !important; }
+.timeline-card strong { font-size: 0.88rem !important; }
+.timeline-dot { width: 20px !important; height: 20px !important; }
+
+/* Scene 12 — EPIC rate reveal */
+.rate-big {
+  font-size: clamp(3.5rem, 9vw, 7rem) !important;
+  letter-spacing: -0.03em;
+  text-shadow: 0 0 80px rgba(212,168,67,0.5), 0 0 40px rgba(212,168,67,0.3) !important;
+}
+.retail-block { padding: 3rem !important; max-width: 600px !important; }
+.retail-block .label { font-size: 1rem !important; margin-bottom: 0.4rem !important; }
+.retail-block .amount { font-size: 1.8rem !important; margin-bottom: 1.75rem !important; }
+.beat-space { height: 20vh !important; }
+
+/* Scene 13 — epic close */
+.scene-13 .section-header { font-size: clamp(2rem,5vw,4rem) !important; }
+.scene-13 .cta-btn {
+  font-size: 1.4rem !important;
+  padding: 1.25rem 4rem !important;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 40px rgba(212,168,67,0.3);
+}
+.scene-13 .cta-btn:hover {
+  box-shadow: 0 0 60px rgba(212,168,67,0.5) !important;
+  transform: translateY(-3px);
+}
+.scene-13-contact {
+  font-size: 1rem !important;
+  margin-top: 2rem !important;
+  line-height: 2.2 !important;
+}
+.scene-13-final { font-size: 0.9rem !important; }
+
+/* Gold decorative rule — reusable */
+.gold-rule {
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  margin: 2rem 0;
+}
+.gold-rule.centered { margin: 2rem auto; }
+
+/* Bigger italic-muted */
+.italic-muted {
+  font-size: clamp(1rem, 1.6vw, 1.2rem) !important;
+  line-height: 1.8 !important;
+}
+
+/* Panel items — bigger */
+.panel-item { font-size: clamp(0.95rem,1.4vw,1.1rem) !important; padding: 0.6rem 0 !important; }
+
+/* Flow items — bigger */
+.flow-item { font-size: clamp(0.9rem,1.4vw,1.05rem) !important; padding: 1rem 1.25rem !important; margin-bottom: 1rem !important; }
+
+/* Scene 5 body text */
+.scene-5 .body-text, .scene-5 .italic-muted { max-width: 860px !important; margin-bottom: 1.5rem; }
+
+/* Responsive fixes for mobile */
+@media(max-width:768px){
+  .scene { padding: 6rem 1.5rem !important; }
+  .scene-1-content { padding: 15vh 1.5rem 0 !important; }
+  .constellation-wrap { height: 400px !important; }
+  .node-circle.central { width: 70px !important; height: 70px !important; }
+  .node-circle.anchor { width: 48px !important; height: 48px !important; }
+  .node-circle.regular { width: 38px !important; height: 38px !important; }
+  .node-label { font-size: 0.62rem !important; max-width: 70px !important; }
+}

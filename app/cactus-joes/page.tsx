@@ -329,6 +329,7 @@ export default function CactusJoesPage() {
             ============================================================ */}
         <section className="scene scene-2" id="scene2" aria-label="Who's in the Room">
           <div className="scene-inner">
+            <div className="gold-rule centered reveal" aria-hidden="true"></div>
             <h2 className="section-header reveal" style={{ textAlign: "center" }}>Two businesses. One property. One conversation.</h2>
             <div className="two-col" id="twocol">
               <div className="panel-left">
@@ -364,6 +365,7 @@ export default function CactusJoesPage() {
             ============================================================ */}
         <section className="scene scene-3" id="scene3" aria-label="The Problem">
           <div className="scene-inner">
+            <div className="gold-rule reveal" aria-hidden="true"></div>
             <h2 className="section-header reveal">
               Joe, what you&apos;ve built is extraordinary. And it&apos;s leaving money on the table every single day.
             </h2>
@@ -432,6 +434,7 @@ export default function CactusJoesPage() {
             ============================================================ */}
         <section className="scene scene-5" id="scene5" aria-label="The Vision: The Ecosystem">
           <div className="scene-inner">
+            <div className="gold-rule reveal" aria-hidden="true"></div>
             <h2 className="section-header reveal">Not a store. Not a venue. An ecosystem.</h2>
             <p className="body-text reveal reveal-delay-1">
               This property is sitting on top of at least twelve revenue streams. Most of them aren&apos;t turned on yet. Some of them don&apos;t even exist yet. But the bones are here. The story is here. The land is here. What we&apos;re proposing isn&apos;t a marketing campaign. It&apos;s an operational backbone — a system that captures every dollar this property is capable of generating, automatically, around the clock.
@@ -1028,6 +1031,7 @@ export default function CactusJoesPage() {
             ============================================================ */}
         <section className="scene scene-12" id="scene12" aria-label="The Investment">
           <div className="scene-inner">
+            <div className="gold-rule reveal" aria-hidden="true"></div>
             <h2 className="section-header reveal">No surprises. Here&apos;s the math.</h2>
 
             <div className="retail-block reveal">
@@ -1042,7 +1046,8 @@ export default function CactusJoesPage() {
             <div className="beat-space" aria-hidden="true"></div>
 
             <div className="rate-reveal" id="rateReveal">
-              <p style={{ fontSize: "clamp(0.85rem,1.2vw,0.95rem)", color: "var(--text-secondary)", marginBottom: "0.75rem", letterSpacing: "0.06em", textTransform: "uppercase" }}>Your Engagement Rate</p>
+              <div style={{ width: "40px", height: "2px", background: "var(--accent)", margin: "0 auto 1.5rem", opacity: 0.6 }} aria-hidden="true"></div>
+              <p style={{ fontSize: "clamp(0.85rem,1.2vw,0.95rem)", color: "var(--text-secondary)", marginBottom: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase" }}>Your Engagement Rate</p>
               <p className="rate-big">$500/month + expenses</p>
               <p style={{ marginTop: "1.25rem", color: "var(--text-primary)", fontSize: "clamp(0.95rem,1.4vw,1.1rem)", maxWidth: "560px", margin: "1.25rem auto 0" }}>
                 That&apos;s your rate. Not retail. Not a trial. Your engagement rate with The Voice of Cash.
@@ -1080,13 +1085,13 @@ export default function CactusJoesPage() {
               All that&apos;s missing is the word &ldquo;go.&rdquo;
             </p>
 
-            <a href="mailto:jordan@thevoiceofcash.com" className="cta-btn" aria-label="Start the conversation — email Jordan at The Voice of Cash">
+            <a href="mailto:thevoiceofcash@gmail.com" className="cta-btn" aria-label="Start the conversation — email Cash at The Voice of Cash">
               Let&apos;s start the conversation.
             </a>
 
             <div className="scene-13-contact">
-              <p>Jordan — The Voice of Cash</p>
-              <p>jordan@thevoiceofcash.com</p>
+              <p>Cash — The Voice of Cash</p>
+              <p>thevoiceofcash@gmail.com</p>
               <p>Las Vegas, NV</p>
             </div>
           </div>
