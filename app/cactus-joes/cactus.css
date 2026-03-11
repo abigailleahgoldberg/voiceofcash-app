@@ -1505,3 +1505,100 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 700; line-height: 1.2;
   .timeline-node { padding: 2rem 1rem 2rem 3.5rem !important; }
   .income-card { min-height: auto !important; padding: 3rem 1.5rem !important; }
 }
+
+/* ============================================================
+   PRECISION FIX PASS — 6 specific issues
+   ============================================================ */
+
+/* FIX 1: Scene 1 tag — black text, bigger, fully legible */
+.scene-1-tag {
+  color: #0D0D0D !important;
+  background: rgba(245,230,200,0.92) !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  padding: 0.5em 1.25em !important;
+  border-radius: 4px !important;
+  display: inline-block !important;
+}
+
+/* FIX 2: Scene 3 — 3 distinct viewport blocks */
+/* Block A: Header alone */
+.scene-3-block-header {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+/* Block B: Stats alone */
+.scene-3-block-stats {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  border-top: 1px solid rgba(196,169,125,0.1);
+}
+/* Block C: Bar + callout alone */
+.scene-3-block-close {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  border-top: 1px solid rgba(196,169,125,0.1);
+}
+
+/* FIX 3: Scene 4 cards — force equal baseline alignment */
+.cards-shelf {
+  align-items: start !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+.cards-shelf .card {
+  transform: none !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.cards-shelf .card p { flex: 1 !important; margin: 0 !important; }
+.cards-shelf .card:hover { transform: translateY(-4px) !important; }
+
+/* FIX 4: Constellation tooltip — definitely wider */
+.node-tooltip {
+  max-width: 320px !important;
+  min-width: 220px !important;
+  width: max-content !important;
+  max-width: min(320px, 90vw) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  font-size: 0.88rem !important;
+  line-height: 1.6 !important;
+  padding: 1rem 1.2rem !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+}
+
+/* FIX 5: Scene 5 lifecycle callout — max width wider, generous line height */
+.scene-5 .callout-text {
+  max-width: 960px !important;
+  font-size: clamp(1.1rem, 2.2vw, 1.8rem) !important;
+  line-height: 1.6 !important;
+  padding: 0 2rem !important;
+}
+
+/* FIX 6: Income cards — guaranteed margin/gap between each for one-at-a-time scroll */
+.income-card {
+  min-height: 90vh !important;
+  margin-bottom: 4rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+/* Last income card no extra margin */
+.income-card:last-of-type { margin-bottom: 0 !important; }
+
+@media(max-width:768px){
+  .income-card { min-height: auto !important; margin-bottom: 2rem !important; }
+  .scene-3-block-header,
+  .scene-3-block-stats,
+  .scene-3-block-close { min-height: auto; padding: 3rem 0; }
+}

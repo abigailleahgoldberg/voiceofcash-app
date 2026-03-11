@@ -360,35 +360,50 @@ export default function CactusJoesPage() {
             ============================================================ */}
         <section className="scene scene-3" id="scene3" aria-label="The Problem">
           <div className="scene-inner">
-            <div className="gold-rule reveal" aria-hidden="true"></div>
-            <h2 className="section-header reveal">
-              Joe, what you&apos;ve built is extraordinary. And it&apos;s leaving money on the table every single day.
-            </h2>
-            <div aria-label="Revenue gap statistics">
-              <p className="stat-line reveal" data-stat="1">The store closes at sundown. The internet doesn&apos;t.</p>
-              <p className="stat-line reveal reveal-delay-1" data-stat="2">No online store. No booking system. No automated follow-up.</p>
-              <p className="stat-line reveal reveal-delay-2" data-stat="3">Customers drive out, love it, leave — and you never hear from them again.</p>
-              <p className="stat-line reveal reveal-delay-3" data-stat="4">No email list capturing walk-ins. No review engine running.</p>
-              <p className="stat-line reveal reveal-delay-4" data-stat="5">Google doesn&apos;t know what you sell. Instagram doesn&apos;t know you exist (yet).</p>
-              <p className="stat-line reveal reveal-delay-5" data-stat="6">Every inquiry that comes in after hours? Gone.</p>
-              <p className="stat-line reveal reveal-delay-6" data-stat="7">Every lead not followed up in 5 minutes? 80% less likely to convert.</p>
-            </div>
-            <div className="revenue-bar-wrap reveal">
-              <div className="revenue-bar-labels">
-                <span>Revenue Captured</span>
-                <span>Revenue Left on the Table</span>
-              </div>
-              <div className="revenue-bar" role="img" aria-label="Revenue gap: approximately 15% captured, 85% left on the table">
-                <div className="revenue-bar-captured"></div>
-                <div className="revenue-bar-lost" id="revenueBarLost"></div>
+
+            {/* BLOCK A — Header alone: its own viewport */}
+            <div className="scene-3-block-header">
+              <div>
+                <div className="gold-rule reveal" aria-hidden="true"></div>
+                <h2 className="section-header reveal">
+                  Joe, what you&apos;ve built is extraordinary. And it&apos;s leaving money on the table every single day.
+                </h2>
               </div>
             </div>
-            <p className="callout-text reveal" style={{ marginTop: "3rem" }}>
-              This isn&apos;t a criticism. This is a diagnosis. You&apos;ve built a $3 million property running on a $5,000-a-month engine. We&apos;re here to build the engine it deserves.
-            </p>
-            <p className="body-text reveal reveal-delay-2" style={{ marginTop: "1.5rem", fontStyle: "italic", color: "var(--text-secondary)" }}>
-              &quot;The average business takes 47 hours to respond to a new inquiry. The one that responds first wins. Right now, that&apos;s not you — but it will be.&quot;
-            </p>
+
+            {/* BLOCK B — Stats alone: its own viewport */}
+            <div className="scene-3-block-stats">
+              <div aria-label="Revenue gap statistics">
+                <p className="stat-line reveal" data-stat="1">The store closes at sundown. The internet doesn&apos;t.</p>
+                <p className="stat-line reveal reveal-delay-1" data-stat="2">No online store. No booking system. No automated follow-up.</p>
+                <p className="stat-line reveal reveal-delay-2" data-stat="3">Customers drive out, love it, leave — and you never hear from them again.</p>
+                <p className="stat-line reveal reveal-delay-3" data-stat="4">No email list capturing walk-ins. No review engine running.</p>
+                <p className="stat-line reveal reveal-delay-4" data-stat="5">Google doesn&apos;t know what you sell. Instagram doesn&apos;t know you exist (yet).</p>
+                <p className="stat-line reveal reveal-delay-5" data-stat="6">Every inquiry that comes in after hours? Gone.</p>
+                <p className="stat-line reveal reveal-delay-6" data-stat="7">Every lead not followed up in 5 minutes? 80% less likely to convert.</p>
+              </div>
+            </div>
+
+            {/* BLOCK C — Progress bar + diagnosis: its own viewport */}
+            <div className="scene-3-block-close">
+              <div className="revenue-bar-wrap reveal">
+                <div className="revenue-bar-labels">
+                  <span>Revenue Captured</span>
+                  <span>Revenue Left on the Table</span>
+                </div>
+                <div className="revenue-bar" role="img" aria-label="Revenue gap: approximately 15% captured, 85% left on the table">
+                  <div className="revenue-bar-captured"></div>
+                  <div className="revenue-bar-lost" id="revenueBarLost"></div>
+                </div>
+              </div>
+              <p className="callout-text reveal" style={{ marginTop: "3rem" }}>
+                This isn&apos;t a criticism. This is a diagnosis. You&apos;ve built a $3 million property running on a $5,000-a-month engine. We&apos;re here to build the engine it deserves.
+              </p>
+              <p className="body-text reveal reveal-delay-2" style={{ marginTop: "1.5rem", fontStyle: "italic", color: "var(--text-secondary)" }}>
+                &quot;The average business takes 47 hours to respond to a new inquiry. The one that responds first wins. Right now, that&apos;s not you — but it will be.&quot;
+              </p>
+            </div>
+
           </div>
         </section>
 
