@@ -196,21 +196,16 @@ export default function CactusJoesPage() {
     }, { threshold: 0.2, rootMargin: "0px 0px -80px 0px" });
     document.querySelectorAll(".whisper-card").forEach((el) => whisperIO.observe(el));
 
-    // Scene 10: timeline rail fill on scroll
+    // Scene 10: timeline rail fill on scroll — always vertical
     const scene10 = document.getElementById("scene10");
     const timelineRail = document.getElementById("timelineRail");
     if (scene10 && timelineRail) {
-      const isMobile = window.innerWidth < 768;
       let rafTl: number | null = null;
       const updateRail = () => {
         const rect = scene10.getBoundingClientRect();
         const h = scene10.offsetHeight;
         const pct = Math.max(0, Math.min(1, (-rect.top) / (h * 0.85)));
-        if (isMobile) {
-          timelineRail.style.height = `${pct * 100}%`;
-        } else {
-          timelineRail.style.width = `${pct * 100}%`;
-        }
+        timelineRail.style.height = `${pct * 100}%`;
       };
       window.addEventListener("scroll", () => {
         if (!rafTl) rafTl = requestAnimationFrame(() => { updateRail(); rafTl = null; });
