@@ -165,6 +165,59 @@ export default function CactusJoesPage() {
       totalIO.observe(totalLine);
     }
 
+    // Scene 7: shimmer callout
+    const shimmerCallout = document.getElementById("shimmerCallout");
+    if (shimmerCallout) {
+      const shimIO = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { shimmerCallout.classList.add("shimmer-run"); shimIO.unobserve(shimmerCallout); }
+        });
+      }, { threshold: 0.5 });
+      shimIO.observe(shimmerCallout);
+    }
+
+    // Scene 7: pricing note show/hide
+    const pricingNote = document.getElementById("pricingNote");
+    const scene7 = document.getElementById("scene7");
+    const scene12end = document.getElementById("scene13");
+    if (pricingNote && scene7) {
+      const noteIO = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { pricingNote.classList.toggle("visible", e.isIntersecting); });
+      }, { threshold: 0.05 });
+      noteIO.observe(scene7);
+      if (scene12end) noteIO.observe(scene12end);
+    }
+
+    // Scene 8: whisper reveal
+    const whisperIO = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) e.target.classList.add("whisper-visible");
+      });
+    }, { threshold: 0.2, rootMargin: "0px 0px -80px 0px" });
+    document.querySelectorAll(".whisper-card").forEach((el) => whisperIO.observe(el));
+
+    // Scene 10: timeline rail fill on scroll
+    const scene10 = document.getElementById("scene10");
+    const timelineRail = document.getElementById("timelineRail");
+    if (scene10 && timelineRail) {
+      const isMobile = window.innerWidth < 768;
+      let rafTl: number | null = null;
+      const updateRail = () => {
+        const rect = scene10.getBoundingClientRect();
+        const h = scene10.offsetHeight;
+        const pct = Math.max(0, Math.min(1, (-rect.top) / (h * 0.85)));
+        if (isMobile) {
+          timelineRail.style.height = `${pct * 100}%`;
+        } else {
+          timelineRail.style.width = `${pct * 100}%`;
+        }
+      };
+      window.addEventListener("scroll", () => {
+        if (!rafTl) rafTl = requestAnimationFrame(() => { updateRail(); rafTl = null; });
+      }, { passive: true });
+      updateRail();
+    }
+
     // Timeline active states
     const timelineIO = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
@@ -616,7 +669,349 @@ export default function CactusJoesPage() {
         </section>
 
         {/* ============================================================
-            SCENES 7-13 PLACEHOLDER
+            SCENE 7 — THE SYSTEMS
+            ============================================================ */}
+        <section className="scene scene-7" id="scene7" aria-label="The Systems">
+          {/* Persistent retail pricing note — shown via JS when scene7 is in/near view */}
+          <div className="pricing-note" id="pricingNote" aria-hidden="true">
+            All pricing shown reflects standard retail rates. Your engagement rate with The Voice of Cash reflects significant savings.
+          </div>
+
+          <div className="scene-inner">
+            <h2 className="section-header reveal">You don&apos;t need more hustle. You need infrastructure.</h2>
+            <p className="body-text reveal reveal-delay-1">Here&apos;s exactly what we build and what it costs.</p>
+
+            {/* Phase 1 */}
+            <div className="phase-divider reveal">
+              <div className="phase-divider-line"></div>
+              <span className="phase-label">Phase 1 — Months 1–3</span>
+              <div className="phase-divider-line" style={{ background: "linear-gradient(to left, var(--accent), transparent)" }}></div>
+            </div>
+            <p className="phase-tag reveal">&ldquo;Get the engine running. Start capturing what you&apos;re already losing.&rdquo;</p>
+
+            <div className="service-card reveal">
+              <div className="service-card-header">
+                <h3>AI Customer Service Agent</h3>
+                <span className="service-price">$1,400/mo | Setup from $2,200</span>
+              </div>
+              <p style={{ color: "var(--text-secondary)", fontSize: "clamp(0.9rem,1.3vw,1rem)", lineHeight: "1.8", margin: 0 }}>
+                Your 24/7 front desk. Handles crystal questions, event inquiries, wedding package info, store hours, directions — all the stuff that goes unanswered after 5pm or when you&apos;re busy with a customer in front of you. Trained on your products, your policies, your voice. Resolves 70–80% of inquiries without a human touching it. Escalates the rest with full context.
+              </p>
+            </div>
+
+            <div className="service-card reveal">
+              <div className="service-card-header">
+                <h3>AI Appointment Booking Agent</h3>
+                <span className="service-price">$900/mo | Setup from $1,500</span>
+              </div>
+              <p style={{ color: "var(--text-secondary)", fontSize: "clamp(0.9rem,1.3vw,1rem)", lineHeight: "1.8", margin: 0 }}>
+                Weddings, classes, field trips, private events — all bookable 24/7 without phone tag. Confirms, reminds, reduces no-shows by 30%. Fills canceled slots from a waitlist automatically.
+              </p>
+            </div>
+
+            <div className="service-card reveal">
+              <div className="service-card-header">
+                <h3>AI Reputation &amp; Review Management</h3>
+                <span className="service-price">$800/mo | Setup from $1,200</span>
+              </div>
+              <p style={{ color: "var(--text-secondary)", fontSize: "clamp(0.9rem,1.3vw,1rem)", lineHeight: "1.8", margin: 0 }}>
+                Monitors Google, Yelp, Facebook. Responds to every review. Flags negatives immediately. Automatically asks happy customers for reviews at the right moment. You have a 38-year-old brand with Joe — the reviews should reflect that. They will.
+              </p>
+            </div>
+
+            <div className="service-card reveal">
+              <div className="service-card-header">
+                <h3>AI Reporting &amp; Performance Dashboard</h3>
+                <span className="service-price">$1,000/mo | Setup from $1,800</span>
+              </div>
+              <p style={{ color: "var(--text-secondary)", fontSize: "clamp(0.9rem,1.3vw,1rem)", lineHeight: "1.8", margin: 0 }}>
+                Every number in one place. Weekly automated briefing: what sold, what&apos;s trending, what needs attention. No spreadsheets. No logging into six platforms. Clean insights delivered to your inbox.
+              </p>
+            </div>
+
+            <div className="phase-summary reveal">
+              <p>Phase 1 Setup (one-time):</p>
+              <p className="amount">~$6,700</p>
+              <p>Monthly retail value:</p>
+              <p className="amount">~$4,100/mo</p>
+            </div>
+
+            <div className="shimmer-callout reveal" id="shimmerCallout">
+              $4,100 a month at retail to run a 24/7 operation that never calls in sick, never forgets to follow up, and never lets a lead die in your inbox. Compare that to one part-time employee. And you&apos;re not paying retail.
+            </div>
+
+            {/* Phase 2 */}
+            <div className="phase-divider reveal">
+              <div className="phase-divider-line"></div>
+              <span className="phase-label">Phase 2 — Months 3–6</span>
+              <div className="phase-divider-line" style={{ background: "linear-gradient(to left, var(--accent), transparent)" }}></div>
+            </div>
+            <p className="phase-tag reveal">&ldquo;Now that the foundation is running, we pour fuel on it.&rdquo;</p>
+
+            <div className="service-card reveal">
+              <div className="service-card-header">
+                <h3>AI Lead Response Agent</h3>
+                <span className="service-price">$1,200/mo | Setup from $1,800</span>
+              </div>
+              <p style={{ color: "var(--text-secondary)", fontSize: "clamp(0.9rem,1.3vw,1rem)", lineHeight: "1.8", margin: 0 }}>
+                Every inquiry answered in under 90 seconds. Web forms, texts, emails. Qualifies the lead, scores them hot/warm/cold, routes the hot ones to you with context. The business that responds first wins. Now that&apos;s you.
+              </p>
+            </div>
+
+            <div className="service-card reveal">
+              <div className="service-card-header">
+                <h3>AI Email &amp; SMS Automation</h3>
+                <span className="service-price">Builds on existing CRM</span>
+              </div>
+              <p style={{ color: "var(--text-secondary)", fontSize: "clamp(0.9rem,1.3vw,1rem)", lineHeight: "1.8", margin: 0 }}>
+                Post-purchase follow-ups. Event reminders. Birthday party promotions. Crystal-of-the-month features. Class announcements. Field trip follow-ups to parent groups. All automated. All personal. A nurture machine that runs while you sleep.
+              </p>
+            </div>
+
+            <div className="service-card reveal">
+              <div className="service-card-header">
+                <h3>AI Social Media Content Agent</h3>
+                <span className="service-price">Content pipeline</span>
+              </div>
+              <p style={{ color: "var(--text-secondary)", fontSize: "clamp(0.9rem,1.3vw,1rem)", lineHeight: "1.8", margin: 0 }}>
+                Consistent posting across Instagram for both Cactus Joe&apos;s and The Crystal Garden. Product showcases, education, behind-the-scenes, event promotion. The content pillars and posting schedule are already written — now it&apos;s about execution at a sustainable pace.
+              </p>
+            </div>
+
+            <div className="service-card reveal">
+              <div className="service-card-header">
+                <h3>AI Sales Funnel Build</h3>
+                <span className="service-price">$2,200/mo | Setup from $3,500</span>
+              </div>
+              <p style={{ color: "var(--text-secondary)", fontSize: "clamp(0.9rem,1.3vw,1rem)", lineHeight: "1.8", margin: 0 }}>
+                The full pipeline from first click to booked event or purchase. Landing pages, nurture sequences, behavioral scoring. This is how you turn &quot;I drove by once&quot; into a wedding booking six months later. Or how a field trip parent becomes a crystal shop regular.
+              </p>
+            </div>
+
+            {/* Phase 3 */}
+            <div className="phase-divider reveal">
+              <div className="phase-divider-line"></div>
+              <span className="phase-label">Phase 3 — Months 6–12</span>
+              <div className="phase-divider-line" style={{ background: "linear-gradient(to left, var(--accent), transparent)" }}></div>
+            </div>
+            <p className="phase-tag reveal">&ldquo;This is where it gets interesting.&rdquo;</p>
+
+            <div className="service-card reveal">
+              <div className="service-card-header"><h3>AI Competitor Intelligence</h3></div>
+              <p style={{ color: "var(--text-secondary)", fontSize: "clamp(0.9rem,1.3vw,1rem)", lineHeight: "1.8", margin: 0 }}>
+                Know exactly what every other crystal shop, nursery, and venue in Vegas is doing. Pricing, reviews, content, SEO. You stop guessing.
+              </p>
+            </div>
+
+            <div className="service-card reveal">
+              <div className="service-card-header"><h3>AI CRM Build &amp; Automation</h3></div>
+              <p style={{ color: "var(--text-secondary)", fontSize: "clamp(0.9rem,1.3vw,1rem)", lineHeight: "1.8", margin: 0 }}>
+                The master database. Every customer, every purchase, every interaction, every event attendee, every field trip school. Segmented. Automated. The backbone of a business that knows its customers by name.
+              </p>
+            </div>
+
+            <div className="service-card reveal">
+              <div className="service-card-header"><h3>AI Operations &amp; Workflow Automation</h3></div>
+              <p style={{ color: "var(--text-secondary)", fontSize: "clamp(0.9rem,1.3vw,1rem)", lineHeight: "1.8", margin: 0 }}>
+                Internal processes. Order processing, inventory management, vendor coordination, volunteer scheduling. The stuff that eats hours and generates zero revenue.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================================
+            SCENE 8 — HIDDEN GEM / LOCAL MARKETING
+            ============================================================ */}
+        <section className="scene scene-8" id="scene8" aria-label="The Hidden Gem Strategy">
+          <div className="scene-inner">
+            <h2 className="section-header reveal">You&apos;re 12 miles from the Strip. That&apos;s not a weakness. That&apos;s the whole play.</h2>
+            <p className="body-text reveal reveal-delay-1">
+              Vegas locals are starving for something real. Something that isn&apos;t a casino, a chain restaurant, or a mall. This property is exactly that — but nobody knows it exists yet. The approach isn&apos;t billboards and paid ads (not yet). The approach is earned curiosity. Speakeasy vibes. Hidden gem energy. The kind of thing people whisper about and share on Instagram stories.
+            </p>
+            <p className="callout-text reveal">&ldquo;Hidden gems don&apos;t need billboards. They need believers.&rdquo;</p>
+
+            <div className="whisper-card from-left" data-whisper="1">
+              <h3>The Speakeasy Angle</h3>
+              <p>We don&apos;t fight the signage restriction. We lean into it. You become Las Vegas&apos;s worst-kept secret. The speakeasy of the desert. The place locals whisper about.</p>
+              <p style={{ marginTop: "1rem", fontStyle: "italic", color: "var(--text-secondary)", fontSize: "0.95rem" }}>
+                &ldquo;Have you been to Cactus Joe&apos;s? You have to go. It&apos;s off the 95, you&apos;d never know it was there, but once you find it —&rdquo;
+              </p>
+              <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontSize: "0.95rem" }}>
+                That&apos;s the energy. That&apos;s viral. That&apos;s how you build a brand that people feel like they discovered. You don&apos;t blast this place everywhere on day one. You let people discover it. Word of mouth is the most powerful marketing channel on earth — especially in a city built on secrets and exclusivity.
+              </p>
+            </div>
+
+            <div className="whisper-card from-right" data-whisper="2">
+              <h3>Street Team / Grassroots</h3>
+              <p>A small, smart street team. Five to ten people, placed strategically — farmer&apos;s markets, community events, school pickup lines, family-friendly spots around the valley. They&apos;re not selling anything. They&apos;re starting conversations. Handing out a crystal. A little card that says &quot;You just found the desert&apos;s best-kept secret&quot; with a QR code. That QR code drops them into your funnel — email capture, first-visit discount, event calendar.</p>
+              <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontSize: "0.95rem" }}>
+                The message isn&apos;t &quot;come buy crystals.&quot; It&apos;s &quot;there&apos;s a 7.5-acre secret garden 15 minutes from here that most people don&apos;t know about.&quot; That framing turns every visit into a story worth telling.
+              </p>
+              {/* Crystal info card mock-up */}
+              <div className="crystal-card-mockup">
+                <strong>You just found the desert&apos;s best-kept secret.</strong>
+                <div className="qr-placeholder">QR</div>
+                <p>cactusjoeslv.com</p>
+              </div>
+            </div>
+
+            <div className="whisper-card from-left" data-whisper="3">
+              <h3>The &ldquo;Did You Know?&rdquo; Social Campaign</h3>
+              <p>Short-form content that makes people stop scrolling:</p>
+              <ul className="data-points" style={{ marginTop: "0.75rem" }}>
+                <li>&ldquo;Did you know there&apos;s a 7.5-acre crystal garden in the Las Vegas desert?&rdquo;</li>
+                <li>&ldquo;Did you know you can get married next to a 200-year-old cactus?&rdquo;</li>
+                <li>&ldquo;Did you know there&apos;s a free monthly art event 12 miles from the Strip?&rdquo;</li>
+              </ul>
+              <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontSize: "0.95rem" }}>Every piece drives to the site. Every site visit gets captured. Every captured lead gets nurtured.</p>
+            </div>
+
+            <div className="whisper-card from-right" data-whisper="4">
+              <h3>Family Discovery Engine</h3>
+              <p>This is the hypothesis to test: what brings families out to 7.5 acres in the desert? Is it the rocks? The birthday parties? The field trips? The holiday lights? We don&apos;t assume — we test. Run small events. Track who shows up. Ask them how they found you. Build on what works. Cut what doesn&apos;t.</p>
+            </div>
+
+            <div className="whisper-card from-left" data-whisper="5">
+              <h3>The Field Trip Funnel</h3>
+              <p>Aligned with Nevada NGSS earth science standards, field trips serve schools in Summerlin, Spring Valley, and the southwest valley — all within 25 minutes. Each field trip is also a marketing event: 30 kids go home with a crystal and a story, and 30 families hear about Cactus Joe&apos;s at dinner that night.</p>
+              <p style={{ marginTop: "1rem", color: "var(--text-secondary)", fontSize: "0.95rem" }}>
+                Outreach starts with school science coordinators, homeschool networks, scout councils, and summer camp directors. One teacher visit leads to an annual booking. One annual booking serves 60–180 students per year from a single school. The lifetime value of one school relationship is enormous.
+              </p>
+            </div>
+
+            <p className="callout-text reveal" style={{ marginTop: "3rem" }}>
+              Start small. Test hypotheses. Learn what brings families to Cactus Joe&apos;s. Then double down on the winners.
+            </p>
+          </div>
+        </section>
+
+        {/* ============================================================
+            SCENE 9 — TWO BRANDS, ONE PROPERTY
+            ============================================================ */}
+        <section className="scene scene-9" id="scene9" aria-label="Two Brands, One Property">
+          <div className="scene-inner">
+            <h2 className="section-header reveal">Cactus Joe&apos;s is the legacy. The Crystal Garden is the future. Together, they&apos;re a moat nobody can cross.</h2>
+
+            <div className="synergy-grid">
+              <div className="panel-left">
+                <div className="card card-warm reveal">
+                  <p className="panel-label">What Cactus Joe&apos;s Brings</p>
+                  {["38 years of brand trust and regional recognition", "Physical plant inventory and landscaping expertise", "The property itself — 7.5 acres, irreplaceable", "Joe's story. Joe's relationships. Joe's name on that land."].map((item, i) => (
+                    <p key={i} className={`panel-item reveal reveal-delay-${i+1}`}>{item}</p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="synergy-center" aria-hidden="true">
+                <div className="synergy-line"></div>
+                <div className="synergy-dot"></div>
+                <div className="synergy-line"></div>
+                <div className="synergy-dot"></div>
+                <div className="synergy-line"></div>
+              </div>
+
+              <div className="panel-right">
+                <div className="card card-cool reveal reveal-delay-2">
+                  <p className="panel-label" style={{ color: "var(--text-secondary)" }}>What The Crystal Garden Brings</p>
+                  {["A new customer segment: crystal collectors, wellness community, metaphysical buyers, tourists", "Event revenue: weddings, parties, classes, markets", "E-commerce: nationwide reach through Shopify", "Digital-native marketing and content strategy", "The energy and hunger to scale"].map((item, i) => (
+                    <p key={i} className={`panel-item reveal reveal-delay-${i+1}`}>{item}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="flow-items reveal" style={{ marginTop: "2rem" }}>
+              <p style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "1rem" }}>Where They Amplify Each Other</p>
+              {[
+                "A family comes for a birthday party (Crystal Garden) → discovers the nursery (Cactus Joe's) → books a landscaping consultation",
+                "A tourist buys crystals online (Crystal Garden) → plans a Vegas trip → visits the property → buys plants (Cactus Joe's)",
+                "A local comes for Art in the Desert → signs up for a class → books a wedding → leaves five reviews",
+                "School field trip (geology + desert ecology) → touches both brands simultaneously",
+                "After a field trip, an excited child returns home with a crystal and a story → the family comes for their birthday party → parents discover the crystal shop → the cycle begins",
+                "Every foot on the property benefits both businesses.",
+              ].map((flow, i) => (
+                <div key={i} className={`flow-item reveal reveal-delay-${(i % 5) + 1}`}>
+                  {flow.split("→").map((part, j, arr) => (
+                    <span key={j}>{part.trim()}{j < arr.length - 1 && <span className="arrow"> → </span>}</span>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+            <p className="callout-text reveal" style={{ marginTop: "3rem" }}>
+              You don&apos;t compete with each other. You complete each other. And the systems we build serve both brands from the same infrastructure.
+            </p>
+          </div>
+        </section>
+
+        {/* ============================================================
+            SCENE 10 — 180-DAY TIMELINE
+            ============================================================ */}
+        <section className="scene scene-10" id="scene10" aria-label="The 180-Day Approach">
+          <div className="scene-inner">
+            <h2 className="section-header reveal">We don&apos;t ask you to bet the farm. We ask you to bet 180 days.</h2>
+            <p className="body-text reveal reveal-delay-1">
+              Everything we&apos;ve shown you today is real. It&apos;s mapped. It&apos;s documented. But we don&apos;t come in and flip every switch at once. That&apos;s how things break. Here&apos;s how we actually work:
+            </p>
+
+            <div className="timeline-wrap" aria-label="180-day rollout timeline">
+              <div className="timeline-track" id="timelineTrack">
+                <div className="timeline-rail-bg" aria-hidden="true"></div>
+                <div className="timeline-rail" id="timelineRail" aria-hidden="true"></div>
+
+                {[
+                  {
+                    days: "Days 1–30",
+                    title: "Listen, Build, Launch the Core",
+                    items: ["Full audit of both businesses", "Deploy Phase 1 systems: customer service agent, booking agent, reputation engine, dashboard", "Shopify store architecture and first product listings live", "Email/SMS capture at point of sale", "Begin school outreach for field trip pipeline"]
+                  },
+                  {
+                    days: "Days 30–60",
+                    title: "Foundation Running, First Data",
+                    items: ["First monthly reports — see what's working", "Refine AI agents based on real interactions", "First Art in the Desert event with digital promotion", "April 4th special needs event as pilot"]
+                  },
+                  {
+                    days: "Days 60–90",
+                    title: "Growth Engine Engaged",
+                    items: ["Lead response agent live — inquiries answered in under 90 seconds", "Email/SMS automation sequences running", "Social media pipeline operational for both brands", "First wedding/event bookings through new system"]
+                  },
+                  {
+                    days: "Days 90–120",
+                    title: "Optimization & Scaling",
+                    items: ["AI sales funnel fully operational", "CRM build underway", "Competitor intelligence running", "Revenue data from first 90 days informs next moves"]
+                  },
+                  {
+                    days: "Days 120–150",
+                    title: "Full Ecosystem Active",
+                    items: ["All twelve revenue streams have basic capture in place", "Operations automation reducing manual workload", "Holiday/seasonal calendar executing with full digital support", "Field trip program scaling — repeat bookings"]
+                  },
+                  {
+                    days: "Days 150–180",
+                    title: "Review, Report, Decide",
+                    items: ["Full 180-day performance report delivered", "Revenue attribution: which systems generated what", "Clear data on what to keep, scale, or cut", "The conversation shifts: \"Does this work?\" → \"How fast do we grow?\""]
+                  },
+                ].map((milestone, i) => (
+                  <div key={i} className="timeline-node reveal" data-milestone={i}>
+                    <div className="timeline-dot"></div>
+                    <div className="timeline-card">
+                      <strong>{milestone.days}<br/>{milestone.title}</strong>
+                      {milestone.items.map((item, j) => (
+                        <div key={j} style={{ fontSize: "0.75rem", color: "var(--text-secondary)", paddingTop: "0.3rem" }}>· {item}</div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="callout-text reveal" style={{ marginTop: "4rem" }}>
+              Six months. Not six years. You&apos;ll have real data, real revenue, and a real system — not a pitch deck.
+            </p>
+          </div>
+        </section>
+
+        {/* ============================================================
+            SCENES 11-13 PLACEHOLDER
             ============================================================ */}
         <section style={{ minHeight: "20vh", background: "var(--bg-dark)" }} id="more-scenes"></section>
 
