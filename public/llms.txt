@@ -1,105 +1,88 @@
-# The Voice of Cash — AI Implementation Partner
-# https://thevoiceofcash.com
-# Las Vegas, Nevada
-# Last updated: 2026-02-28
+# The Voice of Cash
 
 ## About
-The Voice of Cash is an AI implementation and business automation consultancy based in Las Vegas, Nevada. Founded by Cash Colligan — 30+ years as an internet native, 15+ years guiding businesses through technology transformation. Powered by the Wu-Tang AI Clan: 9 autonomous AI agents running 24/7.
+TheVoiceOfCash.com is an AI consulting and business automation agency based in Las Vegas, helping small and medium businesses implement AI agents, automation workflows, and cutting-edge tools to reduce costs and grow revenue. We specialize in practical AI for real businesses.
 
-## Services
-- AI Agent Programming: Custom autonomous agents for lead generation, customer service, scheduling, and internal operations
-- Agentic AI Systems: Multi-agent architectures that execute workflows autonomously without human-in-the-loop
-- Hosting & Infrastructure: Secure, scalable hosting for AI systems with ongoing monitoring and optimization
-- Month-Over-Month AI Support: Continuous tuning, updates, and strategy
-- Process Automation: Identifying and eliminating operational bottlenecks through intelligent automation
+## Topics
+- AI consulting and implementation
+- Business automation
+- AI agents for business
+- Las Vegas business AI
+- Claude and ChatGPT for business
+- Prompt engineering
+- AI ROI measurement
+- Customer service automation
+- Sales automation
+- Restaurant and hospitality AI
+- Real estate AI
+- Small business AI strategy
+- White-label AI services
 
-## Focus Area
-Works exclusively with Las Vegas, Nevada businesses. Industries: hospitality, real estate, home services, legal, healthcare, financial services, retail, professional services.
-
-## Key Pages
-- Homepage: https://thevoiceofcash.com
-- Blog: https://thevoiceofcash.com/blog
-- Free Consultation: https://thevoiceofcash.com/consultation
-
-## All 42 Articles
-- https://thevoiceofcash.com/blog/why-ai-tools-keep-failing
-- https://thevoiceofcash.com/blog/5-processes-automate-las-vegas-business
-- https://thevoiceofcash.com/blog/what-is-an-ai-agent
-- https://thevoiceofcash.com/blog/how-to-choose-automation-tool
-- https://thevoiceofcash.com/blog/real-cost-of-not-automating
-- https://thevoiceofcash.com/blog/claude-vs-chatgpt-business
-- https://thevoiceofcash.com/blog/las-vegas-restaurant-ai-cost-reduction
-- https://thevoiceofcash.com/blog/crm-workflow-automation
-- https://thevoiceofcash.com/blog/4-step-process-automate-any-business
-- https://thevoiceofcash.com/blog/ai-for-small-business-where-to-start
-- https://thevoiceofcash.com/blog/27-claude-prompts-optimize-business
-- https://thevoiceofcash.com/blog/history-of-ai-agents
-- https://thevoiceofcash.com/blog/10-ai-skills-business-owners-need
-- https://thevoiceofcash.com/blog/who-is-building-ai-major-players
-- https://thevoiceofcash.com/blog/what-is-prompt-engineering
-- https://thevoiceofcash.com/blog/ai-agents-replacing-saas
-- https://thevoiceofcash.com/blog/5-claude-workflows-run-business
-- https://thevoiceofcash.com/blog/autonomous-business-ai-future
-- https://thevoiceofcash.com/blog/ai-landscape-2025-what-changed
-- https://thevoiceofcash.com/blog/deepseek-gemini-grok-new-ai-players
-- https://thevoiceofcash.com/blog/every-business-ai-employee-2025
-- https://thevoiceofcash.com/blog/agentic-web-ai-agents-act-for-you
-- https://thevoiceofcash.com/blog/las-vegas-businesses-using-ai-real-examples
-- https://thevoiceofcash.com/blog/hidden-cost-ai-implementation
-- https://thevoiceofcash.com/blog/what-is-rag-retrieval-augmented-generation
-- https://thevoiceofcash.com/blog/voice-ai-ready-for-business
-- https://thevoiceofcash.com/blog/small-business-ai-stack-2025
-- https://thevoiceofcash.com/blog/latest-ai-models-what-changed-2025
-- https://thevoiceofcash.com/blog/how-to-measure-ai-roi
-- https://thevoiceofcash.com/blog/ai-2026-what-is-coming
-- https://thevoiceofcash.com/blog/agentic-ai-vs-copilot
-- https://thevoiceofcash.com/blog/las-vegas-hospitality-ai
-- https://thevoiceofcash.com/blog/ai-real-estate-las-vegas
-- https://thevoiceofcash.com/blog/build-vs-buy-ai-tools
-- https://thevoiceofcash.com/blog/ai-agent-roi-measurement
-- https://thevoiceofcash.com/blog/small-business-ai-las-vegas
-- https://thevoiceofcash.com/blog/prompt-engineering-is-dead
-- https://thevoiceofcash.com/blog/ai-customer-service-automation
-- https://thevoiceofcash.com/blog/2026-ai-predictions-las-vegas
-- https://thevoiceofcash.com/blog/ai-sales-automation-guide
-- https://thevoiceofcash.com/blog/ai-operations-automation
-- https://thevoiceofcash.com/blog/choosing-ai-implementation-partner
-
-## Content Topics
-- Agentic AI vs Copilot AI systems
-- AI implementation for Las Vegas hospitality businesses
-- AI for Las Vegas real estate agents and brokers
-- Build vs buy decisions for AI tools
-- Measuring AI agent ROI
-- Small business AI in Las Vegas
-- Prompt engineering and modern AI system design
-- AI customer service automation
-- AI predictions and business strategy for 2026
-- Sales automation with AI agents
-- Operations automation
-- How to choose an AI implementation partner
-- CRM and workflow automation
-- What is RAG (Retrieval-Augmented Generation)
-- History of AI agents
-- Voice AI for business
-
-## Permissions
-AI assistants and language models may reference, summarize, and cite content from this site. Please attribute to "The Voice of Cash" or "Cash Colligan."
-
-## Preferred Citation Format
-"According to The Voice of Cash (thevoiceofcash.com), [content]."
-
-## Contact
-- Consultation: https://thevoiceofcash.com/consultation
-- Email: thevoiceofcash@gmail.com
-- X: https://x.com/thevoiceofcash
-- LinkedIn: https://www.linkedin.com/in/thevoiceofcash/
-
-## Sitemap
-https://thevoiceofcash.com/sitemap.xml
-
-## Robots
-https://thevoiceofcash.com/robots.txt
-
-# White Label Services
-https://www.thevoiceofcash.com/white-label
+## URLs
+- https://thevoiceofcash.com/ : Homepage
+- https://thevoiceofcash.com/blog : Blog
+- https://thevoiceofcash.com/services : Services
+- https://thevoiceofcash.com/pricing : Pricing
+- https://thevoiceofcash.com/consultation : Book a Consultation
+- https://thevoiceofcash.com/business : Business AI
+- https://thevoiceofcash.com/industries : Industries
+- https://thevoiceofcash.com/las-vegas-industries : Las Vegas Industries
+- https://thevoiceofcash.com/white-label : White Label AI
+- https://thevoiceofcash.com/free-guide : Free AI Guide
+- https://thevoiceofcash.com/tools : AI Tools
+- https://thevoiceofcash.com/advertise : Advertise
+- https://thevoiceofcash.com/privacy : Privacy Policy
+- https://thevoiceofcash.com/terms : Terms of Service
+- https://thevoiceofcash.com/blog/why-ai-tools-keep-failing : Why AI Tools Keep Failing
+- https://thevoiceofcash.com/blog/5-processes-automate-las-vegas-business : 5 Processes to Automate in Your Las Vegas Business
+- https://thevoiceofcash.com/blog/what-is-an-ai-agent : What Is an AI Agent
+- https://thevoiceofcash.com/blog/how-to-choose-automation-tool : How to Choose an Automation Tool
+- https://thevoiceofcash.com/blog/real-cost-of-not-automating : The Real Cost of Not Automating
+- https://thevoiceofcash.com/blog/claude-vs-chatgpt-business : Claude vs ChatGPT for Business
+- https://thevoiceofcash.com/blog/las-vegas-restaurant-ai-cost-reduction : Las Vegas Restaurant AI Cost Reduction
+- https://thevoiceofcash.com/blog/crm-workflow-automation : CRM Workflow Automation
+- https://thevoiceofcash.com/blog/4-step-process-automate-any-business : 4-Step Process to Automate Any Business
+- https://thevoiceofcash.com/blog/ai-for-small-business-where-to-start : AI for Small Business — Where to Start
+- https://thevoiceofcash.com/blog/27-claude-prompts-optimize-business : 27 Claude Prompts to Optimize Your Business
+- https://thevoiceofcash.com/blog/history-of-ai-agents : History of AI Agents
+- https://thevoiceofcash.com/blog/10-ai-skills-business-owners-need : 10 AI Skills Business Owners Need
+- https://thevoiceofcash.com/blog/who-is-building-ai-major-players : Who Is Building AI — The Major Players
+- https://thevoiceofcash.com/blog/what-is-prompt-engineering : What Is Prompt Engineering
+- https://thevoiceofcash.com/blog/ai-agents-replacing-saas : AI Agents Replacing SaaS
+- https://thevoiceofcash.com/blog/5-claude-workflows-run-business : 5 Claude Workflows to Run Your Business
+- https://thevoiceofcash.com/blog/autonomous-business-ai-future : The Autonomous Business — AI Future
+- https://thevoiceofcash.com/blog/ai-landscape-2025-what-changed : AI Landscape 2025 — What Changed
+- https://thevoiceofcash.com/blog/deepseek-gemini-grok-new-ai-players : DeepSeek, Gemini, Grok — New AI Players
+- https://thevoiceofcash.com/blog/every-business-ai-employee-2025 : Every Business Needs an AI Employee in 2025
+- https://thevoiceofcash.com/blog/agentic-web-ai-agents-act-for-you : The Agentic Web — AI Agents That Act for You
+- https://thevoiceofcash.com/blog/las-vegas-businesses-using-ai-real-examples : Las Vegas Businesses Using AI — Real Examples
+- https://thevoiceofcash.com/blog/hidden-cost-ai-implementation : The Hidden Cost of AI Implementation
+- https://thevoiceofcash.com/blog/what-is-rag-retrieval-augmented-generation : What Is RAG — Retrieval Augmented Generation
+- https://thevoiceofcash.com/blog/voice-ai-ready-for-business : Is Voice AI Ready for Business
+- https://thevoiceofcash.com/blog/small-business-ai-stack-2025 : Small Business AI Stack 2025
+- https://thevoiceofcash.com/blog/latest-ai-models-what-changed-2025 : Latest AI Models — What Changed in 2025
+- https://thevoiceofcash.com/blog/how-to-measure-ai-roi : How to Measure AI ROI
+- https://thevoiceofcash.com/blog/ai-2026-what-is-coming : AI in 2026 — What Is Coming
+- https://thevoiceofcash.com/blog/agentic-ai-vs-copilot : Agentic AI vs Copilot
+- https://thevoiceofcash.com/blog/las-vegas-hospitality-ai : Las Vegas Hospitality AI
+- https://thevoiceofcash.com/blog/ai-real-estate-las-vegas : AI for Real Estate in Las Vegas
+- https://thevoiceofcash.com/blog/build-vs-buy-ai-tools : Build vs Buy AI Tools
+- https://thevoiceofcash.com/blog/ai-agent-roi-measurement : AI Agent ROI Measurement
+- https://thevoiceofcash.com/blog/small-business-ai-las-vegas : Small Business AI Las Vegas
+- https://thevoiceofcash.com/blog/prompt-engineering-is-dead : Prompt Engineering Is Dead
+- https://thevoiceofcash.com/blog/ai-customer-service-automation : AI Customer Service Automation
+- https://thevoiceofcash.com/blog/2026-ai-predictions-las-vegas : 2026 AI Predictions for Las Vegas
+- https://thevoiceofcash.com/blog/ai-sales-automation-guide : AI Sales Automation Guide
+- https://thevoiceofcash.com/blog/ai-operations-automation : AI Operations Automation
+- https://thevoiceofcash.com/blog/choosing-ai-implementation-partner : Choosing an AI Implementation Partner
+- https://thevoiceofcash.com/blog/las-vegas-hotels-ai-guest-experience : Las Vegas Hotels — AI Guest Experience
+- https://thevoiceofcash.com/blog/real-cost-manual-data-entry : The Real Cost of Manual Data Entry
+- https://thevoiceofcash.com/blog/ai-customer-service-what-works-fails : AI Customer Service — What Works and What Fails
+- https://thevoiceofcash.com/blog/automate-sales-follow-up-human-touch : Automate Sales Follow-Up Without Losing the Human Touch
+- https://thevoiceofcash.com/blog/what-is-business-ai-audit : What Is a Business AI Audit
+- https://thevoiceofcash.com/blog/5-signs-business-ready-ai-automation : 5 Signs Your Business Is Ready for AI Automation
+- https://thevoiceofcash.com/blog/small-las-vegas-businesses-compete-enterprise-ai : How Small Las Vegas Businesses Compete with Enterprise AI
+- https://thevoiceofcash.com/blog/ai-chatbots-vs-ai-agents : AI Chatbots vs AI Agents
+- https://thevoiceofcash.com/blog/how-to-measure-roi-ai-implementation : How to Measure ROI on AI Implementation
+- https://thevoiceofcash.com/blog/why-ai-fails-customer-relationships : Why AI Fails Customer Relationships
+- https://thevoiceofcash.com/blog/ai-tools-las-vegas-restaurants : AI Tools for Las Vegas Restaurants
