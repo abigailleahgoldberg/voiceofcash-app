@@ -165,7 +165,7 @@ export default function NetworkPage() {
             <div key={cat.name} style={{ marginBottom: 60 }}>
               {/* Category header */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 28, borderBottom: `2px solid ${cat.color}20`, paddingBottom: 16 }}>
-                <span style={{ fontSize: 28 }}>{cat.emoji}</span>
+                
                 <div>
                   <div style={{ fontSize: 11, letterSpacing: '2px', fontWeight: 700, color: cat.color, textTransform: 'uppercase', marginBottom: 2 }}>Category</div>
                   <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', letterSpacing: '1px', color: '#F5F0E8', margin: 0 }}>{cat.name}</h2>
@@ -183,14 +183,6 @@ export default function NetworkPage() {
                       padding: '20px 24px',
                       transition: 'border-color 0.2s, background 0.2s',
                     }}
-                      onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLDivElement).style.borderColor = cat.color + '50';
-                        (e.currentTarget as HTMLDivElement).style.background = 'rgba(255,255,255,0.05)';
-                      }}
-                      onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLDivElement).style.borderColor = cat.color + '20';
-                        (e.currentTarget as HTMLDivElement).style.background = 'rgba(255,255,255,0.03)';
-                      }}
                     >
                       <div style={{ fontSize: 15, fontWeight: 700, color: cat.color, marginBottom: 8 }}>{site.name}</div>
                       <p style={{ fontSize: 13, color: 'rgba(245,240,232,0.55)', lineHeight: 1.6, margin: 0 }}>{site.description}</p>
