@@ -1125,6 +1125,7 @@ export default function VoiceOfCash() {
           <a href="#data">Results</a>
           <a href="#about">About</a>
           <a href="/blog">Blog</a>
+          <a href="/network">Our Network</a>
           <a href="/pricing">Pricing</a>
           <a href="/consultation" className="voc-btn-primary" style={{ padding: "10px 28px", fontSize: 14 }}>Get Started</a>
         </div>
@@ -1898,7 +1899,7 @@ export default function VoiceOfCash() {
         </div>
         <div style={{borderTop:"1px solid rgba(0,200,150,0.06)",paddingTop:24,marginBottom:20,display:"flex",gap:24,flexWrap:"wrap",alignItems:"center"}}>
           <span style={{fontSize:11,letterSpacing:"2px",fontWeight:700,color:"rgba(0,200,150,0.5)"}}>OUR NETWORK</span>
-          {[["WeBearish","https://www.webearish.com"],["AI Skills Agents","https://aiskillsagents.com"],["JewSA","https://www.jewsa.com"],["U-God Sacred Texts","https://u-god.com"]].map(([label,href]) => (
+          {[["WeBearish","https://www.webearish.com"],["AI Skills Agents","https://aiskillsagents.com"],["JewSA","https://www.jewsa.com"],["U-God Sacred Texts","https://u-god.com"],["TheLVAthletics","https://thelvathletics.com"],["ClaudeAISkills","https://claudeaiskills.com"],["Our Network →","https://thevoiceofcash.com/network"]].map(([label,href]) => (
             <a key={href} href={href} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"rgba(255,255,255,0.3)",textDecoration:"none",fontWeight:600,transition:"color 0.3s"}}
               onMouseEnter={e=>(e.currentTarget.style.color="#00C896")}
               onMouseLeave={e=>(e.currentTarget.style.color="rgba(255,255,255,0.3)")}
