@@ -182,7 +182,7 @@ export default function PortalClient() {
 
             {/* Monthly meeting */}
             <div className="card" style={{ display:'flex', gap:24, alignItems:'center', flexWrap:'wrap' }}>
-              <div style={{ fontSize:32 }}>📅</div>
+              <div style={{ display:'flex', alignItems:'center', justifyContent:'center', width:32, height:32 }}><svg width="24" height="24" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="14" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M2 8h16M6 2v4M14 2v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg></div>
               <div>
                 <div style={{ fontSize:11, letterSpacing:'2px', color:G, marginBottom:4 }}>MANDATORY PARTNER MEETING</div>
                 <div style={{ fontSize:18, fontWeight:800 }}>14th of Every Month</div>
@@ -259,7 +259,7 @@ export default function PortalClient() {
 
             {loading ? <div style={{ color:'rgba(245,240,232,0.4)', padding:'40px', textAlign:'center' }}>Loading...</div> : filtered.length === 0 ? (
               <div style={{ textAlign:'center', padding:'60px 20px', color:'rgba(245,240,232,0.3)' }}>
-                <div style={{ fontSize:40, marginBottom:12 }}>📋</div>
+                <div style={{ fontSize:40, marginBottom:12, display:'flex', alignItems:'center', justifyContent:'center' }}><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" strokeWidth="1.5"/><rect x="4" y="4" width="16" height="18" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M8 11h8M8 15h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><path d="M8 4h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg></div>
                 <div style={{ fontSize:16 }}>No clients logged yet. Click + Add Client to start.</div>
               </div>
             ) : (

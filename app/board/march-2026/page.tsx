@@ -27,7 +27,7 @@ export default function BoardMeetingPage() {
       </div>
 
       <section style={{ background: '#f8f8f8', border: '1px solid #e0e0e0', borderRadius: '8px', padding: '24px', marginBottom: '40px' }}>
-        <h2 style={{ fontSize: '20px', fontWeight: '700', margin: '0 0 16px 0' }}>🎯 Executive Summary</h2>
+        <h2 style={{ fontSize: '20px', fontWeight: '700', margin: '0 0 16px 0' }}>Executive Summary</h2>
         <p>Seven agents ran independent market research. The consensus is unanimous: <strong>two real paths to $20k/month — one paying in 60 days.</strong></p>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '16px' }}>
           <div style={{ background: '#fff', border: '2px solid #000', borderRadius: '6px', padding: '16px' }}>
@@ -43,7 +43,7 @@ export default function BoardMeetingPage() {
       </section>
 
       <section style={{ marginBottom: '40px' }}>
-        <h2 style={{ fontSize: '22px', fontWeight: '700', borderBottom: '2px solid #eee', paddingBottom: '8px', marginBottom: '20px' }}>📊 Market Intelligence</h2>
+        <h2 style={{ fontSize: '22px', fontWeight: '700', borderBottom: '2px solid #eee', paddingBottom: '8px', marginBottom: '20px' }}>Market Intelligence</h2>
 
         <h3 style={{ fontSize: '17px', fontWeight: '700', marginBottom: '12px' }}>The Jewish Apparel Market (Raekwon + Ghostface)</h3>
         <p>The humor lane is <strong>genuinely empty</strong>. No standalone brand owns it. Here's the competitive landscape:</p>
@@ -84,7 +84,7 @@ export default function BoardMeetingPage() {
           </thead>
           <tbody>
             {[
-              ['Baby/Infant Apparel', '$22–$35', '55–70% 🏆', 'Viral by nature, gift purchase'],
+              ['Baby/Infant Apparel', '$22–$35', '55–70%', 'Viral by nature, gift purchase'],
               ['Embroidered Hats', '$35–$55', '55–60%', 'Highest margin wearable'],
               ['Sweatshirts/Hoodies', '$55–$75', '45–55%', 'Highest revenue per unit'],
               ['Mugs', '$15–$22', '50–60%', 'Gift impulse buy'],
