@@ -1701,6 +1701,186 @@ export default function VoiceOfCash() {
         </div>
       </section>
 
+      {/* WEBEARISH — AUTISM ACCEPTANCE */}
+      <section style={{
+        background: '#fafaf8',
+        borderTop: '1px solid #e8e4dc',
+        borderBottom: '1px solid #e8e4dc',
+        padding: '80px 5vw',
+        color: '#1a1a1a',
+      }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+
+          {/* Section Header */}
+          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 10,
+              background: '#fff3e8',
+              border: '1px solid #e8c090',
+              borderRadius: 100,
+              padding: '6px 18px',
+              fontSize: 11,
+              letterSpacing: 2,
+              textTransform: 'uppercase' as const,
+              color: '#b06020',
+              fontWeight: 700,
+              marginBottom: 20,
+            }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#b06020" style={{ flexShrink: 0 }}>
+                <path d="M12 2C9.8 2 8 3.8 8 6c0 1.1.4 2.1 1.1 2.8C7.4 9.5 6 11.1 6 13c0 2.2 1.8 4 4 4 .7 0 1.4-.2 2-.5.6.3 1.3.5 2 .5 2.2 0 4-1.8 4-4 0-1.9-1.4-3.5-3.1-3.9C15.6 8.1 16 7.1 16 6c0-2.2-1.8-4-4-4z"/>
+              </svg>
+              We Stand With WeBearish
+            </div>
+            <h2 style={{
+              fontSize: 'clamp(28px, 4vw, 48px)',
+              fontWeight: 900,
+              letterSpacing: '-1px',
+              lineHeight: 1.1,
+              marginBottom: 16,
+              color: '#1a1a1a',
+            }}>
+              Support Autism Acceptance
+            </h2>
+            <p style={{
+              fontSize: 17,
+              color: '#666',
+              maxWidth: 540,
+              margin: '0 auto',
+              lineHeight: 1.7,
+            }}>
+              100% of profits reinvested into programs for autistic children and their families.
+            </p>
+          </div>
+
+          {/* Product Grid */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gap: 24,
+            marginBottom: 48,
+          }}>
+            {[
+              {
+                name: 'WeBearish Classic Tee',
+                price: '$32',
+                desc: 'The original. Soft cotton, bold statement.',
+                link: 'https://webearish.com/shop',
+              },
+              {
+                name: 'Different Is Beautiful Hoodie',
+                price: '$54',
+                desc: 'For the days that need extra warmth and extra courage.',
+                link: 'https://webearish.com/shop',
+              },
+              {
+                name: 'Spectrum Dad Hat',
+                price: '$28',
+                desc: 'For the parents who show up every single day.',
+                link: 'https://webearish.com/shop',
+              },
+              {
+                name: 'Bearish & Proud Tote',
+                price: '$24',
+                desc: 'Carry the mission everywhere you go.',
+                link: 'https://webearish.com/shop',
+              },
+            ].map((product) => (
+              <div key={product.name} style={{
+                background: '#fff',
+                border: '1px solid #e0ddd6',
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: 'column' as const,
+                transition: 'box-shadow 0.3s',
+              }}>
+                {/* Product image placeholder */}
+                <div style={{
+                  background: '#f5f0e8',
+                  height: 160,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderBottom: '1px solid #e8e4dc',
+                }}>
+                  <svg width="64" height="64" viewBox="0 0 100 100" fill="none" style={{ opacity: 0.25 }}>
+                    <ellipse cx="50" cy="65" rx="28" ry="22" fill="#1a1a1a"/>
+                    <circle cx="50" cy="38" r="18" fill="#1a1a1a"/>
+                    <circle cx="35" cy="24" r="10" fill="#1a1a1a"/>
+                    <circle cx="65" cy="24" r="10" fill="#1a1a1a"/>
+                  </svg>
+                </div>
+                {/* Product info */}
+                <div style={{ padding: '20px', flexGrow: 1, display: 'flex', flexDirection: 'column' as const }}>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: '#1a1a1a', marginBottom: 6, lineHeight: 1.3 }}>{product.name}</div>
+                  <div style={{ fontSize: 20, fontWeight: 900, color: '#b06020', marginBottom: 8 }}>{product.price}</div>
+                  <div style={{ fontSize: 13, color: '#888', lineHeight: 1.6, flexGrow: 1, marginBottom: 16 }}>{product.desc}</div>
+                  <a
+                    href={product.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'block',
+                      textAlign: 'center',
+                      background: '#1a1a1a',
+                      color: '#fff',
+                      fontWeight: 700,
+                      fontSize: 12,
+                      letterSpacing: '1.5px',
+                      textTransform: 'uppercase' as const,
+                      padding: '10px 16px',
+                      textDecoration: 'none',
+                      transition: 'background 0.2s',
+                    }}
+                  >
+                    Shop at WeBearish
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Row */}
+          <div style={{ textAlign: 'center', marginBottom: 32 }}>
+            <a
+              href="https://webearish.com/mission"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 10,
+                background: 'transparent',
+                color: '#b06020',
+                border: '2px solid #b06020',
+                fontWeight: 800,
+                fontSize: 14,
+                letterSpacing: '1px',
+                padding: '14px 32px',
+                textDecoration: 'none',
+              }}
+            >
+              Learn More About the Mission
+            </a>
+          </div>
+
+          {/* Disclaimer */}
+          <div style={{
+            textAlign: 'center',
+            fontSize: 12,
+            color: '#aaa',
+            maxWidth: 600,
+            margin: '0 auto',
+            lineHeight: 1.6,
+            fontStyle: 'italic',
+          }}>
+            We are not doctors. We are advocates. Nothing on this site constitutes medical advice.
+          </div>
+
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer style={{padding:"48px 5vw 32px",borderTop:"1px solid rgba(0,200,150,0.1)"}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:24,marginBottom:32}}>
