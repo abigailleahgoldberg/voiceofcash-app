@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Script from 'next/script';
+import NetworkBar from './components/NetworkBar';
 
 const BASE = 'https://thevoiceofcash.com';
 
@@ -44,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property='og:image:type' content='image/png' />
         <meta name='facebook-domain-verification' content='' />
       </head>
-      <body>{children}</body>
+      <body><NetworkBar />{children}</body>
         <Script
           src='https://www.googletagmanager.com/gtag/js?id=G-7LN3V93647'
           strategy='afterInteractive'
